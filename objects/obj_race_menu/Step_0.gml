@@ -13,7 +13,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 	ds_list_add(obj_player.LanguagesList, "Common")
 	switch(image_index)
 	{
-		case 0:
+		case 0: //Aarakocra
 		{
 			obj_player.CharacterRace = "Aarakocra"
 			obj_player.DexterityAdded = 2
@@ -45,8 +45,25 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 1:
+		case 1: //Aasimar - 3 variants
 		{
+			obj_player.CharismaAdded = 2
+			obj_player.Speed = 30
+			obj_player.Size = "Medium"
+			obj_player.Flight = false
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			ds_list_add(obj_player.TraitsList, "Darkvision", "Celestial Resistance", "Healing Hands")
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			ds_list_add(obj_player.LanguagesList, "Celestial")
+			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
 			variant1.image_index = 0
 			variant2 = instance_create_depth(x + 32, y, 0,  obj_variant_menu)
@@ -56,7 +73,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 2:
+		case 2: //Bugbear
 		{
 			obj_player.CharacterRace = "Bugbear"
 			obj_player.StrengthAdded = 2
@@ -80,7 +97,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 3:
+		case 3: //Centaur
 		{
 			obj_player.CharacterRace = "Centaur"
 			obj_player.StrengthAdded = 2
@@ -110,7 +127,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 4:
+		case 4: //Changeling - 19 variants
 		{
 			obj_player.CharacterRace = "Changeling"
 			obj_player.CharismaAdded = 2
@@ -176,7 +193,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 5:
+		case 5: //Dragonborn
 		{
 			obj_player.CharacterRace = "Dragonborn"
 			obj_player.StrengthAdded = 2
@@ -200,7 +217,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 6:
+		case 6: //Dwarf - 2 variants
 		{
 			obj_player.ConstitutionAdded = 2
 			obj_player.Size = "Medium"
@@ -232,8 +249,23 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 7:
+		case 7: //Elf - 11 variants
 		{
+			obj_player.DexterityAdded = 2
+			obj_player.Size = "Medium"
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			ds_list_add(obj_player.TraitsList, "Keen Senses", "Fey Ancestry")
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			ds_list_add(obj_player.LanguagesList, "Elvish")
+			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
 			variant1.image_index = 5
 			variant2 = instance_create_depth(x + 32, y, 0,  obj_variant_menu)
@@ -260,9 +292,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 8:
+		case 8: //Yuan-ti Pureblood
 		{
-			obj_player.CharacterRace = "Yaun-ti Pureblood"
+			obj_player.CharacterRace = "Yuan-ti Pureblood"
 			obj_player.CharismaAdded = 2
 			obj_player.IntelligenceAdded = 1
 			obj_player.Size = "Medium"
@@ -284,7 +316,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 9:
+		case 9: //Firbolg
 		{
 			obj_player.CharacterRace = "Firbolg"
 			obj_player.WisdomAdded = 2
@@ -308,8 +340,19 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 10:
+		case 10: //Gensai - 4 variants
 		{
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 16
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -322,8 +365,19 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 11:
+		case 11: //Gith - 2 variants
 		{
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 20
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -331,8 +385,19 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 12:
+		case 12: //Gnome - 4 variants
 		{
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 22
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -344,7 +409,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 13:
+		case 13: //Goblin
 		{
 			obj_player.CharacterRace = "Goblin"
 			obj_player.DexterityAdded = 2
@@ -368,7 +433,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 14:
+		case 14: //Goliath
 		{
 			obj_player.CharacterRace = "Goliath"
 			obj_player.StrengthAdded = 2
@@ -392,8 +457,19 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 15:
+		case 15: //Half-Elf - 7 variants
 		{
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 26
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -411,8 +487,19 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 16:
+		case 16: //Halfling - 4 variants
 		{
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 33
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -424,8 +511,19 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 17:
+		case 17: //Half-Orc - 2 variants
 		{
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 37
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -433,7 +531,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 18:
+		case 18: //Hobgoblin
 		{
 			obj_player.CharacterRace = "Hobgoblin"
 			obj_player.ConstitutionAdded = 2
@@ -469,8 +567,19 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 19:
+		case 19: //Human - 5 variants
 		{
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 39
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -484,7 +593,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 20:
+		case 20: //Kalshtar
 		{//Add the Quirk
 			obj_player.CharacterRace = "Kalshtar"
 			obj_player.WisdomAdded = 1
@@ -509,7 +618,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 21:
+		case 21: //Kenku
 		{
 			obj_player.CharacterRace = "Kenku"
 			obj_player.DexterityAdded = 2
@@ -533,7 +642,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 22:
+		case 22: //Kobold
 		{
 			obj_player.CharacterRace = "Kobold"
 			obj_player.DexterityAdded = 2
@@ -557,7 +666,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 23:
+		case 23: //Lizardfolk
 		{
 			obj_player.CharacterRace = "Lizardfolk"
 			obj_player.ConstitutionAdded = 2
@@ -581,7 +690,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 24:
+		case 24: //Loxodon
 		{
 			obj_player.CharacterRace = "Loxodon"
 			obj_player.ConstitutionAdded = 2
@@ -605,7 +714,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 25:
+		case 25: //Minotaur
 		{
 			obj_player.CharacterRace = "Minotaur"
 			obj_player.StrengthAdded = 2
@@ -636,7 +745,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 26:
+		case 26: //Orc
 		{
 			obj_player.CharacterRace = "Orc"
 			obj_player.StrengthAdded = 2
@@ -661,8 +770,19 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 27:
+		case 27: //Shifter - 4 variants
 		{
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 44
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -674,7 +794,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 28:
+		case 28: //Simic Hybrid
 		{
 			obj_player.CharacterRace = "Simic Hybrid"
 			obj_player.ConstitutionAdded = 2
@@ -698,7 +818,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 29:
+		case 29: //Tabaxi
 		{
 			obj_player.CharacterRace = "Tabaxi"
 			obj_player.DexterityAdded = 2
@@ -728,14 +848,25 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 30:
-		{// 9 variants
+		case 30: //Tiefling - 9 variants
+		{
 			obj_player.CharacterRace = "Tiefling"
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			room_goto(rm_character_creation)
 		}
 		break;
 		
-		case 31:
+		case 31: //Tortle
 		{
 			obj_player.CharacterRace = "Tortle"
 			obj_player.StrengthAdded = 2
@@ -766,7 +897,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 32:
+		case 32: //Triton
 		{
 			obj_player.CharacterRace = "Triton"
 			obj_player.StrengthAdded = 1
@@ -794,7 +925,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		break;
 		
-		case 33:
+		case 33: //Vedalken
 		{
 			obj_player.CharacterRace = "Vedalken"
 			obj_player.IntelligenceAdded = 2
@@ -819,7 +950,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		break;
 		
-		case 34:
+		case 34: //Vashino
 		{
 			obj_player.CharacterRace = "Vashino"
 			obj_player.DexterityAdded = 2
@@ -844,14 +975,22 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 
 		break;
 		
-		case 35:
+		case 35: //Warforged - 3 variants
 		{
-			// 3 subraces
 			obj_player.CharacterRace = "Warforged"
+			
+			if !ds_exists(obj_player.TraitsList, ds_type_list)
+			{
+				obj_player.TraitsList = ds_list_create()
+			}
+			
+			if !ds_exists(obj_player.LanguagesList, ds_type_list)
+			{
+				obj_player.LanguagesList = ds_list_create()
+			}
+			
 			room_goto(rm_character_creation)
 		}
 		break;
-		
-		//need to add Yaun-ti Pureblood
 	}
 }

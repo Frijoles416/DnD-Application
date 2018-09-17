@@ -12,34 +12,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Protector Aasimiar"
 			obj_player.WisdomAdded = 1
-			obj_player.CharismaAdded = 2
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
-			obj_player.Flight = false
-			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Celestial Resistance"
-				obj_player.Traits[2] = "Healing Hands"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Celestial Resistance"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Healing Hands"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Celestial"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Celestial"
-			}
 			
 			room_goto(rm_character_creation)
 		}
@@ -49,34 +21,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Scourge Aasimiar"
 			obj_player.ConstitutionAdded = 1
-			obj_player.CharismaAdded = 2
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
-			obj_player.Flight = false
-			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Celestial Resistance"
-				obj_player.Traits[2] = "Healing Hands"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Celestial Resistance"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Healing Hands"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Celestial"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Celestial"
-			}
 			
 			room_goto(rm_character_creation)
 		}
@@ -86,34 +30,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Fallen Aasimiar"
 			obj_player.StrengthAdded = 1
-			obj_player.CharismaAdded = 2
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
-			obj_player.Flight = false
-			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Celestial Resistance"
-				obj_player.Traits[2] = "Healing Hands"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Celestial Resistance"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Healing Hands"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Celestial"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Celestial"
-			}
 			
 			room_goto(rm_character_creation)
 		}
@@ -123,7 +39,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Hill Dwarf"
 			obj_player.WisdomAdded = 1
-			obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Dwarven Toughness"
+			
+			ds_list_add(obj_player.TraitsList, "Dwarven Toughness")
 			
 			room_goto(rm_character_creation)
 		}
@@ -134,16 +51,12 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Mountain Dwarf"
 			obj_player.StrengthAdded = 2
 			
-			if !is_array(obj_player.ArmorProficiencies)
+			if !ds_exists(obj_player.ArmorList, ds_type_list)
 			{
-				obj_player.ArmorProficiencies[0] = "Light"
-				obj_player.ArmorProficiencies[1] = "Medium"
+				obj_player.ArmorList = ds_list_create()
 			}
-			else
-			{
-				obj_player.ArmorProficiencies[array_length_1d(obj_player.ArmorProficiencies)+1] = "Light"
-				obj_player.ArmorProficiencies[array_length_1d(obj_player.ArmorProficiencies)+1] = "Medium"
-			}
+			ds_list_add(obj.player.ArmorList, "Light", "Medium")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -151,9 +64,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 5:
 		{
 			obj_player.CharacterRace = "High Elf"
-			obj_player.DexterityAdded = 2
 			obj_player.IntelligenceAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			if !is_array(obj_player.Traits)
@@ -210,9 +121,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 6:
 		{
 			obj_player.CharacterRace = "Wood Elf"
-			obj_player.DexterityAdded = 2
 			obj_player.WisdomAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 35
 			
 			if !is_array(obj_player.Traits)
@@ -234,17 +143,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Trance"
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Fleet of Foot"
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Mask of the Wild"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Elvish"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Elvish"
 			}
 			
 			if !is_array(obj_player.WeaponProfeciencies)
@@ -269,9 +167,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 7:
 		{
 			obj_player.CharacterRace = "Eladrin"
-			obj_player.DexterityAdded = 2
 			obj_player.IntelligenceAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			if !is_array(obj_player.Traits)
@@ -289,17 +185,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Fey Ancestory"
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Trance"
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Fey Step"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Elvish"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Elvish"
 			}
 			
 			if !is_array(obj_player.WeaponProfeciencies)
@@ -324,9 +209,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 8:
 		{
 			obj_player.CharacterRace = "Shadow Elf"
-			obj_player.DexterityAdded = 2
 			obj_player.CharismaAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			if !is_array(obj_player.Traits)
@@ -352,17 +235,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Slip into the Shadow"
 			}
 			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Elvish"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Elvish"
-			}
-			
 			if !is_array(obj_player.WeaponProfeciencies)
 			{
 				obj_player.WeaponProfeciencies[0] = "Longswords"
@@ -385,9 +257,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 9:
 		{
 			obj_player.CharacterRace = "Aerenal Elf"
-			obj_player.DexterityAdded = 2
 			obj_player.IntelligenceAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			if !is_array(obj_player.Traits)
@@ -429,8 +299,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 10:
 		{
 			obj_player.CharacterRace = "Valenar Elf"
-			obj_player.DexterityAdded = 2
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			if !is_array(obj_player.Traits)
@@ -486,9 +354,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 11:
 		{
 			obj_player.CharacterRace = "Aereni Wood Elf"
-			obj_player.DexterityAdded = 2
 			obj_player.WisdomAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 35
 			
 			if !is_array(obj_player.Traits)
@@ -512,17 +378,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Mask of the Wild"
 			}
 			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Elvish"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Elvish"
-			}
-			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -530,9 +385,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 12:
 		{
 			obj_player.CharacterRace = "Valenar Wood Elf"
-			obj_player.DexterityAdded = 2
 			obj_player.WisdomAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			if !is_array(obj_player.Traits)
@@ -556,17 +409,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Mask of the Wild"
 			}
 			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Elvish"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Elvish"
-			}
-			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -574,9 +416,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 13:
 		{
 			obj_player.CharacterRace = "Sea Elf"
-			obj_player.DexterityAdded = 2
 			obj_player.ConstitutionAdded = 2
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			obj_player.Swim = true
 			obj_player.SwimSpeed = 30
@@ -638,8 +478,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Shadar-Kai Elf"
 			obj_player.ConstitutionAdded = 1
-			obj_player.DexterityAdded = 2
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			if !is_array(obj_player.Traits)
@@ -661,17 +499,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Blessings of the Raven Queen"
 			}
 			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Elvish"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Elvish"
-			}
-			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -679,9 +506,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 15:
 		{
 			obj_player.CharacterRace = "Dark Elf"
-			obj_player.DexterityAdded = 2
 			obj_player.CharismaAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			if !is_array(obj_player.Traits)
@@ -703,17 +528,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Sunlight Sensitivity"
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Drow Magic"
 				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Drow Weapon Training"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Elvish"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Elvish"
 			}
 			
 			if !is_array(obj_player.WeaponProfeciencies)
