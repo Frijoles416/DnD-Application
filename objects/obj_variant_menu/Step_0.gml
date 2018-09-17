@@ -249,10 +249,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		//Gensai - 4 variants
+		//Genasi - 4 variants
 		case 16:
 		{
-			obj_player.CharacterRace = "Air Gensai"
+			obj_player.CharacterRace = "Air Genasi"
 			obj_player.DexterityAdded = 1
 			
 			ds_list_add(obj_player.TraitsList, "Unending Breath", "Mingle with the Wind")
@@ -264,7 +264,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 17:
 		{
-			obj_player.CharacterRace = "Earth Gensai"
+			obj_player.CharacterRace = "Earth Genasi"
 			obj_player.StrengthAdded = 1
 			
 			ds_list_add(obj_player.TraitsList, "Earth Walk", "Merge with Stone")
@@ -276,7 +276,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 18:
 		{
-			obj_player.CharacterRace = "Fire Gensai"
+			obj_player.CharacterRace = "Fire Genasi"
 			obj_player.IntelligenceAdded = 1
 			
 			ds_list_add(obj_player.TraitsList, "Fire Resistance", "Reach to the Blaze")
@@ -288,7 +288,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 19:
 		{
-			obj_player.CharacterRace = "Water Gensai"
+			obj_player.CharacterRace = "Water Genasi"
 			obj_player.WisdomAdded = 1
 			
 			ds_list_add(obj_player.TraitsList, "Amphibious", "Call to the Wave")
@@ -502,36 +502,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 37:
 		{
 			obj_player.CharacterRace = "Half-Orc"
-			obj_player.StrengthAdded = 2
-			obj_player.ConstitutionAdded = 1
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Menacing"
-				obj_player.Traits[2] = "Relentless Enduance"
-				obj_player.Traits[3] = "Savage Attacks"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Menacing"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Relentless Endurance"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Savage Attacks"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Orc"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Orc"
-			}
+			ds_list_add(obj_player.TraitsList, "Relentless Endurance", "Savage Attacks")
 			
 			room_goto(rm_character_creation)
 			
@@ -541,44 +513,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 38:
 		{
 			obj_player.CharacterRace = "Dragonmarked Half-Orc"
-			obj_player.StrengthAdded = 2
-			obj_player.ConstitutionAdded = 1
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Menacing"
-				obj_player.Traits[2] = "Hunter's Intuition"
-				obj_player.Traits[3] = "Imprint Prey"
-				obj_player.Traits[4] = "Nature's Voice"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Menacing"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Hunter's Intuition"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Imprint Prey"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Nature's Voice"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Orc"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Orc"
-			}
+			ds_list_add(obj_player.TraitsList, "Hunter's Intuition", "Imprint Prey", "Nature's Voice")
 			
 			room_goto(rm_character_creation)
 			
 		}
 		break;
 		
+		//Human - 6 variants
 		case 39:
 		{
 			obj_player.CharacterRace = "Human"
@@ -588,20 +531,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.ConstitutionAdded = 1
 			obj_player.WisdomAdded = 1
 			obj_player.CharismaAdded = 1
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
-			
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Your Choice"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Your Choice"
-			}
 			
 			room_goto(rm_character_creation)
 			
@@ -611,36 +540,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 40:
 		{
 			obj_player.CharacterRace = "Cannith Human"
-			obj_player.DexterityAdded = 1// add player stat choice
+			obj_player.DexterityAdded = 1
+			// add player stat choice
 			obj_player.IntelligenceAdded = 1
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Artisan's Intuition"
-				obj_player.Traits[1] = "Maker's Gift"
-				obj_player.Traits[2] = "Magecraft"
-				obj_player.Traits[3] = "Spellsmith"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Artisan's Intuition"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Maker's Gift"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Magecraft"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Spellsmith"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Your Choice"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Your Choice"
-			}
+			ds_list_add(obj_player.TraitsList, "Artisan's Intuition", "Maker's Gift", "Magecraft", "Spellsmith")
 			
 			room_goto(rm_character_creation)
 			
@@ -650,36 +554,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 41:
 		{
 			obj_player.CharacterRace = "Vadalis Human"
-			obj_player.DexterityAdded = 1// add player stat choice
+			obj_player.DexterityAdded = 1
+			// add player stat choice
 			obj_player.WisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Wild Intuition"
-				obj_player.Traits[1] = "Expert Handling"
-				obj_player.Traits[2] = "Primal Connection"
-				obj_player.Traits[3] = "The Bigger They Are"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Wild Intuition"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Expert Handling"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Primal Connection"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "The Bigger They Are"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Your Choice"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Your Choice"
-			}
+			ds_list_add(obj_player.TraitsList, "Wild Intuition", "Expert Handling", "Primal Connection", "The Bigger They Are")
 			
 			room_goto(rm_character_creation)
 			
@@ -694,31 +575,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 40
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Courier's Speed"
-				obj_player.Traits[1] = "Intuitive Motion"
-				obj_player.Traits[2] = "Orien's Grce"
-				obj_player.Traits[3] = "Shared Passage"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Courier's Speed"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Intuitive Motion"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Orien's Grace"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shared Passage"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Your Choice"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Your Choice"
-			}
+			ds_list_add(obj_player.TraitsList, "Courier's Speed", "Intuitive Motion", "Orien's Grace", "Shared Passage")
 			
 			room_goto(rm_character_creation)
 			
@@ -728,34 +585,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 43:
 		{
 			obj_player.CharacterRace = "Deneith Human"
-			obj_player.StrengthAdded = 1// add player stat choice
+			obj_player.StrengthAdded = 1
+			// add player stat choice
 			obj_player.WisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Sentinel's Intuition"
-				obj_player.Traits[1] = "Sentinel's Shield"
-				obj_player.Traits[2] = "Vigilant Guardian"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Sentinel's Intuition"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Sentinel's Shield"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Vigilant Guardian"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Your Choice"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Your Choice"
-			}
+			ds_list_add(obj_player.TraitsList, "Sentinel's Intuition", "Sentinel's Shield", "Vigilant Guardian")
 			
 			room_goto(rm_character_creation)
 			
@@ -765,77 +601,30 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 44:
 		{
 			obj_player.CharacterRace = "Dragonmarked Human"
-			obj_player.DexterityAdded = 1// add player stat choice
+			obj_player.DexterityAdded = 1
+			// add player stat choice
 			obj_player.WisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Hunter's Intuition"
-				obj_player.Traits[2] = "Imprint Prey"
-				obj_player.Traits[3] = "Nature's Voice"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Hunter's Intuition"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Imprint Prey"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Nature's Voice"
-			}
+			ds_list_add(obj_player.TraitsList, "Darkvision", "Hunter's Intuition", "Imprint Prey", "Nature's Voice")
 			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-				obj_player.Languages[1] = "Your Choice"
-				obj_player.Languages[2] = "Goblin"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Your Choice"
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Goblin"
-			}
+			ds_list_add(obj_player.LanguagesList, "Goblin")
 			
 			room_goto(rm_character_creation)
 			
 		}
 		break;
 		
+		//Shifter - 4 variants
 		case 45:
 		{
 			obj_player.CharacterRace = "Beasthide Shifter"
 			obj_player.DexterityAdded = 1
 			obj_player.ConstitutionAdded = 2
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Keen Senses"
-				obj_player.Traits[2] = "Shifting"
-				obj_player.Traits[3] = "Tough"
-				obj_player.Traits[3] = "Shifting Feature"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Keen Senses"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shifting"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Tough"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shifting Feature"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-			}
+			ds_list_add(obj_player.TraitsList, "Tough")
 			
 			room_goto(rm_character_creation)
 			
@@ -847,34 +636,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Longtooth Shifter"
 			obj_player.DexterityAdded = 1
 			obj_player.StrengthAdded = 2
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Keen Senses"
-				obj_player.Traits[2] = "Shifting"
-				obj_player.Traits[3] = "Fierce"
-				obj_player.Traits[4] = "Shifting Feature"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Keen Senses"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shifting"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Fierce"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shifting Feature"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-			}
+			ds_list_add(obj_player.TraitsList, "Fierce")
 			
 			room_goto(rm_character_creation)
 			
@@ -884,36 +648,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 47:
 		{
 			obj_player.CharacterRace = "Swiftstride Shifter"
-			obj_player.DexterityAdded = 2
+			obj_player.DexterityAdded = 1
 			obj_player.CharismaAdded = 1
-			obj_player.Size = "Medium"
 			obj_player.Speed = 35
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Keen Senses"
-				obj_player.Traits[2] = "Shifting"
-				obj_player.Traits[3] = "Graceful"
-				obj_player.Traits[4] = "Shifting Feature"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Keen Senses"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shifting"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Graceful"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shifting Feature"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-			}
+			ds_list_add(obj_player.TraitsList, "Graceful")
 			
 			room_goto(rm_character_creation)
 			
@@ -925,39 +664,54 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Wildhunt Shifter"
 			obj_player.DexterityAdded = 1
 			obj_player.WisdomAdded = 2
-			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !is_array(obj_player.Traits)
-			{
-				obj_player.Traits[0] = "Darkvision"
-				obj_player.Traits[1] = "Keen Senses"
-				obj_player.Traits[2] = "Shifting"
-				obj_player.Traits[3] = "Natural Tracker"
-				obj_player.Traits[4] = "Shifting Feature"
-				obj_player.Traits[5] = "Mark of the Scent"
-			}
-			else
-			{
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Darkvision"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Keen Senses"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shifting"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Tough"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Shifting Feature"
-				obj_player.Traits[array_length_1d(obj_player.Traits)+1] = "Mark of the Scent"
-			}
-			
-			if !is_array(obj_player.Languages)
-			{
-				obj_player.Languages[0] = "Common"
-			}
-			else
-			{
-				obj_player.Languages[array_length_1d(obj_player.Languages)+1] = "Common"
-			}
+			ds_list_add(obj_player.TraitsList, "Natural Tracker", "Mark of the Scent")
 			
 			room_goto(rm_character_creation)
 			
+		}
+		break;
+		
+		//Warforged - 3 variants
+		case 49:
+		{
+			//add player stat choice
+			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.TraitsList, "Specialized Design", "Integrated Tool")
+			
+			ds_list_add(obj_player.LanguagesList, "Your Choice")
+			
+			if !ds_exists(obj_player.ToolsList, ds_type_list)
+			{
+				obj_player.ToolsList = ds_list_create()
+			}
+			ds_list_add(obj_player.ToolsList, "Your Choice")
+			
+			room_goto(rm_character_creation)
+		}
+		break;
+		
+		case 50:
+		{
+			obj_player.StrengthAdded = 2
+			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.TraitsList = "Iron Fists", "Powerful Build")
+			
+			room_goto(rm_character_creation)
+		}
+		break;
+		
+		case 51:
+		{
+			obj_player.DexterityAdded = 2
+			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.TraitsList = "Swift", "Light Step")
+			
+			room_goto(rm_character_creation)
 		}
 		break;
 	}

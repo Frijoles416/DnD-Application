@@ -259,7 +259,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 10: //Gensai - 4 variants
+		case 10: //Genasi - 4 variants
 		{
 			obj_player.ConstitutionAdded = 2
 			obj_player.Speed = 30
@@ -411,6 +411,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 17: //Half-Orc - 2 variants
 		{
+			obj_player.StrengthAdded = 2
+			obj_player.ConstitutionAdded = 1
+			obj_player.Size = "Medium"
+			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.TraitsList, "Darkvision", "Menacing")
+			
+			ds_list_add(obj_player.LanguagesList, "Orc")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 37
@@ -447,8 +455,12 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		}
 		break;
 		
-		case 19: //Human - 5 variants
+		case 19: //Human - 6 variants
 		{
+			obj_player.Size = "Medium"
+			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.LanguagesList, "Your Choice")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 39
@@ -458,14 +470,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			variant3.image_index = 41
 			variant4 = instance_create_depth(x + 160, y + 32, 0,  obj_variant_menu)
 			variant4.image_index = 42
-			variant5 = instance_create_depth(x + 288, y, 0,  obj_variant_menu)
+			variant5 = instance_create_depth(x + 288, y - 32, 0, obj_variant_menu)
 			variant5.image_index = 43
+			variant6 = instance_create_depth(x + 288, y + 32, 0, obj_variant_menu)
+			variant6.image_index = 44
 		}
 		break;
 		
-		case 20: //Kalshtar
+		case 20: //Kalashtar
 		{//Add the Quirk
-			obj_player.CharacterRace = "Kalshtar"
+			obj_player.CharacterRace = "Kalashtar"
 			obj_player.WisdomAdded = 1
 			obj_player.CharismaAdded = 1
 			//Choice option needs to be added
@@ -586,15 +600,18 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 27: //Shifter - 4 variants
 		{
+			obj_player.Size = "Medium"
+			
+			ds_list_add(obj_player.TraitsList = "Darkvision", "Keen Senses", "Shifting", "Shifting Feature")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
-			variant1.image_index = 44
+			variant1.image_index = 45
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
-			variant2.image_index = 45
+			variant2.image_index = 46
 			variant3 = instance_create_depth(x + 160, y - 32, 0,  obj_variant_menu)
-			variant3.image_index = 46
+			variant3.image_index = 47
 			variant4 = instance_create_depth(x + 160, y + 32, 0,  obj_variant_menu)
-			variant4.image_index = 47
+			variant4.image_index = 48
 		}
 		break;
 		
@@ -602,7 +619,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Simic Hybrid"
 			obj_player.ConstitutionAdded = 2
-			//Player choice to add
+			//add player stat choice
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
@@ -639,6 +656,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 30: //Tiefling - 9 variants
 		{
 			obj_player.CharacterRace = "Tiefling"
+			//I am going to add the base traits here since I don't know where to get info on the variants
+			obj_player.IntelligenceAdded = 1
+			obj_player.CharismaAdded = 2
+			obj_player.Size = "Medium"
+			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.TraitsList = "Darkvision", "Hellish Resistance", "Infernal Legacy")
+			
+			ds_list_add(obj_player.LanguagesList = "Infernal")
+			
+			//Variants not created yet
 			
 			room_goto(rm_character_creation)
 		}
@@ -704,9 +732,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		break;
 		
-		case 34: //Vashino
+		case 34: //Viashino
 		{
-			obj_player.CharacterRace = "Vashino"
+			obj_player.CharacterRace = "Viashino"
 			obj_player.DexterityAdded = 2
 			obj_player.StrengthAdded = 1
 			obj_player.Size = "Medium"
@@ -724,8 +752,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 35: //Warforged - 3 variants
 		{
 			obj_player.CharacterRace = "Warforged"
+			obj_player.ConstitutionAdded = 1
+			obj_player.Size = "Medium"
 			
-			room_goto(rm_character_creation)
+			ds_list_add(obj_player.TraitsList = "Warforged Resilience", "Sentry's Rest", "Integrated Protection")
+			
+			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
+			variant1.image_index = 49
+			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
+			variant2.image_index = 50
+			variant3 = instance_create_depth(x + 160, y - 32, 0,  obj_variant_menu)
+			variant3.image_index = 51
 		}
 		break;
 	}
