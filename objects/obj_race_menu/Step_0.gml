@@ -9,8 +9,13 @@ if instance_exists(obj_variant_menu) exit
 //Clicking event
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 {
+	//pre-initialization
+	if !ds_exists(obj_player.TraitsList, ds_type_list) obj_player.TraitsList = ds_list_create()
+	
 	if !ds_exists(obj_player.LanguagesList, ds_type_list) obj_player.LanguagesList = ds_list_create()
+	
 	ds_list_add(obj_player.LanguagesList, "Common")
+	
 	switch(image_index)
 	{
 		case 0: //Aarakocra
@@ -23,16 +28,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Flight = true
 			obj_player.FlightSpeed = 50
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Flight", "Talons")
 			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Aarakocra", "Auran")
 			
 			if !ds_exists(obj_player.WeaponsList, ds_type_list)
@@ -52,16 +49,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Flight = false
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Celestial Resistance", "Healing Hands")
 			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Celestial")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
@@ -81,16 +70,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
 			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Goblin")
 			
 			room_goto(rm_character_creation)
@@ -105,16 +86,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 40
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Charge", "Hooves", "Equine Build", "Survivor", "Hybrid Nature - Humanoid/ Monstrosity")
 			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Sylvan")
 			
 			if !ds_exists(obj_player.WeaponsList, ds_type_list)
@@ -134,16 +107,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Change Appearance", "Changeling Instincts", "Unsettling Visage", "Divergent Persona")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Your Choice",  "Your Choice")
 			
 			if !ds_exists(obj_player.WeaponsList, ds_type_list)
@@ -201,16 +166,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Breath Weapon", "Breath Weapon", "Damage Resistance")
 			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Draconic")
 			
 			room_goto(rm_character_creation)
@@ -223,23 +180,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 25
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Dwarven Resilience", "Stonecunning")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Dwarvish")
-			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
-			ds_list_add(obj_player.WeaponsList, )
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 3
@@ -254,16 +197,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.DexterityAdded = 2
 			obj_player.Size = "Medium"
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Keen Senses", "Fey Ancestry")
 			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Elvish")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
@@ -300,16 +235,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Innate Spellcasting", "Magic Resistance", "Poison Immunity")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Abyssmal", "Draconic")
 			
 			room_goto(rm_character_creation)
@@ -324,16 +251,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Firbolg Magic", "Hidden Step", "Powerful Build", "Speech of Beast and Leaf")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Elvish", "Giant")
 			
 			room_goto(rm_character_creation)
@@ -342,16 +261,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 10: //Gensai - 4 variants
 		{
-			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 16
@@ -368,16 +277,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 11: //Gith - 2 variants
 		{
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
-			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 20
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -387,16 +286,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 12: //Gnome - 4 variants
 		{
-			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 22
@@ -417,16 +306,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Small"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Fury of the Small", "Nimble Escape")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Goblin")
 			
 			room_goto(rm_character_creation)
@@ -441,16 +322,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Powerful Build", "Mountain Born", "Natural Athlete", "Stone's Endurance")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Giant")
 			
 			room_goto(rm_character_creation)
@@ -459,16 +332,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 15: //Half-Elf - 7 variants
 		{
-			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 26
@@ -490,16 +353,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 16: //Halfling - 4 variants
 		{
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
-			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 33
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -513,16 +366,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 17: //Half-Orc - 2 variants
 		{
-			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 37
@@ -539,16 +382,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Savin' Face")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Goblin")
 			
 			if !ds_exists(obj_player.WeaponsList, ds_type_list)
@@ -569,16 +404,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 19: //Human - 5 variants
 		{
-			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 39
@@ -602,16 +427,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Severed from Dreams", "Dual Mind", "Mental Discipline", "Mind Link", "Psychic Glamour")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Quori", "Your Choice")
 			
 			room_goto(rm_character_creation)
@@ -626,16 +443,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Expert Forgery", "Kenku Training", "Mimicry")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Auran")
 			
 			room_goto(rm_character_creation)
@@ -650,16 +459,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Small"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Grovel, Cower, and Be", "Pack Tactics", "Sunlight Sensitivity")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Draconic")
 			
 			room_goto(rm_character_creation)
@@ -674,16 +475,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Bite", "Cunning Artisan", "Hold Breath", "Hunter's Lore", "Natural Armor", "Hungry Jaws")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Draconic")
 			
 			room_goto(rm_character_creation)
@@ -698,16 +491,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Powerful Build", "Loxodon Bravery", "Natural Armor", "Stonecunning", "Keen Smell")
 
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-			}
 			ds_list_add(obj_player.ToolsList, "Mason's Tools")
 			
 			room_goto(rm_character_creation)
@@ -722,16 +507,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Goring Rush", "Hammering Horns", "Menacing", "Hybrid Nature")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Minotaur")
 			
 			if !ds_exists(obj_player.WeaponsList, ds_type_list)
@@ -754,16 +531,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Aggressive", "Menacing", "Powerful Build")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Orc")
 			
 			room_goto(rm_character_creation)
@@ -772,16 +541,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 27: //Shifter - 4 variants
 		{
-			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 44
@@ -802,16 +561,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Animal Enhancement")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Elvish")
 			
 			room_goto(rm_character_creation)
@@ -826,16 +577,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Feline Agility", "Cat's Talent")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Your Choice")
 			
 			if !ds_exists(obj_player.WeaponsList, ds_type_list)
@@ -852,16 +595,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Tiefling"
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
-			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -874,16 +607,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Hold Breath", "Natural Armor", "Shell Defense", "Survival Instinct")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Aquan")
 			
 			if !ds_exists(obj_player.WeaponsList, ds_type_list)
@@ -908,16 +633,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Swim = true
 			obj_player.SwimSpeed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Control Air and Water", "Emissary of the Sea", "Guardian of the Depths")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Primordial")
 			
 			room_goto(rm_character_creation)
@@ -933,16 +650,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Vedalken Dispassion", "Tireless Precision")
 
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-			}
 			ds_list_add(obj_player.ToolsList, "Your Choice")
 			
 			room_goto(rm_character_creation)
@@ -958,16 +667,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
 			ds_list_add(obj_player.TraitsList, "Wiry Frame", "Bite", "Lashing Tail")
 
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			ds_list_add(obj_player.LanguagesList, "Draconic")
 			
 			room_goto(rm_character_creation)
@@ -978,16 +679,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 35: //Warforged - 3 variants
 		{
 			obj_player.CharacterRace = "Warforged"
-			
-			if !ds_exists(obj_player.TraitsList, ds_type_list)
-			{
-				obj_player.TraitsList = ds_list_create()
-			}
-			
-			if !ds_exists(obj_player.LanguagesList, ds_type_list)
-			{
-				obj_player.LanguagesList = ds_list_create()
-			}
 			
 			room_goto(rm_character_creation)
 		}
