@@ -261,7 +261,12 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 10: //Gensai - 4 variants
 		{
+			obj_player.ConstitutionAdded = 2
+			obj_player.Speed = 30
+			obj_player.Size = "Medium"
 			
+			ds_list_add(obj_player.LanguagesList, "Primordial")
+
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 16
 			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
@@ -276,6 +281,23 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 11: //Gith - 2 variants
 		{
+			obj_player.IntelligenceAdded = 1
+			obj_player.Speed = 30
+			obj_player.Size = "Medium"
+			
+			ds_list_add(obj_player.LanguagesList, "Gith", "Your Choice")
+			
+			if !ds_exists(obj_player.WeaponsList, ds_type_list)
+			{
+				obj_player.WeaponsList = ds_list_create()
+			}
+			ds_list_add(obj_player.WeaponsList, "Shortswords", "Longswords", "Greatswords")
+			
+			if !ds_exists(obj_player.ArmorList, ds_type_list)
+			{
+				obj_player.ArmorList = ds_list_create()
+			}
+			ds_list_add(obj_player.ArmorList, "Light Armor", "Medium Armor")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 20
@@ -286,6 +308,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 12: //Gnome - 4 variants
 		{
+			obj_player.IntelligenceAdded = 2
+			obj_player.Speed = 25
+			obj_player.Size = "Small"
+			
+			ds_list_add(obj_player.TraitsList, "Gnome Cunning")
+			
+			ds_list_add(obj_player.LanguagesList, "Gnomish")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 22
@@ -332,6 +361,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 15: //Half-Elf - 7 variants
 		{
+			obj_player.CharacterRace = "Half-Elf"
+			obj_player.CharismaAdded = 2
+			//additional player choice
+			obj_player.Size = "Medium"
+			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.TraitsList, "Darkvision", "Fey Ancestry")
+			
+			ds_list_add(obj_player.LanguagesList, "Elven", "Your Choice")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 26
@@ -352,6 +390,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 16: //Halfling - 4 variants
 		{
+			obj_player.DexterityAdded = 2
+			obj_player.Size = "Small"
+			obj_player.Speed = 25
+			
+			ds_list_add(obj_player.TraitsList = "Lucky", "Brave", "Nimble")
+			
+			ds_list_add(obj_player.LanguagesList = "Halfling")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 33
