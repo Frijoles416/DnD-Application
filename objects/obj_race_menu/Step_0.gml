@@ -394,9 +394,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Small"
 			obj_player.Speed = 25
 			
-			ds_list_add(obj_player.TraitsList = "Lucky", "Brave", "Nimble")
+			ds_list_add(obj_player.TraitsList, "Lucky", "Brave", "Nimble")
 			
-			ds_list_add(obj_player.LanguagesList = "Halfling")
+			ds_list_add(obj_player.LanguagesList, "Halfling")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 33
@@ -662,9 +662,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList = "Darkvision", "Hellish Resistance", "Infernal Legacy")
+			ds_list_add(obj_player.TraitsList, "Darkvision", "Hellish Resistance", "Infernal Legacy")
 			
-			ds_list_add(obj_player.LanguagesList = "Infernal")
+			ds_list_add(obj_player.LanguagesList, "Infernal")
 			
 			//Variants not created yet
 			
@@ -755,7 +755,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.ConstitutionAdded = 1
 			obj_player.Size = "Medium"
 			
-			ds_list_add(obj_player.TraitsList = "Warforged Resilience", "Sentry's Rest", "Integrated Protection")
+			ds_list_add(obj_player.TraitsList, "Warforged Resilience", "Sentry's Rest", "Integrated Protection")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 49

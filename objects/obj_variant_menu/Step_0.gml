@@ -698,7 +698,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.StrengthAdded = 2
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList = "Iron Fists", "Powerful Build")
+			ds_list_add(obj_player.TraitsList, "Iron Fists", "Powerful Build")
 			
 			room_goto(rm_character_creation)
 		}
@@ -709,7 +709,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.DexterityAdded = 2
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList = "Swift", "Light Step")
+			ds_list_add(obj_player.TraitsList, "Swift", "Light Step")
 			
 			room_goto(rm_character_creation)
 		}
