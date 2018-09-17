@@ -6,7 +6,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 	{
 		case 0:
 		{
-			obj_player.CharacterBackground = "Acolye"
+			obj_player.CharacterBackground = "Acolyte"
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -20,7 +20,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 2:
 		{
-			obj_player.CharacterBackground = "Archeologist"
+			obj_player.CharacterBackground = "Archaeologist"
 			room_goto(rm_character_creation)
 		}
 		
@@ -61,7 +61,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 8:
 		{
-			obj_player.CharacterBackground = "Criminal/ Sky"
+			obj_player.CharacterBackground = "Criminal/ Spy"
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -82,7 +82,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 11:
 		{
-			obj_player.CharacterBackground = "Far Traverler"
+			obj_player.CharacterBackground = "Far Traveler"
 			room_goto(rm_character_creation)
 		}
 		break;
