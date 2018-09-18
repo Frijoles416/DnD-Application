@@ -1,0 +1,1 @@
+//Race Trait Variable Creation
