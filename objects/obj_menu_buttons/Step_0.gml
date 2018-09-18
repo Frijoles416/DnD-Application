@@ -162,30 +162,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.FlightSpeed = ini_read_real("CharacterSave", "Character Flight Speed", 0)
 			obj_player.Swim = ini_read_real("CharacterSave", "Character Swim", 0)
 		
-			var m
-			for (m = 0; m < array_length_1d(obj_player.Traits); m += 1)
-			{
-				obj_player.Traits[m] = ini_read_string("CharacterSave", "Character Traits", 0)
-			}
-		
-			var m
-			for (m = 0; m < array_length_1d(obj_player.Languages); m += 1)
-			{
-				obj_player.Languages[m] = ini_read_string("CharacterSave", "Character Languages", 0)
-			}
-		
-			var m
-			for (m = 0; m < array_length_1d(obj_player.WeaponProfeciencies); m += 1)
-			{
-				obj_player.WeaponProfeciencies[m] = ini_read_string("CharacterSave", "Character Weapon Profeciencies", 0)
-			}
-		
-			var m
-			for (m = 0; m < array_length_1d(obj_player.ArmorProficiencies); m += 1)
-			{
-				obj_player.ArmorProficiencies[m] = ini_read_string("CharacterSave", "Character Armor Proficiencies", 0)
-			}
-		
 			ini_close()
 		
 		break;
