@@ -109,29 +109,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ini_write_string("CharacterSave", "Charcter Size", obj_player.Size)
 		
 		
-			var m
-			for (m = 0; m < array_length_1d(obj_player.Traits); m += 1)
-			{
-				ini_write_string("CharacterSave", "Character Traits", obj_player.Traits[m])
-			}
-		
-			var m
-			for (m = 0; m < array_length_1d(obj_player.Languages); m += 1)
-			{
-				ini_write_string("CharacterSave", "Character Languages", obj_player.Languages[m])
-			}
-		
-			var m
-			for (m = 0; m < array_length_1d(obj_player.WeaponProfeciencies); m += 1)
-			{
-				ini_write_string("CharacterSave", "Character Weapon Profeciencies", obj_player.WeaponProfeciencies[m])
-			}
-		
-			var m
-			for (m = 0; m < array_length_1d(obj_player.ArmorProficiencies); m += 1)
-			{
-				ini_write_string("CharacterSave", "Character Armor Proficiencies", obj_player.ArmorProficiencies[m])
-			}
 		
 			ini_close()
 		

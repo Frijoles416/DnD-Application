@@ -30,8 +30,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			obj_player.HasTalons = true
 			
-			if !ds_exists(Attacks, ds_type_list) Attacks = ds_list_create()
-			ds_list_add(Attacks, "Talons")
+			if !ds_exists(obj_player.Attacks, ds_type_list) obj_player.Attacks = ds_list_create()
+			ds_list_add(obj_player.Attacks, "Talons")
 			
 			
 			ds_list_add(obj_player.TraitsList, "Flight", "Talons")
