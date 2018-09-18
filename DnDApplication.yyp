@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "53cc3e5f-6a45-4127-b53f-a533c4a27ddf",
+            "Value": {
+                "id": "e1c450f6-8632-4035-96b0-0ddc18cd45ab",
+                "resourcePath": "objects\\obj_skill_selection\\obj_skill_selection.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5f9b0a61-f6bc-44a3-9a51-d00a3fdcf833",
             "Value": {
                 "id": "59ed5951-33d9-4168-a253-08379f3e5fa7",
@@ -500,6 +508,14 @@
                 "id": "6c3eaf05-379f-4200-83da-d2a0bbc3c0bc",
                 "resourcePath": "views\\d570049d-46cd-4e55-8ff3-c3a58d86f5c5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "da39445f-7a3a-40e4-87e9-4a588c9ed1e1",
+            "Value": {
+                "id": "4a9fea42-8891-42a6-af3c-ac1f032ec563",
+                "resourcePath": "sprites\\spr_skill_choices\\spr_skill_choices.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

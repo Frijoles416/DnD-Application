@@ -28,6 +28,12 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Flight = true
 			obj_player.FlightSpeed = 50
 			
+			obj_player.HasTalons = true
+			
+			if !ds_exists(Attacks, ds_type_list) Attacks = ds_list_create()
+			ds_list_add(Attacks, "Talons")
+			
+			
 			ds_list_add(obj_player.TraitsList, "Flight", "Talons")
 			
 			ds_list_add(obj_player.LanguagesList, "Aarakocra", "Auran")
@@ -69,6 +75,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.DexterityAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
+			
+			obj_player.UseDarkvision = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
 			

@@ -100,44 +100,9 @@ Cantrips = 7
 OtherMagic = 8
 
 
-//have to convert the strings to valuse to make them usable
-Traits = 0
-Languages = 0
-WeaponProfeciencies = 0
-ArmorProficiencies = 0
-
-//Check Traits
-TraitTalons = -1
-TraitDarkvision = -1
-TraitCelestialResistance = -1
-TraitHealingHands = -1
-TraitLightBearer = -1
-TraitLongLimbed = -1
-TraitPowerfulBuild = -1
-TraitSneaky = -1
-TraitSurpriseAttack = -1
-TraitHooves = -1
-TraitEquineBuild = -1
-TraitSurvivor = -1
-TraitHybridNature = -1
-TraitChangeAppearance = 1
-TraitUnsettlingVisage = -1
-TraitStonecunning = -1
-TraitFirbolgMagic = -1
-TraitHiddenStep = -1
-TraitSpeechofBeastandLeaf = -1
-TraitMinglewiththeWind = -1
-TraitEarthWalk = -1
-TraitMergewithStone = -1
-TraitFireResistance = -1
-TraitReachtotheBlaze = -1
-TraitAcidResistance = -1
-TraitCalltotheWave = -1
-TraitGithyankiPsionics = -1
-TraitGithzeraiPsionics = -1
-TraitMentalDiscipline = -1
-
 //Implementaion of Traits for Gameplay
+HasTalons = false
+
 UseDarkvision = false
 UseCelestialResistance = false
 UseHealingHands = false
