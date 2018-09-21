@@ -33,15 +33,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			if !ds_exists(obj_player.Attacks, ds_type_list) obj_player.Attacks = ds_list_create()
 			ds_list_add(obj_player.Attacks, "Talons")
 			
-			
 			ds_list_add(obj_player.TraitsList, "Flight", "Talons")
 			
 			ds_list_add(obj_player.LanguagesList, "Aarakocra", "Auran")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
+			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Unarmed Strikes")
 			
 			room_goto(rm_character_creation)
@@ -55,13 +51,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Flight = false
 			
+			obj_player.HasLightBearer = true
+			obj_player.HasHealingHands = true
 			obj_player.UseDarkvision = true
 			obj_player.UseCelestialResistance = true
-			obj_player.UseHealingHands = true
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Celestial Resistance", "Healing Hands")
+			ds_list_add(obj_player.TraitsList, "Darkvision", "Celestial Resistance", "Healing Hands", "Light Bearer")
 			
 			ds_list_add(obj_player.LanguagesList, "Celestial")
+			
+			if !ds_exists(obj_player.Cantrips, ds_type_list) obj_player.Cantrips = ds_list_create()
+			ds_list_add(obj_player.Cantrips, "Light")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
 			variant1.image_index = 0
@@ -84,7 +84,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.UseLongLimbed = true
 			obj_player.UsePowerfulBuild = true
 			obj_player.UseSneaky = true
-			obj_player.UseSurpriseAttack = true
+			obj_player.HasSurpriseAttack = true
 			
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
@@ -103,19 +103,21 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 40
 			
+			obj_player.HasCharge = true
 			obj_player.HasHooves = true
 			obj_player.UseEquineBuild = true
 			obj_player.UseSurvivor = true
+			obj_player.UseHybridNature = true
 			
 			ds_list_add(obj_player.TraitsList, "Charge", "Hooves", "Equine Build", "Survivor", "Hybrid Nature - Humanoid/ Monstrosity")
 			
 			ds_list_add(obj_player.LanguagesList, "Sylvan")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
+			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Hooves")
+			
+			if !ds_exists(obj_player.Attacks, ds_type_list) obj_player.Attacks = ds_list_create()
+			ds_list_add(obj_player.Attacks, "Hooves")
 			
 			room_goto(rm_character_creation)
 		}
@@ -128,14 +130,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.HasChangeAppearance = true
+			obj_player.HasUnsettlingVisage = true
+			obj_player.UseChangelingInstincts = true
+			obj_player.UseDivergentPersona = true
+			
+			
 			ds_list_add(obj_player.TraitsList, "Change Appearance", "Changeling Instincts", "Unsettling Visage", "Divergent Persona")
 
 			ds_list_add(obj_player.LanguagesList, "Your Choice",  "Your Choice")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
+			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Your Choice")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_tool_selection)
@@ -206,10 +211,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			obj_player.UseDarkvision = true
 			obj_player.UseStonecunning = true
+			obj_player.UseDwarvenResilience = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Dwarven Resilience", "Stonecunning")
 
 			ds_list_add(obj_player.LanguagesList, "Dwarvish")
+			
+			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
+			ds_list_add(obj_player.WeaponsList, "Battleaxe", "Handaxe", "Throwing Hammer", "Warhammer")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 3
@@ -225,6 +234,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			
 			obj_player.UseKeenSenses = true
+			obj_player.UseFeyAncestry = true
 			
 			ds_list_add(obj_player.TraitsList, "Keen Senses", "Fey Ancestry")
 			

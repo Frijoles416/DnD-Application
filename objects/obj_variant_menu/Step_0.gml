@@ -42,6 +42,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Hill Dwarf"
 			obj_player.WisdomAdded = 1
 			
+			obj_player.UseDwarvenToughness = true
+			
 			ds_list_add(obj_player.TraitsList, "Dwarven Toughness")
 			
 			room_goto(rm_character_creation)
@@ -53,10 +55,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Mountain Dwarf"
 			obj_player.StrengthAdded = 2
 			
-			if !ds_exists(obj_player.ArmorList, ds_type_list)
-			{
-				obj_player.ArmorList = ds_list_create()
-			}
+			if !ds_exists(obj_player.ArmorList, ds_type_list) obj_player.ArmorList = ds_list_create()
 			ds_list_add(obj.player.ArmorList, "Light", "Medium")
 			
 			room_goto(rm_character_creation)
@@ -70,14 +69,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.IntelligenceAdded = 1
 			obj_player.Speed = 30
 			
+			obj_player.UseDarkvision = true
+			obj_player.HasTrance = true
+			
+			if !ds_exists(obj_player.Cantrips, ds_type_list) obj_player.Cantrips = ds_list_create()
+			ds_list_add(obj_player.Cantrips, "Your Choice")
+			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Elf Weapon Training", "Cantrip")
 			
 			ds_list_add(obj_player.LanguagesList, "Your Choice")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
+			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Shortbow", "Longbow", "Shortswords", "Longswords")
 			
 			room_goto(rm_character_creation)
@@ -90,12 +92,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.WisdomAdded = 1
 			obj_player.Speed = 35
 			
+			obj_player.UseDarkvision = true
+			obj_player.HasTrance = true
+			obj_player.HasMaskOfTheWild = true
+			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Elf Weapon Training", "Fleet of Foot", "Mask of the Wild")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
+			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Shortbow", "Longbow", "Shortswords", "Longswords")
 			
 			room_goto(rm_character_creation)
@@ -107,13 +110,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Eladrin"
 			obj_player.IntelligenceAdded = 1
 			obj_player.Speed = 30
+
+			obj_player.HasFeyStep = true
+			obj_player.UseDarkvision = true
+			obj_player.HasTrance = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Fey Step")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
+			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Shortbow", "Longbow", "Shortswords", "Longswords")
 			
 			room_goto(rm_character_creation)
@@ -126,12 +130,18 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharismaAdded = 1
 			obj_player.Speed = 30
 			
+			obj_player.UseDarkvision = true
+			obj_player.HasTrance = true
+			obj_player.UseNaturalTalent = true
+			obj_player.UseGiftOfTheShadows = true
+			obj_player.HasSlipIntoShadow = true
+			
+			if !ds_exists(obj_player.Cantrips, ds_type_list) obj_player.Cantrips = ds_list_create()
+			ds_list_add(obj_player.Cantrips, "Minor Illusion")
+			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Natural Talent", "Gift of the Shadows", "Shape Shadows", "Slip into Shadow")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
+			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Shortbow", "Longbow", "Shortswords", "Longswords")
 			
 			room_goto(rm_character_creation)
