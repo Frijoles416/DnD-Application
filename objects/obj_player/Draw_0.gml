@@ -12,22 +12,22 @@ if room = rm_character_creation
 	draw_text(32, 112, "Experience : " + string(CharacterExperience))
 	draw_text(32, 128, "Background : " + string(CharacterBackground))
 
-	draw_text(32, 144, "Dexterity : " + string(CharacterDexterity))
+	draw_text(32, 144, "Dexterity : " + string(InitialDexterity))
 	draw_text(256, 144, " +  " + string(DexterityAdded))
 
-	draw_text(32, 160, "Constitution : " + string(CharacterConstitution))
+	draw_text(32, 160, "Constitution : " + string(InitialConstitution))
 	draw_text(256, 160, " +  " + string(ConstitutionAdded))
 
-	draw_text(32, 176, "Intelligence : " + string(CharacterIntelligence))
+	draw_text(32, 176, "Intelligence : " + string(InitialIntelligence))
 	draw_text(256, 176, " +  " + string(IntelligenceAdded))
 
-	draw_text(32, 192, "Wisdom : " + string(CharacterWisdom))
+	draw_text(32, 192, "Wisdom : " + string(InitialWisdom))
 	draw_text(256, 192, " +  " + string(WisdomAdded))
 
-	draw_text(32, 208, "Charisma : " + string(CharacterCharisma))
+	draw_text(32, 208, "Charisma : " + string(InitialCharisma))
 	draw_text(256, 208, " +  " + string(CharismaAdded))
 
-	draw_text(32, 224, "Strength : " + string(CharacterStrength))
+	draw_text(32, 224, "Strength : " + string(InitialStrength))
 	draw_text(256, 224, " +  " + string(StrengthAdded))
 
 	draw_text(32, 240, "Speed : " + string(Speed))

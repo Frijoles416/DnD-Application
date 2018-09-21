@@ -6,43 +6,43 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 	{
 		case 0:
 		{
-			if obj_player.CharacterStrength != 20
-			obj_player.CharacterStrength += 1 
+			if obj_player.InitialStrength != 20
+			obj_player.InitialStrength += 1 
 		}
 		break;
 		
 		case 1:
 		{
-			if obj_player.CharacterDexterity != 20
-			obj_player.CharacterDexterity += 1 
+			if obj_player.InitialDexterity != 20
+			obj_player.InitialDexterity += 1 
 		}
 		break;
 		
 		case 2:
 		{
-			if obj_player.CharacterConstitution != 20
-			obj_player.CharacterConstitution += 1 
+			if obj_player.InitialConstitution != 20
+			obj_player.InitialConstitution += 1 
 		}
 		break;
 		
 		case 3:
 		{
-			if obj_player.CharacterIntelligence != 20
-			obj_player.CharacterIntelligence += 1 
+			if obj_player.InitialIntelligence != 20
+			obj_player.InitialIntelligence += 1 
 		}
 		break;
 		
 		case 4:
 		{
-			if obj_player.CharacterWisdom != 20
-			obj_player.CharacterWisdom += 1 
+			if obj_player.InitialWisdom != 20
+			obj_player.InitialWisdom += 1 
 		}
 		break;
 		
 		case 5:
 		{
-			if obj_player.CharacterCharisma != 20
-			obj_player.CharacterCharisma += 1 
+			if obj_player.InitialCharisma != 20
+			obj_player.InitialCharisma += 1 
 		}
 		break;
 		
@@ -61,43 +61,43 @@ if mouse_check_button_released(mb_right) && place_meeting(x, y, obj_player)
 	{
 		case 0:
 		{
-			if obj_player.CharacterStrength != 0
-			obj_player.CharacterStrength -= 1 
+			if obj_player.InitialStrength != 0
+			obj_player.InitialStrength -= 1 
 		}
 		break;
 		
 		case 1:
 		{
-			if obj_player.CharacterDexterity != 0
-			obj_player.CharacterDexterity -= 1 
+			if obj_player.InitialDexterity != 0
+			obj_player.InitialDexterity -= 1 
 		}
 		break;
 		
 		case 2:
 		{
-			if obj_player.CharacterConstitution != 0
-			obj_player.CharacterConstitution -= 1 
+			if obj_player.InitialConstitution != 0
+			obj_player.InitialConstitution -= 1 
 		}
 		break;
 		
 		case 3:
 		{
-			if obj_player.CharacterIntelligence != 0
-			obj_player.CharacterIntelligence -= 1 
+			if obj_player.InitialIntelligence != 0
+			obj_player.InitialIntelligence -= 1 
 		}
 		break;
 		
 		case 4:
 		{
-			if obj_player.CharacterWisdom != 0
-			obj_player.CharacterWisdom -= 1 
+			if obj_player.InitialWisdom != 0
+			obj_player.InitialWisdom -= 1 
 		}
 		break;
 		
 		case 5:
 		{
-			if obj_player.CharacterCharisma != 0
-			obj_player.CharacterCharisma -= 1 
+			if obj_player.InitialCharisma != 0
+			obj_player.InitialCharisma -= 1 
 		}
 		break;
 		

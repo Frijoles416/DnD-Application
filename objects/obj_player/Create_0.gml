@@ -10,32 +10,32 @@ CharacterBackground = ""
 CharacterAlignment = ""
 CharacterExperience = 0
 
-CharacterStrength = 12
+InitialStrength = 12
 StrengthModifier = 0
 StrengthAdded = 0
 ActualStrength = 0
 
-CharacterDexterity = 12
+InitialDexterity = 12
 DexterityModifier = 0
 DexterityAdded = 0
 ActualDexterity = 0
 
-CharacterConstitution = 12
+InitialConstitution = 12
 ConstitutionModifier = 0
 ConstitutionAdded = 0
 ActualConstitution = 0
 
-CharacterIntelligence = 12
+InitialIntelligence = 12
 IntelligenceModifier = 0
 IntelligenceAdded = 0
 ActualIntelligence = 0
 
-CharacterWisdom = 12
+InitialWisdom = 12
 WisdomModifier = 0
 WisdomAdded = 0
 ActualWisdom = 0
 
-CharacterCharisma = 12
+InitialCharisma = 12
 CharismaModifier = 0
 CharismaAdded = 0
 ActualCharisma = 0
@@ -50,8 +50,8 @@ Size = ""
 //Class Variables
 
 HitDie = 0
-MaxHitpoints = 0
-HitpointsAdded = 0
+MaxHP = 0
+HPAdded = 0
 
 StrengthSavingThrow = false
 DexteritySavingThrow = false

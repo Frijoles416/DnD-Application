@@ -4,42 +4,42 @@ switch(image_index)
 {
 	case 0:
 	{
-		draw_text(x + 128, y, obj_player.CharacterStrength)
+		draw_text(x + 128, y, obj_player.InitialStrength)
 		
 	break;
 	}
 	
 	case 1:
 	{
-		draw_text(x + 128, y, obj_player.CharacterDexterity)
+		draw_text(x + 128, y, obj_player.InitialDexterity)
 		
 	break;
 	}
 	
 	case 2:
 	{
-		draw_text(x + 128, y, obj_player.CharacterConstitution)
+		draw_text(x + 128, y, obj_player.InitialConstitution)
 		
 	break;
 	}
 	
 	case 3:
 	{
-		draw_text(x + 128, y, obj_player.CharacterIntelligence)
+		draw_text(x + 128, y, obj_player.InitialIntelligence)
 		
 	break;
 	}
 	
 	case 4:
 	{
-		draw_text(x + 128, y, obj_player.CharacterWisdom)
+		draw_text(x + 128, y, obj_player.InitialWisdom)
 		
 	break;
 	}
 	
 	case 5:
 	{
-		draw_text(x + 128, y, obj_player.CharacterCharisma)
+		draw_text(x + 128, y, obj_player.InitialCharisma)
 		
 	break;
 	}
