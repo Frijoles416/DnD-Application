@@ -102,6 +102,8 @@ OtherMagic = 8
 
 //Implementaion of Traits for Gameplay
 HasTalons = false
+HasHooves = false
+HasBreathWeapon = false
 
 UseDarkvision = false
 UseCelestialResistance = false
@@ -122,3 +124,5 @@ UseEarthWalk = false
 UseFireResistance = false
 UseAcidResistance = false
 UseMentalDiscipline = false
+UseDamageResistance = false
+UseKeenSenses = false

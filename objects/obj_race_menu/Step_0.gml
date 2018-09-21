@@ -55,6 +55,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Flight = false
 			
+			obj_player.UseDarkvision = true
+			obj_player.UseCelestialResistance = true
+			obj_player.UseHealingHands = true
+			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Celestial Resistance", "Healing Hands")
 			
 			ds_list_add(obj_player.LanguagesList, "Celestial")
@@ -77,6 +81,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Speed = 30
 			
 			obj_player.UseDarkvision = true
+			obj_player.UseLongLimbed = true
+			obj_player.UsePowerfulBuild = true
+			obj_player.UseSneaky = true
+			obj_player.UseSurpriseAttack = true
+			
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
 			
@@ -93,6 +102,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.WisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 40
+			
+			obj_player.HasHooves = true
+			obj_player.UseEquineBuild = true
+			obj_player.UseSurvivor = true
 			
 			ds_list_add(obj_player.TraitsList, "Charge", "Hooves", "Equine Build", "Survivor", "Hybrid Nature - Humanoid/ Monstrosity")
 			
@@ -174,6 +187,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.HasBreathWeapon = true
+			obj_player.UseDamageResistance = true
+			
 			ds_list_add(obj_player.TraitsList, "Breath Weapon", "Breath Weapon", "Damage Resistance")
 			
 			ds_list_add(obj_player.LanguagesList, "Draconic")
@@ -187,6 +203,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.ConstitutionAdded = 2
 			obj_player.Size = "Medium"
 			obj_player.Speed = 25
+			
+			obj_player.UseDarkvision = true
+			obj_player.UseStonecunning = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Dwarven Resilience", "Stonecunning")
 
@@ -204,6 +223,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.DexterityAdded = 2
 			obj_player.Size = "Medium"
+			
+			obj_player.UseKeenSenses = true
 			
 			ds_list_add(obj_player.TraitsList, "Keen Senses", "Fey Ancestry")
 			

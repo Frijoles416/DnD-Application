@@ -22,7 +22,7 @@ ActualWisdom = (InitialWisdom + WisdomAdded)
 CharismaModifier = floor((InitialWisdom + WisdomAdded)/2 + 5)
 
 //Hitpoint Contol
-switch(CharacterRace)
+/*switch(CharacterRace)
 {
 	case "Barbarian":
 	MaxHP = 12 + ConstitutionModifer
