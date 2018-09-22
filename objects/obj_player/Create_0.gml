@@ -93,7 +93,6 @@ Attacks = ds_list_create()
 Cantrips = ds_list_create()
 OtherMagic = ds_list_create()
 
-
 // *** GAMEPLAY TRAITS AND ABILITIES *** //
 
 // *** ACTIVE EFFECTS *** //

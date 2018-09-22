@@ -7,7 +7,24 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 0:
 		{
 			obj_player.CharacterBackground = "Acolyte"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyInsight = true
+			obj_player.ProficiencyReligion = true
+			
+			ds_list_add(obj_player.InventoryList, "A holy symbol", "A prayer book", "Stick of incense", "Stick of incense", "Stick of incense", "Stick of incense", "Stick of incense", "Vestiments", "Common clohthes")
+			obj_player.GoldPieces += 15
+			obj_player.BackgroundFeatures = "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.\nYou might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
+			LanguagesChosen = 0
+			MaxLanguages = 2
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
+			
 		}
 		break;
 		
