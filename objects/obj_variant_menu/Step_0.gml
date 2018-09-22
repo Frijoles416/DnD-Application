@@ -42,8 +42,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Hill Dwarf"
 			obj_player.WisdomAdded = 1
 			
-			obj_player.UseDwarvenToughness = true
-			
 			ds_list_add(obj_player.TraitsList, "Dwarven Toughness")
 			
 			room_goto(rm_character_creation)
@@ -68,9 +66,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.IntelligenceAdded = 1
 			obj_player.Speed = 30
 			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
-			
 			ds_list_add(obj_player.Cantrips, "Your Choice")
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Elf Weapon Training", "Cantrip")
@@ -89,10 +84,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.WisdomAdded = 1
 			obj_player.Speed = 35
 			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
-			obj_player.HasMaskOfTheWild = true
-			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Elf Weapon Training", "Fleet of Foot", "Mask of the Wild")
 			
 			ds_list_add(obj_player.WeaponsList, "Shortbow", "Longbow", "Shortswords", "Longswords")
@@ -106,10 +97,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Eladrin"
 			obj_player.IntelligenceAdded = 1
 			obj_player.Speed = 30
-
-			obj_player.HasFeyStep = true
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Fey Step")
 			
@@ -124,12 +111,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Shadow Elf"
 			obj_player.CharismaAdded = 1
 			obj_player.Speed = 30
-			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
-			obj_player.UseNaturalTalent = true
-			obj_player.UseGiftOfTheShadows = true
-			obj_player.HasSlipIntoShadow = true
 			
 			ds_list_add(obj_player.Cantrips, "Minor Illusion")
 			
@@ -147,10 +128,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.IntelligenceAdded = 1
 			obj_player.Speed = 30
 			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
-			obj_player.UseAereniElf = true
-			
 			ds_list_add(obj_player.Cantrips, "Your Choice")
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Cantrip", "Aereni Elf")
@@ -166,9 +143,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Valenar Elf"
 			obj_player.IntelligenceAdded = 1
 			obj_player.Speed = 30
-			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
 			
 			ds_list_add(obj_player.Cantrips, "Your Choice")
 			
@@ -188,11 +162,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.WisdomAdded = 1
 			obj_player.Speed = 35
 			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
-			obj_player.UseAereniElf = true
-			obj_player.HasMaskOfTheWild = true
-			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Aereni Elf", "Fleet of Foot", "Mask of the Wild")
 			
 			room_goto(rm_character_creation)
@@ -204,10 +173,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Valenar Wood Elf"
 			obj_player.WisdomAdded = 1
 			obj_player.Speed = 35
-			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
-			obj_player.HasMaskOfTheWild = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Valenar Elf", "Fleet of Foot", "Mask of the Wild")
 			
@@ -225,10 +190,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Swim = true
 			obj_player.SwimSpeed = 30
 			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
-			obj_player.UseFriendOfTheSea = true
-			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Sea Elf Training", "Child of the Sea", "Friend of the Sea")
 			
 			ds_list_add(obj_player.LanguagesList, "Aquan")
@@ -245,11 +206,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.ConstitutionAdded = 1
 			obj_player.Speed = 30
 			
-			obj_player.UseDarkvision = true
-			obj_player.HasTrance = true
-			obj_player.UseNecroticResistance = true
-			obj_player.HasBlessingsOfTheRavenQueen = true
-			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Necrotic Resistance", "Blessings of the Raven Queen")
 			
 			room_goto(rm_character_creation)
@@ -261,10 +217,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Dark Elf"
 			obj_player.CharismaAdded = 1
 			obj_player.Speed = 30
-			
-			obj_player.UseSuperiorDarkvision = true
-			obj_player.HasTrance = true
-			obj_player.UseSunlightSensitivity = true
 			
 			ds_list_add(obj_player.Cantrips, "Dancing Lights")
 			
@@ -284,9 +236,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Air Genasi"
 			obj_player.DexterityAdded = 1
 			
-			obj_player.UseUnendingBreath = true
-			obj_player.HasMingleWithTheWind = true
-			
 			ds_list_add(obj_player.OtherMagic, "Levitate")
 			
 			ds_list_add(obj_player.TraitsList, "Unending Breath", "Mingle with the Wind")
@@ -299,10 +248,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 17:
 		{
 			obj_player.CharacterRace = "Earth Genasi"
-			obj_player.StrengthAdded = 1
-			
-			obj_player.UseEarthWalk = true
-			obj_player.HasMergeWithStone = true		
+			obj_player.StrengthAdded = 1		
 			
 			ds_list_add(obj_player.OtherMagic, "Pass Without Trace")
 			
@@ -318,9 +264,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Fire Genasi"
 			obj_player.IntelligenceAdded = 1
 			
-			obj_player.UseFireResistance = true
-			obj_player.HasReachToTheBlaze = true
-			
 			ds_list_add(obj_player.Cantrips, "Produce Flame")
 			
 			ds_list_add(obj_player.TraitsList, "Fire Resistance", "Reach to the Blaze")
@@ -334,10 +277,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Water Genasi"
 			obj_player.WisdomAdded = 1
-			
-			obj_player.UseAmphibious = true
-			obj_player.HasCallToTheWave = true
-			obj_player.UseAcidResistance = true
 			
 			ds_list_add(obj_player.Cantrips, "Shape Water")
 			
@@ -353,8 +292,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Githyanki"
 			obj_player.StrengthAdded = 2
-			
-			obj_player.HasGithyankiPsionics = true
 			
 			ds_list_add(obj_player.TraitsList, "Decadent Mastery", "Martial Prodigy", "Githyanki Psionics")
 			
@@ -376,9 +313,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Githzerai"
 			obj_player.WisdomAdded = 2
 			
-			obj_player.UseMentalDiscipline = true
-			obj_player.HasGithzeraiPsionics = true
-			
 			ds_list_add(obj_player.TraitsList, "Mental Discipline", "Githzerai Psionics")
 			
 			ds_list_add(obj_player.Cantrips, "Mage Hand")
@@ -394,9 +328,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Forest Gnome"
 			obj_player.DexterityAdded = 1
 			
-			obj_player.UseDarkvision = true
-			obj_player.UseSpeakWithSmallBeast = true
-			
 			ds_list_add(obj_player.Cantrips, "Minor Illusion")
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Natural Illusionist", "Speak with Small Beast")
@@ -410,10 +341,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Rock Gnome"
 			obj_player.ConstitutionAdded = 1
-			
-			obj_player.UseDarkvision = true
-			obj_player.UseArtificiersLore = true
-			obj_player.HasTinker = true
 			
 			ds_list_add(obj_player.ToolsList, "Tinker's Tools")
 			
@@ -429,9 +356,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Deep Gnome"
 			obj_player.DexterityAdded = 1
 			
-			obj_player.UseSuperiorDarkvision = true
-			obj_player.UseStoneCamouflage = true
-			
 			ds_list_add(obj_player.TraitsList, "Superior Darkvision", "Stone Camouflage")
 			
 			ds_list_add(obj_player.LanguagesList, "Undercommon")
@@ -445,9 +369,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Scribing Gnome"
 			obj_player.CharismaAdded = 1
-			
-			obj_player.UseGiftedScribe = true
-			obj_player.UseDarkvision = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Gifted Scribe", "Whispering Wind", "Scribe's Insight")
 			
@@ -467,6 +388,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		//Half-Elf - 7 variants
 		case 26:
 		{
+			obj_player.UseSkillVersatility = true
+			
 			ds_list_add(obj_player.TraitsList, "Skill Versatility")
 			
 			room_goto(rm_character_creation)
@@ -478,10 +401,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			ds_list_add(obj_player.TraitsList, "Elf Weapon Training")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
 			ds_list_add(obj_player.WeaponsList, "Longswords", "Shortswords", "Longbow", "Shortbow")
 			
 			room_goto(rm_character_creation)
@@ -491,6 +410,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 28:
 		{
+			ds_list_add(obj_player.Cantrips, "Your Choice")
+			
 			ds_list_add(obj_player.TraitsList, "Cantrip")
 			
 			room_goto(rm_character_creation)
@@ -500,6 +421,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 29:
 		{
+			obj_player.Speed = 35
+			
 			ds_list_add(obj_player.TraitsList, "Fleet of Foot")
 			
 			room_goto(rm_character_creation)
@@ -509,6 +432,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 30:
 		{
+			
 			ds_list_add(obj_player.TraitsList, "Mask of the Wild")
 			
 			room_goto(rm_character_creation)
@@ -518,6 +442,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 31:
 		{
+			ds_list_add(obj_player.Cantrips, "Dancing Lights")
+			
 			ds_list_add(obj_player.TraitsList, "Drow Magic")
 			
 			room_goto(rm_character_creation)
@@ -569,6 +495,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.TraitsList, "Innkeeper's Charm", "Ever Hospitable")
 			
+			ds_list_add(obj_player.Cantrips, "Friends", "Prestidigitation")
+			
 			room_goto(rm_character_creation)
 			
 		}
@@ -579,7 +507,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Jorasco Halfling"
 			obj_player.WisdomAdded = 1
 			
-			ds_list_add(obj_player.TraitsList, "Medical Intuition", "Healing Touch")
+			ds_list_add(obj_player.TraitsList, "Medical Intuition", "Healing Touch", "Jorasco's Blessing")
+			
+			ds_list_add(obj_player.Cantrips, "Spare the Dying")
 			
 			room_goto(rm_character_creation)
 			
@@ -632,6 +562,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			// add player stat choice
 			obj_player.IntelligenceAdded = 1
 			
+			ds_list_add(obj_player.Cantrips, "Mending")
+			
+			//tools list
+			
 			ds_list_add(obj_player.TraitsList, "Artisan's Intuition", "Maker's Gift", "Magecraft", "Spellsmith")
 			
 			room_goto(rm_character_creation)
@@ -645,8 +579,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.DexterityAdded = 1
 			// add player stat choice
 			obj_player.WisdomAdded = 1
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.OtherMagic, "Animal Friendship")
 			
 			ds_list_add(obj_player.TraitsList, "Wild Intuition", "Expert Handling", "Primal Connection", "The Bigger They Are")
 			
@@ -660,7 +594,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterRace = "Orien Human"
 			obj_player.DexterityAdded = 2
 			// add player stat choice
-			obj_player.Size = "Medium"
 			obj_player.Speed = 40
 			
 			ds_list_add(obj_player.TraitsList, "Courier's Speed", "Intuitive Motion", "Orien's Grace", "Shared Passage")
@@ -676,8 +609,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.StrengthAdded = 1
 			// add player stat choice
 			obj_player.WisdomAdded = 1
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
+			
+			ds_list_add(obj_player.Cantrips, "Blade Ward")
+			
+			ds_list_add(obj_player.OtherMagic, "Shield")
 			
 			ds_list_add(obj_player.TraitsList, "Sentinel's Intuition", "Sentinel's Shield", "Vigilant Guardian")
 			
@@ -692,8 +627,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.DexterityAdded = 1
 			// add player stat choice
 			obj_player.WisdomAdded = 1
-			obj_player.Size = "Medium"
-			obj_player.Speed = 30
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Hunter's Intuition", "Imprint Prey", "Nature's Voice")
 			
