@@ -1,7 +1,10 @@
 instance_create_depth(x, y, -1000, obj_player_cursor)
 
 ///Character Sheet Information
-//Race Variables
+
+// *** RACE VARIABLES *** //
+
+//Character Info
 CharacterName = ""
 CharacterClass = ""
 CharacterLevel = 1
@@ -10,35 +13,24 @@ CharacterBackground = ""
 CharacterAlignment = ""
 CharacterExperience = 0
 
+//Character Stats
 InitialStrength = 12
-StrengthModifier = 0
 StrengthAdded = 0
-ActualStrength = 0
 
 InitialDexterity = 12
-DexterityModifier = 0
 DexterityAdded = 0
-ActualDexterity = 0
 
 InitialConstitution = 12
-ConstitutionModifier = 0
 ConstitutionAdded = 0
-ActualConstitution = 0
 
 InitialIntelligence = 12
-IntelligenceModifier = 0
 IntelligenceAdded = 0
-ActualIntelligence = 0
 
 InitialWisdom = 12
-WisdomModifier = 0
 WisdomAdded = 0
-ActualWisdom = 0
 
 InitialCharisma = 12
-CharismaModifier = 0
 CharismaAdded = 0
-ActualCharisma = 0
 
 Speed = 0
 Flight = false
@@ -47,12 +39,13 @@ Swim = false
 SwimSpeed = 0
 Size = ""
 
-//Class Variables
+// *** CLASS VARIABLES *** //
 
 HitDie = 0
 MaxHP = 0
 HPAdded = 0
 
+//Saving Throws
 StrengthSavingThrow = false
 DexteritySavingThrow = false
 ConstitutionSavingThrow = false
@@ -60,6 +53,7 @@ IntelligenceSavingThrow = false
 WisdomSavingThrow = false
 CharismaSavingThrow = false
 
+//Skill Proficiencies
 ProficiencyAcrobatics = false
 ProficiencyAnimalHandling = false
 ProficiencyArcana = false
@@ -88,53 +82,106 @@ Ideals = ""
 Bonds = ""
 Flaws = ""
 
-//ds list
-TraitsList = 0
-LanguagesList = 1
-WeaponsList = 2
-ArmorList = 3
-ToolsList = 4
-InventoryList = 5
-Attacks = 6
-Cantrips = 7
-OtherMagic = 8
+//Data structure list initialization
+TraitsList = ds_list_create()
+LanguagesList = ds_list_create()
+WeaponsList = ds_list_create()
+ArmorList = ds_list_create()
+ToolsList = ds_list_create()
+InventoryList = ds_list_create()
+Attacks = ds_list_create()
+Cantrips = ds_list_create()
+OtherMagic = ds_list_create()
 
 
-//Implementaion of Traits for Gameplay
+// *** GAMEPLAY TRAITS AND ABILITIES *** //
+
+// *** ACTIVE EFFECTS *** //
+
+//Attacks
 HasTalons = false
 HasHooves = false
 HasBreathWeapon = false
+
 HasLightBearer = false 
 HasHealingHands = false
 HasSurpriseAttack = false 
+
+//Actions
 HasCharge = false
 HasChangeAppearance = false
 HasUnsettlingVisage = false
 HasMaskOfTheWild = false
 HasFeyStep = false
 HasSlipIntoShadow = false
+HasHealingHands = false
+HasBlessingsOfTheRavenQueen = false
+HasHiddenStep = false
+HasTinker = false
+HasFuryOfTheSmall = false
+HasNimbleEscape = false
+HasStonesEndurance = false
 
+//Cantrips, other magic
+HasLightBearer = false
+HasInnateSpellcasting = false
+HasMingleWithTheWind = false
+HasMergeWithStone = false
+HasReachToTheBlaze = false
+HasCallToTheWave = false
+
+// *** PASSIVE EFFECTS *** //
+
+//Sight, hearing, perception, etc.
 UseDarkvision = false
+UseSuperiorDarkvision = false
+UseSunlightSensitivity = false
+UseKeenSenses = false
+
+//Damage Resistance
 UseCelestialResistance = false
-UseLongLimbed = false
-UsePowerfulBuild = false
-UseSneaky = false
-UseEquineBuild = false
-UseSurvivor = false
-UseStonecunning = false
-UseHiddenStep = false
-UseSpeechofBeastandLeaf = false
-UseEarthWalk = false
+UseNecroticResistance = false
 UseFireResistance = false
 UseAcidResistance = false
-UseMentalDiscipline = false
 UseDamageResistance = false
-UseKeenSenses = false
+UseMagicResistance = false
+UsePoisonImmunity = false
+
+//Strength, Constitution, breathing, etc.
+UsePowerfulBuild = false
+UseEquineBuild = false
+UseDwarvenToughness = false
+UseAmphibious = false
+UseUnendingBreath = false
+UseMountainBorn = false
+
+//Movement, Dexterity
+UseSurpriseAttack = false
+UseEarthWalk = false
+UseSneaky = false
+UseLongLimbed = false
+UseStoneCamouflage = false
+
+//Skill-related
+UseSurvivor = false
+UseStonecunning = false
+UseArtificiersLore = false
+UseGiftedScribe = false
+UseNaturalAthlete = false
+
+//Saving throw-related
+UseGnomeCunning = false
+UseMentalDiscipline = false
+UseFeyAncestry = false
+
+//Other passive abilities
+UseSpeakWithSmallBeast = false
+UseSpeechofBeastandLeaf = false
 UseHybridNature = false
 UseChangelingInstincts = false
 UseDivergentPersona = false
 UseDwarvenResilience = false
-UseDwarvenToughness = false
-UseFeyAncestry = false
 UseNaturalTalent = false
 UseGiftOfTheShadows = false
+UseFriendOfTheSea = false
+UseAereniElf = false

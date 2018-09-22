@@ -1,4 +1,5 @@
 ///Draw character information
+
 draw_set_font(fnt_1)
 if room = rm_character_creation
 {
@@ -12,23 +13,29 @@ if room = rm_character_creation
 	draw_text(32, 112, "Experience : " + string(CharacterExperience))
 	draw_text(32, 128, "Background : " + string(CharacterBackground))
 
-	draw_text(32, 144, "Dexterity : " + string(InitialDexterity))
-	draw_text(256, 144, " +  " + string(DexterityAdded))
+	draw_text(32, 144, "Dexterity : " + string(ActualDexterity))
+	draw_text(200, 144, "(" + string(InitialDexterity) +  " + " +  string(DexterityAdded) + ")")
+	draw_text(296, 144, "Modifier : + " + string(DexterityModifier))
 
-	draw_text(32, 160, "Constitution : " + string(InitialConstitution))
-	draw_text(256, 160, " +  " + string(ConstitutionAdded))
+	draw_text(32, 160, "Constitution : " + string(ActualConstitution))
+	draw_text(200, 160, "(" + string(InitialConstitution) +  " + " +  string(ConstitutionAdded) + ")")
+	draw_text(296, 160, "Modifier : + " + string(ConstitutionModifier))
 
-	draw_text(32, 176, "Intelligence : " + string(InitialIntelligence))
-	draw_text(256, 176, " +  " + string(IntelligenceAdded))
+	draw_text(32, 176, "Intelligence : " + string(ActualIntelligence))
+	draw_text(200, 176, "(" + string(InitialIntelligence) +  " + " +  string(IntelligenceAdded) + ")")
+	draw_text(296, 176, "Modifier : + " + string(IntelligenceModifier))
 
-	draw_text(32, 192, "Wisdom : " + string(InitialWisdom))
-	draw_text(256, 192, " +  " + string(WisdomAdded))
+	draw_text(32, 192, "Wisdom : " + string(ActualWisdom))
+	draw_text(200, 192, "(" + string(InitialWisdom) +  " + " +  string(WisdomAdded) + ")")
+	draw_text(296, 192, "Modifier : + " + string(WisdomModifier))
 
-	draw_text(32, 208, "Charisma : " + string(InitialCharisma))
-	draw_text(256, 208, " +  " + string(CharismaAdded))
+	draw_text(32, 208, "Charisma : " + string(ActualCharisma))
+	draw_text(200, 208, "(" + string(InitialCharisma) +  " + " +  string(CharismaAdded) + ")")
+	draw_text(296, 208, "Modifier : + " + string(CharismaModifier))
 
-	draw_text(32, 224, "Strength : " + string(InitialStrength))
-	draw_text(256, 224, " +  " + string(StrengthAdded))
+	draw_text(32, 224, "Strength : " + string(ActualStrength))
+	draw_text(200, 224, "(" + string(InitialStrength) +  " + " +  string(StrengthAdded) + ")")
+	draw_text(296, 224, "Modifier : + " + string(StrengthModifier))
 
 	draw_text(32, 240, "Speed : " + string(Speed))
 	if Swim = true draw_text(32, 256, "Swim Speed : " + string(SwimSpeed)) 
@@ -47,7 +54,6 @@ if room = rm_character_creation
 		    draw_text(32, 320 + (m * 16), ds_list_find_value(TraitsList, m))
 		}
 	}
-	else draw_text(32, 304, "You have no traits")
 
 	if ds_exists(LanguagesList, ds_type_list) 
 	{
@@ -58,7 +64,6 @@ if room = rm_character_creation
 		    draw_text(244, 320 + (m * 16), ds_list_find_value(LanguagesList, m))
 		}
 	}
-	else draw_text(196, 304, "You know no languages")
 
 	if ds_exists(WeaponsList, ds_type_list) 
 	{
@@ -69,7 +74,6 @@ if room = rm_character_creation
 		    draw_text(416, 320 + (m * 16), ds_list_find_value(WeaponsList, m))
 		}
 	}
-	else draw_text(400, 304, "No Weapon Proficiencies")
 
 	if ds_exists(ArmorList, ds_type_list) 
 	{
@@ -80,7 +84,6 @@ if room = rm_character_creation
 		    draw_text(608, 320 + (m * 16), ds_list_find_value(ArmorList, m))
 		}
 	}
-	else draw_text(608, 304, "No Armor Proficencies")
 
 	if ds_exists(ToolsList, ds_type_list) 
 	{
@@ -91,5 +94,4 @@ if room = rm_character_creation
 		    draw_text(800, 320 + (m * 16), ds_list_find_value(ToolsList, m))
 		}
 	}
-	else draw_text(796, 304, "No Tool Proficiencies")
 }

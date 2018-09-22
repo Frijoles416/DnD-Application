@@ -19,7 +19,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Aarakocra"
 			obj_player.DexterityAdded = 2
-			obj_player.WisdomAdded = 2
+			obj_player.WisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 25
 			obj_player.Flight = true

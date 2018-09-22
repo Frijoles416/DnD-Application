@@ -1,4 +1,3 @@
-argument0 = modifier
-argument1 = actual
+actual = argument0
 
-modifier = floor((actual/2) - 5)
+floor((actual/2) - 5)

@@ -447,7 +447,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharismaAdded = 1
 			
 			obj_player.UseGiftedScribe = true
-			obj_player.UseDarkvision - true
+			obj_player.UseDarkvision = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Gifted Scribe", "Whispering Wind", "Scribe's Insight")
 			
