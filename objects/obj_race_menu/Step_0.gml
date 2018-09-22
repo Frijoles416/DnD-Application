@@ -10,9 +10,6 @@ if instance_exists(obj_variant_menu) exit
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 {
 	//pre-initialization
-	if !ds_exists(obj_player.TraitsList, ds_type_list) obj_player.TraitsList = ds_list_create()
-	
-	if !ds_exists(obj_player.LanguagesList, ds_type_list) obj_player.LanguagesList = ds_list_create()
 	
 	ds_list_add(obj_player.LanguagesList, "Common")
 	
@@ -30,14 +27,12 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			obj_player.HasTalons = true
 			
-			if !ds_exists(obj_player.Attacks, ds_type_list) obj_player.Attacks = ds_list_create()
 			ds_list_add(obj_player.Attacks, "Talons")
 			
 			ds_list_add(obj_player.TraitsList, "Flight", "Talons")
 			
 			ds_list_add(obj_player.LanguagesList, "Aarakocra", "Auran")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Unarmed Strikes")
 			
 			room_goto(rm_character_creation)
@@ -60,7 +55,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.LanguagesList, "Celestial")
 			
-			if !ds_exists(obj_player.Cantrips, ds_type_list) obj_player.Cantrips = ds_list_create()
 			ds_list_add(obj_player.Cantrips, "Light")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
@@ -84,7 +78,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.UseLongLimbed = true
 			obj_player.UsePowerfulBuild = true
 			obj_player.UseSneaky = true
-			obj_player.HasSurpriseAttack = true
+			obj_player.UseSurpriseAttack = true
 			
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
@@ -113,10 +107,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.LanguagesList, "Sylvan")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Hooves")
 			
-			if !ds_exists(obj_player.Attacks, ds_type_list) obj_player.Attacks = ds_list_create()
 			ds_list_add(obj_player.Attacks, "Hooves")
 			
 			room_goto(rm_character_creation)
@@ -140,7 +132,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 
 			ds_list_add(obj_player.LanguagesList, "Your Choice",  "Your Choice")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Your Choice")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_tool_selection)
@@ -217,7 +208,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 
 			ds_list_add(obj_player.LanguagesList, "Dwarvish")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
 			ds_list_add(obj_player.WeaponsList, "Battleaxe", "Handaxe", "Throwing Hammer", "Warhammer")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
@@ -274,6 +264,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.UseDarkvision = true
+			obj_player.UseMagicResistance = true
+			obj_player.UsePoisonImmunity = true
+			obj_player.HasInnateSpellcasting = true
+			
+			ds_list_add(obj_player.Cantrips, "Poison Spray")
+			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Innate Spellcasting", "Magic Resistance", "Poison Immunity")
 
 			ds_list_add(obj_player.LanguagesList, "Abyssmal", "Draconic")
@@ -289,6 +286,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.StrengthAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
+			
+			obj_player.HasFirbolgMagic = true
+			obj_player.HasHiddenStep = true
+			obj_player.UsePowerfulBuild = true
+			obj_player.UseSpeechofBeastandLeaf = true
 			
 			ds_list_add(obj_player.TraitsList, "Firbolg Magic", "Hidden Step", "Powerful Build", "Speech of Beast and Leaf")
 
@@ -324,19 +326,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Speed = 30
 			obj_player.Size = "Medium"
 			
-			ds_list_add(obj_player.LanguagesList, "Gith", "Your Choice")
-			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
-			ds_list_add(obj_player.WeaponsList, "Shortswords", "Longswords", "Greatswords")
-			
-			if !ds_exists(obj_player.ArmorList, ds_type_list)
-			{
-				obj_player.ArmorList = ds_list_create()
-			}
-			ds_list_add(obj_player.ArmorList, "Light Armor", "Medium Armor")
+			ds_list_add(obj_player.LanguagesList, "Gith")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 20
@@ -350,6 +340,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.IntelligenceAdded = 2
 			obj_player.Speed = 25
 			obj_player.Size = "Small"
+			
+			obj_player.UseGnomeCunning = true
 			
 			ds_list_add(obj_player.TraitsList, "Gnome Cunning")
 			
@@ -374,6 +366,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Small"
 			obj_player.Speed = 30
 			
+			obj_player.UseDarkvision = true
+			obj_player.HasFuryOfTheSmall = true
+			obj_player.HasNimbleEscape = true
+			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Fury of the Small", "Nimble Escape")
 
 			ds_list_add(obj_player.LanguagesList, "Goblin")
@@ -390,6 +386,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.UsePowerfulBuild = true
+			obj_player.UseMountainBorn = true
+			obj_player.HasStonesEndurance = true
+			obj_player.UseNaturalAthlete = true
+			
 			ds_list_add(obj_player.TraitsList, "Powerful Build", "Mountain Born", "Natural Athlete", "Stone's Endurance")
 
 			ds_list_add(obj_player.LanguagesList, "Giant")
@@ -405,6 +406,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			//additional player choice
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
+			
+			obj_player.UseDarkvision = true
+			obj_player.UseFeyAncestry = true
 			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Fey Ancestry")
 			
