@@ -1,5 +1,4 @@
 ///Draw character information
-if CharacterRace != "" draw_text(32, 32, HasTalons)
 
 draw_set_font(fnt_1)
 draw_set_halign(fa_left)

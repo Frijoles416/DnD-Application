@@ -82,6 +82,12 @@ ProficiencySurvival = false
 ArmorClass = 0
 DeathSaveSuccesses = 0
 DeathSaveFailures = 0
+Initiative = 0
+Inspiration = 0
+ProficiencyBonus = 0
+Perception = 0
+
+
 PersonalityTraits = ""
 Ideals = ""
 Bonds = ""
@@ -98,11 +104,8 @@ InventoryList = ds_list_create()
 Attacks = ds_list_create()
 Cantrips = ds_list_create()
 OtherMagic = ds_list_create()
-
-<<<<<<< HEAD
-=======
 /*
->>>>>>> 56ac63a74731c2fe9c4c9579ca1d630eaa1ccf7d
+
 // *** GAMEPLAY TRAITS AND ABILITIES *** //
 
 // *** ACTIVE EFFECTS *** //
