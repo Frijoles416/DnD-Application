@@ -103,10 +103,6 @@ HasTalons = false
 HasHooves = false
 HasBreathWeapon = false
 
-HasLightBearer = false 
-HasHealingHands = false
-HasSurpriseAttack = false 
-
 //Actions
 HasCharge = false
 HasChangeAppearance = false

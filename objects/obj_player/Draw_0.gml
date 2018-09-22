@@ -1,6 +1,7 @@
 ///Draw character information
 
 draw_set_font(fnt_1)
+draw_set_halign(fa_left)
 if room = rm_character_creation
 {
 	draw_self()
