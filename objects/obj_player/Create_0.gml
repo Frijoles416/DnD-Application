@@ -12,6 +12,11 @@ CharacterRace = ""
 CharacterBackground = ""
 CharacterAlignment = ""
 CharacterExperience = 0
+CopperPieces = 0
+SilverPieces = 0
+GoldPieces = 0
+ElectrumPieces = 0
+PlatinumPieces = 0
 
 //Character Stats
 InitialStrength = 12
@@ -81,6 +86,7 @@ PersonalityTraits = ""
 Ideals = ""
 Bonds = ""
 Flaws = ""
+BackgroundFeatures = ""
 
 //Data structure list initialization
 TraitsList = ds_list_create()
@@ -93,6 +99,10 @@ Attacks = ds_list_create()
 Cantrips = ds_list_create()
 OtherMagic = ds_list_create()
 
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> 56ac63a74731c2fe9c4c9579ca1d630eaa1ccf7d
 // *** GAMEPLAY TRAITS AND ABILITIES *** //
 
 // *** ACTIVE EFFECTS *** //
