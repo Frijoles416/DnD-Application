@@ -13,13 +13,13 @@ ActualConstitution = (InitialConstitution + ConstitutionAdded)
 ConsitutionModifier = floor((InitialConstitution + ConstitutionAdded)/2 - 5)
 
 ActualIntelligence = (InitialIntelligence + IntelligenceAdded)
-IntelligenceModifier = floor((InitialIntelligence + IntelligenceAdded)/2 + 5)
+IntelligenceModifier = floor((InitialIntelligence + IntelligenceAdded)/2 - 5)
 
 ActualCharisma = (InitialCharisma + CharismaAdded)
-CharismaModifier = floor((InitialCharisma + CharismaAdded)/2 + 5)
+CharismaModifier = floor((InitialCharisma + CharismaAdded)/2 - 5)
 
 ActualWisdom = (InitialWisdom + WisdomAdded)
-CharismaModifier = floor((InitialWisdom + WisdomAdded)/2 + 5)
+CharismaModifier = floor((InitialWisdom + WisdomAdded)/2 - 5)
 
 //Hitpoint Contol
 /*switch(CharacterRace)
