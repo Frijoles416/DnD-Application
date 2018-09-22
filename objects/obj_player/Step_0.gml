@@ -2,6 +2,14 @@ x = mouse_x
 y = mouse_y
 
 //Modifier Calculation
+//uh
+StatsStrength[set_stat_actual(ActualStrength, InitialStrength, StrengthAdded), set_stat_modifier(StrengthModifier, ActualStrength)] = 1
+StatsDexterity[set_stat_actual(ActualDexterity, InitialDexterity, DexterityAdded), set_stat_modifier(StrengthModifier, ActualStrength)] = 2
+Stats[actual, modifier] = 3
+Stats[actual, modifier] = 4
+Stats[actual, modifier] = 5
+
+
 
 ActualStrength = (InitialStrength + StrengthAdded)
 StrengthModifier = floor((InitialStrength + StrengthAdded)/2 - 5)
