@@ -645,6 +645,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.ConstitutionAdded = 2
 			obj_player.Speed = 30
 			
+			obj_player.ProficiencyAthletics = true
+			
 			ds_list_add(obj_player.TraitsList, "Tough")
 			
 			room_goto(rm_character_creation)
@@ -658,6 +660,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.DexterityAdded = 1
 			obj_player.StrengthAdded = 2
 			obj_player.Speed = 30
+			
+			obj_player.ProficiencyIntimidation = true
 			
 			ds_list_add(obj_player.TraitsList, "Fierce")
 			
@@ -673,6 +677,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharismaAdded = 1
 			obj_player.Speed = 35
 			
+			obj_player.ProficiencyAcrobatics = true
+			
 			ds_list_add(obj_player.TraitsList, "Graceful")
 			
 			room_goto(rm_character_creation)
@@ -687,6 +693,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.WisdomAdded = 2
 			obj_player.Speed = 30
 			
+			obj_player.ProficiencySurvival = true
+			
 			ds_list_add(obj_player.TraitsList, "Natural Tracker", "Mark of the Scent")
 			
 			room_goto(rm_character_creation)
@@ -697,6 +705,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		//Warforged - 3 variants
 		case 49:
 		{
+			obj_player.CharacterRace = "Warforged Envoy"
 			//add player stat choice
 			obj_player.Speed = 30
 			
@@ -704,10 +713,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.LanguagesList, "Your Choice")
 			
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-			}
 			ds_list_add(obj_player.ToolsList, "Your Choice")
 			
 			room_goto(rm_character_creation)
@@ -716,6 +721,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 50:
 		{
+			obj_player.CharacterRace = "Warforged Juggernaut"
 			obj_player.StrengthAdded = 2
 			obj_player.Speed = 30
 			
@@ -727,8 +733,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 51:
 		{
+			obj_player.CharacterRace = "Warforged Skirmisher"
 			obj_player.DexterityAdded = 2
-			obj_player.Speed = 30
+			obj_player.Speed = 35
 			
 			ds_list_add(obj_player.TraitsList, "Swift", "Light Step")
 			

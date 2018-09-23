@@ -83,6 +83,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 40
 			
+			obj_player.ProficiencySurvival = true
+			
 			ds_list_add(obj_player.TraitsList, "Charge", "Hooves", "Equine Build", "Survivor", "Hybrid Nature - Humanoid/ Monstrosity")
 			
 			ds_list_add(obj_player.LanguagesList, "Sylvan")
@@ -189,6 +191,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.DexterityAdded = 2
 			obj_player.Size = "Medium"
+			
+			obj_player.ProficiencyPerception = true
 			
 			ds_list_add(obj_player.TraitsList, "Keen Senses", "Fey Ancestry")
 			
@@ -334,6 +338,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.ProficiencyAthletics = true
+			
 			ds_list_add(obj_player.TraitsList, "Powerful Build", "Mountain Born", "Natural Athlete", "Stone's Endurance")
 
 			ds_list_add(obj_player.LanguagesList, "Giant")
@@ -467,6 +473,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 
 			ds_list_add(obj_player.LanguagesList, "Quori", "Your Choice")
 			
+			//add skill choice
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -482,6 +490,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ds_list_add(obj_player.TraitsList, "Expert Forgery", "Kenku Training", "Mimicry")
 
 			ds_list_add(obj_player.LanguagesList, "Auran")
+			
+			//add skill choice
 			
 			room_goto(rm_character_creation)
 		}
@@ -515,6 +525,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 
 			ds_list_add(obj_player.LanguagesList, "Draconic")
 			
+			ds_list_add(obj_player.Attacks, "Bite")
+			
+			//add skill choice
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -543,15 +557,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.ProficiencyIntimidation = true
+			
 			ds_list_add(obj_player.TraitsList, "Goring Rush", "Hammering Horns", "Menacing", "Hybrid Nature")
 
 			ds_list_add(obj_player.LanguagesList, "Minotaur")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
 			ds_list_add(obj_player.WeaponsList, "Horns")
+			
+			ds_list_add(obj_player.Attacks, "Horns")
 			
 			
 			room_goto(rm_character_creation)
@@ -567,6 +581,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.ProficiencyIntimidation = true
+			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Aggressive", "Menacing", "Powerful Build")
 
 			ds_list_add(obj_player.LanguagesList, "Orc")
@@ -578,6 +594,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 27: //Shifter - 4 variants
 		{
 			obj_player.Size = "Medium"
+			
+			obj_player.ProficiencyPerception = true
 			
 			ds_list_add(obj_player.TraitsList = "Darkvision", "Keen Senses", "Shifting", "Shifting Feature")
 			
@@ -616,15 +634,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.ProficiencyPerception = true
+			obj_player.ProficiencyStealth = true
+			
 			ds_list_add(obj_player.TraitsList, "Darkvision", "Feline Agility", "Cat's Talent")
 
 			ds_list_add(obj_player.LanguagesList, "Your Choice")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
 			ds_list_add(obj_player.WeaponsList, "Claws")
+			
+			ds_list_add(obj_player.Attacks, "Claws")
 			
 			room_goto(rm_character_creation)
 		}
@@ -643,6 +662,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.LanguagesList, "Infernal")
 			
+			ds_list_add(obj_player.Cantrips, "Thaumaturgy")
+			
 			//Variants not created yet
 			
 			room_goto(rm_character_creation)
@@ -657,15 +678,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			obj_player.ProficiencySurvival = true
+			
 			ds_list_add(obj_player.TraitsList, "Hold Breath", "Natural Armor", "Shell Defense", "Survival Instinct")
 
 			ds_list_add(obj_player.LanguagesList, "Aquan")
 			
-			if !ds_exists(obj_player.WeaponsList, ds_type_list)
-			{
-				obj_player.WeaponsList = ds_list_create()
-			}
 			ds_list_add(obj_player.WeaponsList, "Claws")
+			
+			ds_list_add(obj_player.Attacks, "Claws")
 			
 			
 			room_goto(rm_character_creation)
@@ -687,6 +708,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 
 			ds_list_add(obj_player.LanguagesList, "Primordial")
 			
+			ds_list_add(obj_player.OtherMagic, "Fog Cloud")
+			
 			room_goto(rm_character_creation)
 		}
 		
@@ -703,6 +726,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ds_list_add(obj_player.TraitsList, "Vedalken Dispassion", "Tireless Precision")
 
 			ds_list_add(obj_player.ToolsList, "Your Choice")
+			
+			//add skill choice
 			
 			room_goto(rm_character_creation)
 		}
@@ -721,6 +746,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 
 			ds_list_add(obj_player.LanguagesList, "Draconic")
 			
+			ds_list_add(obj_player.Attacks, "Bite")
+			
+			//add skill choice
+			
 			room_goto(rm_character_creation)
 		}	
 
@@ -728,7 +757,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 35: //Warforged - 3 variants
 		{
-			obj_player.CharacterRace = "Warforged"
 			obj_player.ConstitutionAdded = 1
 			obj_player.Size = "Medium"
 			

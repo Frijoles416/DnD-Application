@@ -106,7 +106,7 @@ Cantrips = ds_list_create()
 OtherMagic = ds_list_create()
 /*
 
-// *** GAMEPLAY TRAITS AND ABILITIES *** //
+// *** GAMEPLAY TRAITS AND ABILITIES *** // DEPRECATED
 
 // *** ACTIVE EFFECTS *** //
 
