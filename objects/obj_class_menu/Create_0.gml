@@ -1,3 +1,9 @@
 image_speed = 0
 SkillsChosen = 0
+ChosenInstru = 0
+ChosenCantrips = 0
+ChosenSpells = 0
 MaxSkills = 0
+MaxInstru = 0
+MaxCantrips = 0
+MaxSpells = 0

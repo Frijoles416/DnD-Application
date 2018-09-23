@@ -43,7 +43,31 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 1:
 		{
 			obj_player.CharacterClass = "Bard"
-			room_goto(rm_character_creation)
+			obj_player.HitDie = "1d8"
+			
+			ds_list_add(obj_player.ArmorList, "Light Armor")
+			ds_list_add(obj_player.WeaponsList, "Simple Weapons", "Hand Crossbows", "Longswords", "Rapiers", "Shortswords")
+			ds_list_add(obj_player.TraitsList, "Rage", "Unarmored Defense")
+			
+			MaxInstru = 2
+			
+			var i
+			var space = 32
+			var instru
+			for (var i = 0; i < 9; i += 1)
+			{
+				instru[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_instrument_choices)
+				instru[i].image_index = i
+			}
+			
+			ds_list_add(obj_player.InventoryList, "Leather Armor", "Dagger")
+			
+			obj_player.DexteritySavingThrow = true
+			obj_player.CharismaSavingThrow = true
+			
+			MaxCantrips = 2
+			MaxSpells = 2
+			
 		}
 		break;
 		

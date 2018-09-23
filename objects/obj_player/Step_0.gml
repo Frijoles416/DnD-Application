@@ -24,4 +24,8 @@ switch(CharacterRace)
 	case "Barbarian":
 	MaxHP = 12 + ConstitutionModifer
 	break;
+	
+	case "Bard":
+	MaxHP = 8 + ConstitutionModifer
+	break;
 }

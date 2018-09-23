@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "072e0868-3f58-4b54-9f62-b6569aa62a77",
+            "Value": {
+                "id": "b6e58909-efed-43b6-bbcc-ebc746416e56",
+                "resourcePath": "objects\\obj_instrument_choices\\obj_instrument_choices.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0a46e935-7d58-4418-b39c-4a965d5f8f48",
             "Value": {
                 "id": "c7da0f4e-8f41-493c-9d48-850233e14f3a",
@@ -84,6 +92,14 @@
                 "id": "58f8dc29-60b0-4768-93d9-b9665ba65005",
                 "resourcePath": "views\\12abe7ad-d66f-40c1-ab4d-e0d218ac0e8f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "132b39fb-609c-44b0-b056-4bf82be1719f",
+            "Value": {
+                "id": "8603f920-5a3f-4159-bf37-490b3ae609b6",
+                "resourcePath": "objects\\obj_bard_spells\\obj_bard_spells.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -271,6 +287,14 @@
             }
         },
         {
+            "Key": "415f44c5-cc83-4ba6-9fec-26bc1d227c19",
+            "Value": {
+                "id": "26f52568-7fdd-4a97-b206-01d59bfd74a4",
+                "resourcePath": "sprites\\spr_bard_spells\\spr_bard_spells.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4f487a78-3217-428c-ad76-3575799bd32c",
             "Value": {
                 "id": "afa544d7-8b63-4cc2-a89b-0c90092e09ad",
@@ -436,6 +460,14 @@
                 "id": "8172bff2-7829-4884-9bca-b1b13aa57c8d",
                 "resourcePath": "views\\a40b42c7-97d5-4fbc-93f3-ded3ec6b0057.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a7e02b81-7fe6-4a54-bc21-de5fde442962",
+            "Value": {
+                "id": "5c449be8-9516-465d-af47-484cd4e3a8e7",
+                "resourcePath": "sprites\\spr_musical_instruments\\spr_musical_instruments.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
