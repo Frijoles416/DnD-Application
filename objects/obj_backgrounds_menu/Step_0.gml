@@ -2,6 +2,11 @@ if global.pause exit
 
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 {
+	CanChooseArtisansTools = false //goes into proficiencies AND inventory
+	CanChooseInstrument = false //goes into proficiencies (and inventory if entertainer)
+	CanChooseGamingSet = false //goes into proficiencies only
+	CanChooseGladiatorWeapon = false //goes into proficiencies AND inventory
+	
 	switch(image_index)
 	{
 		case 0:
@@ -9,9 +14,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterBackground = "Acolyte"
 			obj_player.ProficiencyInsight = true
 			obj_player.ProficiencyReligion = true
+			obj_player.GoldPieces += 15
 			
 			ds_list_add(obj_player.InventoryList, "A holy symbol", "A prayer book", "Stick of incense", "Stick of incense", "Stick of incense", "Stick of incense", "Stick of incense", "Vestiments", "Common clohthes")
-			obj_player.GoldPieces += 15
+
 			obj_player.BackgroundFeatures = "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.\nYou might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
 			LanguagesChosen = 0
 			MaxLanguages = 2
@@ -83,7 +89,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Fine clothes", "Disguise Kit", "Tools of the con of your choice")
 			ds_list_add(obj_player.ToolsList, "Disguise Kit", "Forgery Kit")
-			//add some way to choose between the tools of the con
+			
 			
 			room_goto(rm_character_creation)
 		}
@@ -121,6 +127,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.BackgroundFeatures = "You always have free room and board in any place where shield dwarves or gold dwarves dwell, and the individuals in such a settlement might vie among themselves to determine who can offer you (and possibly your compatriots) the finest accommodations and assistance."
 			
 			ds_list_add(obj_player.InventoryList, "Artisan's tools of your choice", "Maker's mark chisel", "Traveler's clothes", "Gem worth 10 gp")
+			CanChooseArtisansTools = true
+			
 			if !ds_list_find_index(obj_player.LanguagesList, "Dwarvish") 
 			{
 				LanguagesChosen = 0
@@ -195,6 +203,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Crowbar", "Dark common clothes with hood")
 			ds_list_add(obj_player.ToolsList, "Gaming Set", "Thieves' Tools")
+			CanChooseGamingSet = true
 			
 			room_goto(rm_character_creation)
 		}
@@ -210,6 +219,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Musical instrument of your choice", "Favor of an admirer (love letter, lock of hair, or trinket)", "Costume")
 			ds_list_add(obj_player.ToolsList, "Disguise Kit", "Musical Instrument")
+			CanChooseInstrument = true
 			
 			room_goto(rm_character_creation)
 		}
@@ -247,7 +257,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.BackgroundFeatures = "Your accent, mannerisms, figures of speech, and perhaps even your appearance all mark you as foreign. Curious glances are directed your way wherever you go, which can be a nuisance, but you also gain the friendly interest of scholars and others intrigued by far-off lands, to say nothing of everyday folk who are eager to hear stories of your homeland. You can parley this attention into access to people and places you might not otherwise have, for you and your traveling companions. Noble lords, scholars, and merchant princes, to name a few, might be interested in hearing about your distant homeland and people."
 			
 			ds_list_add(obj_player.InventoryList, "Traveler's clothes", "Musical instrument OR Gaming set", "Poorly wrought maps from your homeland", "Small piece of jewelry worth 10 gp")
-			//choice of musical instrument or gaming set
+			CanChooseInstrument = true
+			CanChooseGamingSet = true
+			
 			LanguagesChosen = 0
 			MaxLanguages = 1
 			
@@ -281,8 +293,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 13:
 		{
 			obj_player.CharacterBackground = "Gladiator"
-			//this is actually just a variant of entertainer
-			//musical instrument gets replaced with an inexpensive, unusual weapon
+			obj_player.ProficiencyAcrobatics = true
+			obj_player.ProficiencyPerformance = true
+			obj_player.GoldPieces += 15
+			obj_player.BackgroundFeatures = "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
+			
+			ds_list_add(obj_player.InventoryList, "Unusual weapon of your choice", "Favor of an admirer (love letter, lock of hair, or trinket)", "Costume")
+			ds_list_add(obj_player.ToolsList, "Disguise Kit")
+			CanChooseGladiatorWeapon = true
 			
 			room_goto(rm_character_creation)
 		}
@@ -290,15 +308,39 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 14:
 		{
-			obj_player.CharacterBackground = "Guild Artisan/ Guild Merchant"
+			obj_player.CharacterBackground = "Guild Artisan"
 			obj_player.ProficiencyInsight = true
 			obj_player.ProficiencyPersuasion = true
 			obj_player.GoldPieces += 15
 			obj_player.BackgroundFeatures = "As an established and respected member of a guild, you can rely on certain benefits that membership provides. \nYour fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers. You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces."
 			
-			ds_list_add("Letter of introduction from guild", "Traveler's clothes")
-			//choice between artisan's tools and mule and cart
-			//tool choice between artisan's tool and navigator's tools
+			ds_list_add(obj_player.InventoryList, "Artisan's tools of your choice", "Letter of introduction from guild", "Traveler's clothes")
+			CanChooseArtisansTools = true
+			
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
+		}
+		break;
+		
+		case 14.5: //split from guild artisan for simplicity
+		{
+			obj_player.CharacterBackground = "Guild Merchant"
+			obj_player.ProficiencyInsight = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 15
+			obj_player.BackgroundFeatures = "As an established and respected member of a guild, you can rely on certain benefits that membership provides. \nYour fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers. You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces."
+			
+			ds_list_add(obj_player.InventoryList, "Letter of introduction from guild", "Traveler's clothes", "Mule", "Cart")
+			ds_list_add(obj_player.ToolsList, "Navigator's Tools")
 			LanguagesChosen = 0
 			MaxLanguages = 1
 			
@@ -384,7 +426,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
 			
 			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
-			ds_list_add(obj_player.ToolsList, "Gaming Set", "Land Vehicles"
+			ds_list_add(obj_player.ToolsList, "Gaming Set", "Land Vehicles")
+			CanChooseGamingSet = true
 			
 			room_goto(rm_character_creation)
 		}
@@ -475,6 +518,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
 			ds_list_add(obj_player.ToolsList, "Land Vehicles", "Gaming Set")
+			CanChooseGamingSet = true
 			
 			room_goto(rm_character_creation)
 		}
@@ -490,6 +534,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
 			ds_list_add(obj_player.ToolsList, "Disguise Kit", "Musical Instrument")
+			CanChooseInstrument = true
 			
 			room_goto(rm_character_creation)
 		}
@@ -504,7 +549,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
 			
 			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
-			ds_list_add(obj_player.ToolsList, "Calligrapher's Tools", "Forgery Kit"
+			ds_list_add(obj_player.ToolsList, "Calligrapher's Tools", "Forgery Kit")
 			
 			room_goto(rm_character_creation)
 		}
@@ -520,6 +565,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
 			ds_list_add(obj_player.ToolsList, "Theives' Tools", "Gaming Set")
+			CanChooseGamingSet = true
 			
 			room_goto(rm_character_creation)
 		}
@@ -535,6 +581,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
 			ds_list_add(obj_player.ToolsList, "Poisoner's Kit", "Musical Instrument")
+			CanChooseInstrument = true
 			
 			room_goto(rm_character_creation)
 		}

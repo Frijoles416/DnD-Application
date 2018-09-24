@@ -8,15 +8,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 	{
 		case 0:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Alchemist Supplies")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Alchemist Supplies")
-			}
+			ds_list_add(obj_player.ToolsList, "Alchemist's Supplies")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -28,15 +20,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 1:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Brewer's Supplies")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Brewer's Supplies")
-			}
+			ds_list_add(obj_player.ToolsList, "Brewer's Supplies")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -48,15 +32,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 2:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Calligrapher's Supplies")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Calligrapher's Supplies")
-			}
+			ds_list_add(obj_player.ToolsList, "Calligrapher's Supplies")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -68,15 +44,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 3:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Carpenter's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Carpenter's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Carpenter's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -88,15 +56,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 4:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Cartographer's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Cartographer's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Cartographer's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -108,15 +68,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 5:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Cobbler's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Cobbler's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Cobbler's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -128,15 +80,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 6:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Cook's Utensils")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Cook's Utensils")
-			}
+			ds_list_add(obj_player.ToolsList, "Cook's Utensils")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -148,15 +92,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 7:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Glassblower's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Glassblower's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Glassblower's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -168,15 +104,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 8:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Jeweler's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Jeweler's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Jeweler's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -188,15 +116,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 9:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Leatherworker's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Leatherworker's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Leatherworker's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -208,15 +128,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 10:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Mason's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Mason's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Mason's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -228,15 +140,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 11:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Painter's Supplies")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Painter's Supplies")
-			}
+			ds_list_add(obj_player.ToolsList, "Painter's Supplies")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -248,15 +152,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 12:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Potter's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Potter's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Potter's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -268,15 +164,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 13:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Smith's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Smith's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Smith's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -288,15 +176,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 14:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Tinkers's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Tinker's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Tinker's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -308,15 +188,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 15:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Weaver's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Weaver's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Weaver's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -328,15 +200,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 16:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Woodcarver's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Woodcarver's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Woodcarver's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -348,15 +212,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 17:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Navigator's Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Navigator's Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Navigator's Tools")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
@@ -368,15 +224,103 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 18:
 		{
-			if !ds_exists(obj_player.ToolsList, ds_type_list)
-			{
-				obj_player.ToolsList = ds_list_create()
-				ds_list_add(obj_player.ToolsList, "Theives' Tools")
-			}
-			else
-			{
-				ds_list_add(obj_player.ToolsList, "Theives' Tools")
-			}
+			ds_list_add(obj_player.ToolsList, "Theives' Tools")
+			
+			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
+			stat1.image_index = 1
+			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
+			stat2.image_index = 3
+			instance_destroy(obj_tool_selection)
+		}
+		break;
+		
+		case 19:
+		{
+			ds_list_add(obj_player.ToolsList, "Land Vehicles")
+			
+			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
+			stat1.image_index = 1
+			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
+			stat2.image_index = 3
+			instance_destroy(obj_tool_selection)
+		}
+		break;
+		
+		case 20:
+		{
+			ds_list_add(obj_player.ToolsList, "Sea/Air Vehicles")
+			
+			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
+			stat1.image_index = 1
+			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
+			stat2.image_index = 3
+			instance_destroy(obj_tool_selection)
+		}
+		break;
+		
+		case 21:
+		{
+			ds_list_add(obj_player.ToolsList, "Disguise Kit")
+			
+			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
+			stat1.image_index = 1
+			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
+			stat2.image_index = 3
+			instance_destroy(obj_tool_selection)
+		}
+		break;
+		
+		case 22:
+		{
+			ds_list_add(obj_player.ToolsList, "Forgery Kit")
+			
+			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
+			stat1.image_index = 1
+			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
+			stat2.image_index = 3
+			instance_destroy(obj_tool_selection)
+		}
+		break;
+		
+		case 23:
+		{
+			ds_list_add(obj_player.ToolsList, "Herbalism Kit")
+			
+			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
+			stat1.image_index = 1
+			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
+			stat2.image_index = 3
+			instance_destroy(obj_tool_selection)
+		}
+		break;
+		
+		case 24:
+		{
+			ds_list_add(obj_player.ToolsList, "Poisoner's Kit")
+			
+			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
+			stat1.image_index = 1
+			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
+			stat2.image_index = 3
+			instance_destroy(obj_tool_selection)
+		}
+		break;
+		
+		case 25:
+		{
+			ds_list_add(obj_player.ToolsList, "Gaming Set")
+			
+			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
+			stat1.image_index = 1
+			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
+			stat2.image_index = 3
+			instance_destroy(obj_tool_selection)
+		}
+		break;
+		
+		case 26:
+		{
+			ds_list_add(obj_player.ToolsList, "Musical Instrument")
 			
 			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
 			stat1.image_index = 1
