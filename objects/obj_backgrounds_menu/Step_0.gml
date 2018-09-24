@@ -244,7 +244,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.ProficiencyInsight = true
 			obj_player.ProficiencyPerception = true
 			obj_player.GoldPieces += 5
-			obj_player.BackgroundFeatures = ""
+			obj_player.BackgroundFeatures = "Your accent, mannerisms, figures of speech, and perhaps even your appearance all mark you as foreign. Curious glances are directed your way wherever you go, which can be a nuisance, but you also gain the friendly interest of scholars and others intrigued by far-off lands, to say nothing of everyday folk who are eager to hear stories of your homeland. You can parley this attention into access to people and places you might not otherwise have, for you and your traveling companions. Noble lords, scholars, and merchant princes, to name a few, might be interested in hearing about your distant homeland and people."
 			
 			ds_list_add(obj_player.InventoryList, "Traveler's clothes", "Musical instrument OR Gaming set", "Poorly wrought maps from your homeland", "Small piece of jewelry worth 10 gp")
 			//choice of musical instrument or gaming set
@@ -265,6 +265,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 12:
 		{
 			obj_player.CharacterBackground = "Folk Hero"
+			obj_player.ProficiencyAnimalHandling = true
+			obj_player.ProficiencySurvival = true
+			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you."
+			
+			ds_list_add(obj_player.InventoryList, "Shovel", "Iron Pot", "Common clothes")
+			//add choice of artisan's tools
+			ds_list_add(obj_player.ToolsList, "Land Vehicles")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -272,6 +281,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 13:
 		{
 			obj_player.CharacterBackground = "Gladiator"
+			//this is actually just a variant of entertainer
+			//musical instrument gets replaced with an inexpensive, unusual weapon
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -279,27 +291,86 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 14:
 		{
 			obj_player.CharacterBackground = "Guild Artisan/ Guild Merchant"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyInsight = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 15
+			obj_player.BackgroundFeatures = "As an established and respected member of a guild, you can rely on certain benefits that membership provides. \nYour fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers. You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces."
+			
+			ds_list_add("Letter of introduction from guild", "Traveler's clothes")
+			//choice between artisan's tools and mule and cart
+			//tool choice between artisan's tool and navigator's tools
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 15:
 		{
 			obj_player.CharacterBackground = "Haunted One"
-			room_goto(rm_character_creation)
+			//choice of 2 from arcana, investigation, religion, survival
+			obj_player.GoldPieces += 0
+			obj_player.BackgroundFeatures = "Those who look into your eyes can see that you have faced unimaginable horror and that you are no stranger to darkness. Though they might fear you, commoners will extend you every courtesy and do their utmost to help you. Unless you have shown yourself to be a danger to them, they will even take up arms to fight alongside you, should you find yourself facing an enemy alone."
+			
+			ds_list_add(obj_player.InventoryList, "Monster hunter's pack", "Gothic trinket")
+			//choice of one exotic language
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 16:
 		{
 			obj_player.CharacterBackground = "Hermit"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyMedicine = true
+			obj_player.ProficiencyReligion = true
+			obj_player.GoldPieces += 5
+			obj_player.BackgroundFeatures = "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the people who consigned you to exile, and hence the reason for your return to society. Work with your DM to determine the details of your discovery and its impact on the campaign."
+			
+			ds_list_add(obj_player.InventoryList, "Scroll case full of notes", "Winter blanket", "Common clothes", "Herbalism kit")
+			ds_list_add(obj_player.ToolsList, "Herbalism Kit")
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 17:
 		{
 			obj_player.CharacterBackground = "House Agent (Cannith)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Alchemist's Supplies", "Tinker's Tools")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -307,13 +378,29 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 18:
 		{
 			obj_player.CharacterBackground = "House Agent (Deneith)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Gaming Set", "Land Vehicles"
+			
 			room_goto(rm_character_creation)
 		}
 		break;
 		
 		case 19:
 		{
-			obj_player.CharacterBackground = "House Agent (Dhallanda)"
+			obj_player.CharacterBackground = "House Agent (Ghallanda)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Brewer's Supplies", "Cook's Utensils")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -321,6 +408,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 20:
 		{
 			obj_player.CharacterBackground = "House Agent (Jorasco)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			dS_list_add(obj_player.ToolsList, "Alchemist's Supplies", "Herbalism Kit")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -328,6 +423,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 21:
 		{
 			obj_player.CharacterBackground = "House Agent (Kundarak)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Tinker's Tools", "Thieves' Tools")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -335,6 +438,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 22:
 		{
 			obj_player.CharacterBackground = "House Agent (Lyrandar)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Sea/Air Vehicles", "Navigator's Tools")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -342,6 +453,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 23:
 		{
 			obj_player.CharacterBackground = "House Agent (Medani)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Thieves' Tools", "Disguise Kit")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -349,13 +468,29 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 24:
 		{
 			obj_player.CharacterBackground = "House Agent (Orien)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Land Vehicles", "Gaming Set")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
 		
 		case 25:
 		{
-			obj_player.CharacterBackground = "House Agent (Phiarlian)"
+			obj_player.CharacterBackground = "House Agent (Phiarlan)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Disguise Kit", "Musical Instrument")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -363,6 +498,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 26:
 		{
 			obj_player.CharacterBackground = "House Agent (Sivis)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Calligrapher's Tools", "Forgery Kit"
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -370,6 +513,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 27:
 		{
 			obj_player.CharacterBackground = "House Agent (Tharashk)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Theives' Tools", "Gaming Set")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -377,6 +528,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 28:
 		{
 			obj_player.CharacterBackground = "House Agent (Thuranni)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Poisoner's Kit", "Musical Instrument")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -384,6 +543,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 29:
 		{
 			obj_player.CharacterBackground = "House Agent (Vadalis)"
+			obj_player.ProficiencyInvestigation = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
+			ds_list_add(obj_player.ToolsList, "Land Vehicles", "Herbalism Kit")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
