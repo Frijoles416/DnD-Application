@@ -4,7 +4,7 @@ depth = -100
 
 if obj_backgrounds_menu.CanChooseArtisansTools = true
 {
-	//switch sprites for artisan's tools ONLY
+	//switch sprites for artisan's tools ONLY (indices 0-18)
 	if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 	{
 		/*

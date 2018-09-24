@@ -605,27 +605,90 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 30:
 		{
 			obj_player.CharacterBackground = "Inheritor"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencySurvival = true
+			//choice between arcana, history, religion
+			obj_player.GoldPieces += 15
+			obj_player.BackgroundFeatures = "Choose or randomly determine your inheritance from among the possibilities in the table below. Work with your Dungeon Master to come up with details: Why is your inheritance so important, and what is its full story? You might prefer for the DM to invent these details as part of the game, allowing you to learn more about your inheritance as your character does."
+			
+			ds_list_add(obj_player.InventoryList, "Inheritance", "Traveler's clothes", "Gaming set OR musical instrument")
+			CanChooseGamingSet = true
+			CanChooseInstrument = true
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 31:
 		{
 			obj_player.CharacterBackground = "Knight"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyHistory = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 25
+			obj_player.BackgroundFeatures = "You have the service of three retainers loyal to your family. One of your retainers is a noble who serves as your squire, aiding you in exchange for training on their own path to knighthood. Your retainers cna perform mundane tasks for you, but they do not fight for you, will not follow you into obviously dangerous areas (such as dungeons), and will leave if they are frequently endangered or abused."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "Signet ring", "Scroll of pedigree")
+			ds_list_add(obj_player.ToolsList, "Gaming Set")
+			CanChooseGamingSet = true
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 32:
 		{
 			obj_player.CharacterBackground = "Knight of the Order"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyPersuasion = true
+			//choice from arcana, history, nature, religion
+			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "You receive shelter and succor from members of your knightly order and those who are sympathetic to its aims. If your order is a religious one, you can gain aid from temples and other religious communities of your deity. Knights of civic orders can get help from the community- whether a lone settlement or a great nation that they serve, and knights of philosophical orders can find help from those they have aided in pursuit of their ideals, and those who share those ideals. This help comes in the form of shelter and meals, and healing when appropriate, as well as occasionally risky assistance, such as a band of local citizens rallying to aid a sorely pressed knight in a fight, or those who support the order helping to smuggle a knight out of town when he or she is being hunted unjustly."
+			
+			ds_list_add(obj_player.InventoryList, "Traveler's clothes", "Signet, banner or seal indicative of your rank")
+			CanChooseGamingSet = true
+			CanChooseInstrument = true //proficiency only
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 33:
 		{
 			obj_player.CharacterBackground = "Mercenary Veteran"
+			obj_player.ProficiencyAthletics = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "You know the mercenary life as only someone who has experienced it can. You are able to identify mercenary companies by their emblems, and you know a little about any such company, including the names and reputations of its commanders and leaders, and who has hired them recently. You can find the taverns and feast halls where mercenaries abide in any area, as long as you speak the language. You can find mercenary work between adventures sufficient to maintain a comfortable lifestyle."
+			
+			ds_list_add(obj_player.InventoryList, "Uniform of your company", "Insignia of your rank", "Gaming set of your choice")
+			ds_list_add(obj_player.ToolsList, "Gaming Set", "Land Vehicles")
+			CanChooseGamingSet = true //proficiency and inventory
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -633,20 +696,60 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 34:
 		{
 			obj_player.CharacterBackground = "Noble"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyHistory = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 25
+			obj_player.BackgroundFeatures = "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk and merchants make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to."
+			
+			ds_list_add(obj_player.InventoryList, "Fine Clothes", "Signet ring", "Scroll of pedigree")
+			ds_list_add(obj_player.ToolsList, "Gaming Set")
+			CanChooseGamingSet = true //proficiency only
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 35:
 		{
 			obj_player.CharacterBackground = "Outlander"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyAthletics = true
+			obj_player.ProficiencySurvival = true
+			obj_player.GoldPieces += 10
+			
+			ds_list_add(obj_player.InventoryList, "Staff", "Hunting trap", "Trophy from an animal you killed", "Traveler's clothes")
+			ds_list_add(obj_player.ToolsList, "Musical Instrument")
+			CanChooseInstrument = true //proficiency only
+			LanguagesChosen = 0
+			MaxLanguages = 1
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 36:
 		{
 			obj_player.CharacterBackground = "Pirate"
+			obj_player.ProficiencyAthletics = true
+			obj_player.ProficiencyPerception = true
+			obj_player.GoldPieces += 10
+			
+			
 			room_goto(rm_character_creation)
 		}
 		break;
