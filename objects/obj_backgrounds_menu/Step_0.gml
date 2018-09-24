@@ -748,6 +748,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.ProficiencyAthletics = true
 			obj_player.ProficiencyPerception = true
 			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "No matter where you go, people are afraid of you due to your reputation. When you are in a civilized settlement, you can get away with minor criminal offenses, such as refusing to pay for food at a tavern or breaking down doors at a local shop, since most people will not report your activity to the authorities."
+			
+			ds_list_add(obj_player.InventoryList, "Belaying pin", "50 ft of silk rope", "Lucky charm", "Common clothes")
+			ds_list_add(obj_player.ToolsList, "Navigator's tools", "Air/Water Vehicles")
 			
 			
 			room_goto(rm_character_creation)
@@ -757,13 +761,37 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 37:
 		{
 			obj_player.CharacterBackground = "Sage"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyArcana = true
+			obj_player.ProficiencyHistory = true
+			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
+			
+			ds_list_add(obj_player.InventoryList, "Bottle of black ink", "Quill", "Small knife", "Letter from a dead colleague with an unanswered question", "Common clothes")
+			LanguagesChosen = 0
+			MaxLanguages = 2
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 38:
 		{
 			obj_player.CharacterBackground = "Sailor"
+			obj_player.ProficiencyAthletics = true
+			obj_player.ProficiencyPerception = true
+			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you’re calling in a favor, you can’t be certain of a schedule or route that will meet your every need. Your Dungeon Master will determine how long it takes to get where you need to go. In return for your free passage, you and your companions are expected to assist the crew during the voyage."
+			
+			ds_list_add(obj_player.InventoryList, "Belaying pin", "50 ft of silk rope", "Lucky charm", "Common clothes")
+			ds_list_add(obj_player.ToolsList, "Navigator's tools", "Air/Water Vehicles")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -771,6 +799,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 39:
 		{
 			obj_player.CharacterBackground = "Soldier"
+			obj_player.ProficiencyAthletics = true
+			obj_player.ProficiencyIntimidation = true
+			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
+			
+			ds_list_add(obj_player.InventoryList, "Insignia of rank", "Trophy from a fallen enemy", "Gaming set of your choice", "Common clothes")
+			ds_list_add(obj_player.ToolsList, "Gaming Set", "Land Vehicles")
+			CanChooseGamingSet = true
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -778,6 +815,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 40:
 		{
 			obj_player.CharacterBackground = "Urban Bounty Hunter"
+			//choice of 2 from deception, insight, persuasion, stealth
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "You are in frequent contact with people in the segment of society that your chosen quarries move through. These people might be associated with the criminal underworld, the rough-and-tumble folk of the streets, or members of high society. This connection comes in the form of a contact in any city you visit, a person who provides information about the people and places of the local area."
+			
+			ds_list_add(obj_player.InventoryList, "Clothes appropriate for your duties")
+			//choice of 2 tool proficiencies from gaming set, musical instrument, thieves' tools
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -785,6 +829,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 41:
 		{
 			obj_player.CharacterBackground = "Urchin"
+			obj_player.ProficiencySleightofHand = true
+			obj_player.ProficiencyStealth = true
+			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow."
+			
+			ds_list_add(obj_player.InventoryList, "Small knife", "Map of the city you are from", "Pet mouse", "Token of your parents", "Common clothes")
+			ds_list_add(obj_player.ToolsList, "Disguise Kit", "Thieves' Tools")
+			
 			room_goto(rm_character_creation)
 		}
 		break;
@@ -792,14 +844,52 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 42:
 		{
 			obj_player.CharacterBackground = "Uthgardt Tribe Member"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyAthletics = true
+			obj_player.ProficiencySurvival = true
+			obj_player.GoldPieces += 10
+			obj_player.BackgroundFeatures = "You have an excellent knowledge of not only your tribe's territory, but also the terrain and natural resources of the rest of the North. You are familiar enough with any wilderness area that you find twice as much food and water as you normally would when you forage there. Additionally, you can call upon the hospitality of your people, and those folk allied with your tribe, often including members of druid circles, tribes of nomadic elves, the Harpers, and the priesthoods devoted to the gods of the First Circle."
+			
+			ds_list_add(obj_player.InventoryList, "Hunting trap", "Token of your tribal totem", "Traveler's clothes")
+			//tool proficiency choice of musical instrument OR artisan's tools
+			CanChooseArtisansTools = true
+			CanChooseInstrument = true
+			LanguagesChosen = 0
+			MaxLanguages = 2
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 		
 		case 43:
 		{
 			obj_player.CharacterBackground = "Waterdhavian Noble"
-			room_goto(rm_character_creation)
+			obj_player.ProficiencyHistory = true
+			obj_player.ProficiencyPersuasion = true
+			obj_player.GoldPieces += 20
+			obj_player.BackgroundFeatures = "While you are in Waterdeep or elsewhere in the North your house sees to your everyday needs. Your name and signet are sufficient to cover most of your expenses; the inns, taverns, and feast halls you frequent are glad to record your debt and send an accounting to your family's estate in Waterdeep to settle what you owe. This advantage enables you to live a comfortable lifestyle without having to pay 2 gp a day for it, or reduces the cost of a wealthy or aristocratic lifestyle by that amount. You may not maintain a less affluent lifestyle and use the difference as income-the benefit is a line of credit, not an actual monetary reward."
+			
+			ds_list_add(obj_player.InventoryList, "Fine clothes", "Signet ring or brooch", "Scroll of pedigree", "Skin of fine wine")
+			//tool proficiency choice of gaming set OR musical instrument
+			CanChooseGamingSet = true
+			CanChooseInstrument = true
+			LanguagesChosen = 0
+			MaxLanguages = 2
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
 		}
 		break;
 	}
