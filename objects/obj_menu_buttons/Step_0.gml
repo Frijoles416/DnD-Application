@@ -274,13 +274,5 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		break;
 		}
-		case 9: //sub-tool confirmation button
-		{
-			room_goto(rm_character_creation)
-			
-			instance_destroy(obj_backgrounds_menu.checkbox)
-			
-		}
-		break;
 	}
 }
