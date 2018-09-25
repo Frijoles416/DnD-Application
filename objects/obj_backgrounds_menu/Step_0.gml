@@ -129,6 +129,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ds_list_add(obj_player.InventoryList, "Artisan's tools of your choice", "Maker's mark chisel", "Traveler's clothes", "Gem worth 10 gp")
 			CanChooseArtisansTools = true
 			
+			var i
+			var space = 32
+			var tool
+			for (var i = 0; i < 16; i += 1)
+			{
+				tool[i] = instance_create_depth(764, 32 + (space * i), 0, obj_sub_tool_selection)
+				tool[i].image_index = i
+			}	
+			
 			if !ds_list_find_index(obj_player.LanguagesList, "Dwarvish") 
 			{
 				LanguagesChosen = 0
@@ -285,8 +294,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ds_list_add(obj_player.InventoryList, "Shovel", "Iron Pot", "Common clothes")
 			//add choice of artisan's tools
 			ds_list_add(obj_player.ToolsList, "Land Vehicles")
+			CanChooseArtisansTools = true
 			
-			room_goto(rm_character_creation)
+			var i
+			var space = 32
+			var tool
+			for (var i = 0; i < 16; i += 1)
+			{
+				tool[i] = instance_create_depth(764, 32 + (space * i), 0, obj_sub_tool_selection)
+				tool[i].image_index = i
+			}
 		}
 		break;
 		
@@ -316,6 +333,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Artisan's tools of your choice", "Letter of introduction from guild", "Traveler's clothes")
 			CanChooseArtisansTools = true
+			
+			var i
+			var space = 32
+			var tool
+			for (var i = 0; i < 16; i += 1)
+			{
+				tool[i] = instance_create_depth(764, 32 + (space * i), 0, obj_sub_tool_selection)
+				tool[i].image_index = i
+			}
 			
 			LanguagesChosen = 0
 			MaxLanguages = 1
@@ -852,6 +878,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ds_list_add(obj_player.InventoryList, "Hunting trap", "Token of your tribal totem", "Traveler's clothes")
 			//tool proficiency choice of musical instrument OR artisan's tools
 			CanChooseArtisansTools = true
+			
+			var i
+			var space = 32
+			var tool
+			for (var i = 0; i < 16; i += 1)
+			{
+				tool[i] = instance_create_depth(764, 32 + (space * i), 0, obj_sub_tool_selection)
+				tool[i].image_index = i
+			}
+			
 			CanChooseInstrument = true
 			LanguagesChosen = 0
 			MaxLanguages = 2

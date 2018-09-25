@@ -455,6 +455,14 @@
             }
         },
         {
+            "Key": "9b86f8c5-86ec-40ba-8d93-893c437d0cf4",
+            "Value": {
+                "id": "21720b3c-3b5e-4728-9e53-65004ccf9ad6",
+                "resourcePath": "objects\\obj_checkbox_marker\\obj_checkbox_marker.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a282eea3-2eba-4d3e-9769-0272480da141",
             "Value": {
                 "id": "a7bc5903-916e-4593-ad20-f6df0e151707",
@@ -492,6 +500,14 @@
                 "id": "eda8cac0-d18f-4e14-b0fa-d66fc4fdbac1",
                 "resourcePath": "views\\ac54280e-f897-4ab6-b2b5-662ec5ac877b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b2e9d594-e415-4ae8-a6b2-2fa39e25a881",
+            "Value": {
+                "id": "6a4dc7ba-216c-4a1e-82d5-bfa4d3bae562",
+                "resourcePath": "sprites\\spr_checkbox_marker\\spr_checkbox_marker.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
