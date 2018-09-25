@@ -10,7 +10,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Alchemist's Supplies"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 			
 		}
 		break;
@@ -19,7 +19,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Brewer's Supplies"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -27,7 +27,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Calligrapher's Supplies"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -35,7 +35,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Carpenter's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -43,7 +43,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Cartographer's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -51,7 +51,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Cobbler's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -59,7 +59,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Cook's Utensils"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -67,7 +67,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Glassblower's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -75,7 +75,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Jeweler's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -83,7 +83,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Leatherworker's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -91,7 +91,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Mason's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -99,7 +99,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Painter's Supplies"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -107,7 +107,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Potter's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -115,7 +115,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Smith's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 
@@ -123,7 +123,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Tinker's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -131,7 +131,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Weaver's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
@@ -139,7 +139,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			tool = "Woodcarver's Tools"
 			obj_checkbox_marker.depth = -200
-			obj_checkbox_marker.y = (16 + 32*image_index)
+			obj_checkbox_marker.y = (16 + 16*image_index)
 		}
 		break;
 		
