@@ -2,10 +2,10 @@ if global.pause exit
 
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 {
-	CanChooseArtisansTools = false //goes into proficiencies AND inventory
-	CanChooseInstrument = false //goes into proficiencies (and inventory if entertainer)
-	CanChooseGamingSet = false //goes into proficiencies only
-	CanChooseGladiatorWeapon = false //goes into proficiencies AND inventory
+	CanChooseArtisansTools = false
+	CanChooseInstrument = false
+	CanChooseGamingSet = false
+	CanChooseGladiatorWeapon = false
 	
 	switch(image_index)
 	{
@@ -457,7 +457,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.BackgroundFeatures = "As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house."
 			
 			ds_list_add(obj_player.InventoryList, "Fine clothes", "House signet ring", "ID papers")
-			dS_list_add(obj_player.ToolsList, "Alchemist's Supplies", "Herbalism Kit")
+			ds_list_add(obj_player.ToolsList, "Alchemist's Supplies", "Herbalism Kit")
 			
 			room_goto(rm_character_creation)
 		}
