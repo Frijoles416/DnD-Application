@@ -271,8 +271,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Swim = ini_read_real("CharacterSave", "Character Swim", 0)
 		
 			ini_close()
-		
-		break;
 		}
+		break;
 	}
 }

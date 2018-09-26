@@ -130,9 +130,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			CanChooseArtisansTools = true
 			
 			var i
-			var space = 16
+			var space = 20
 			var tool
-			for (var i = 0; i < 17; i += 1)
+			for (var i = 0; i < 18; i += 1)
 			{
 				tool[i] = instance_create_depth(764, 16 + (space * i), 0, obj_sub_tool_selection)
 				tool[i].image_index = i
@@ -297,9 +297,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			CanChooseArtisansTools = true
 			
 			var i
-			var space = 16
+			var space = 20
 			var tool
-			for (var i = 0; i < 16; i += 1)
+			for (var i = 0; i < 18; i += 1)
 			{
 				tool[i] = instance_create_depth(764, 16 + (space * i), 0, obj_sub_tool_selection)
 				tool[i].image_index = i
@@ -335,9 +335,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			CanChooseArtisansTools = true
 			
 			var i
-			var space = 16
+			var space = 20
 			var tool
-			for (var i = 0; i < 17; i += 1)
+			for (var i = 0; i < 18; i += 1)
 			{
 				tool[i] = instance_create_depth(764, 16 + (space * i), 0, obj_sub_tool_selection)
 				tool[i].image_index = i
@@ -880,9 +880,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			CanChooseArtisansTools = true
 			
 			var i
-			var space = 16
+			var space = 20
 			var tool
-			for (var i = 0; i < 17; i += 1)
+			for (var i = 0; i < 18; i += 1)
 			{
 				tool[i] = instance_create_depth(764, 16 + (space * i), 0, obj_sub_tool_selection)
 				tool[i].image_index = i
