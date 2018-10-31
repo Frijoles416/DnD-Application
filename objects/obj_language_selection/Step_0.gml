@@ -2,10 +2,19 @@ if global.pause exit
 
 depth = -100
 
-if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
+if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !selected
 {
+	selected = true
 	obj_backgrounds_menu.LanguagesChosen += 1
-		if obj_backgrounds_menu.LanguagesChosen = obj_backgrounds_menu.MaxLanguages room_goto(rm_character_creation)
+	if obj_backgrounds_menu.LanguagesChosen = obj_backgrounds_menu.MaxLanguages 
+	{
+		if !instance_exists(obj_tool_selection)
+		{
+			room_goto(rm_character_creation)
+		}
+		else instance_destroy(obj_language_selection)
+	}
+		
 		
 	switch(image_index)
 	{

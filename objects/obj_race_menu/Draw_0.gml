@@ -3,9 +3,18 @@ if obj_player.x < 492 var side = 0
 else var side = 1
 
 
+if selected
+{
+	draw_set_color(c_white)
+	draw_set_alpha(.5)
+	draw_rectangle(x, y, sprite_width, sprite_height, false)
+	draw_set_alpha(1)
+}
+
+
 draw_self()
 
-if instance_exists(obj_variant_menu) exit
+/*if instance_exists(obj_variant_menu) exit
 
 if place_meeting(x, y, obj_player)
 {

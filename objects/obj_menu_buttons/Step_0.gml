@@ -8,13 +8,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 	{
 		case 0:
 			{
+				
+				//Runs the alarm that will create selection based Data Structures if they have been destroyed
+				obj_player.alarm[0] = 1
+				
 				obj_player.CharacterRace = ""
-				obj_player.WisdomAdded = 0
-				obj_player.CharismaAdded = 0
-				obj_player.StrengthAdded = 0
-				obj_player.IntelligenceAdded = 0
-				obj_player.ConstitutionAdded = 0
-				obj_player.DexterityAdded = 0
+				obj_player.RaceWisdomAdded = 0
+				obj_player.RaceCharismaAdded = 0
+				obj_player.RaceStrengthAdded = 0
+				obj_player.RaceIntelligenceAdded = 0
+				obj_player.RaceConstitutionAdded = 0
+				obj_player.RaceDexterityAdded = 0
 				
 				obj_player.Size = ""
 				obj_player.Speed = 0
@@ -23,11 +27,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.Swim = false
 				obj_player.SwimSpeed = 0
 				
-				ds_list_clear(obj_player.TraitsList)
-				ds_list_clear(obj_player.LanguagesList)
-				ds_list_clear(obj_player.WeaponsList)
-				ds_list_clear(obj_player.ArmorList)
-				ds_list_clear(obj_player.ToolsList)
+				ds_list_clear(obj_player.RaceTraitsList)
+				ds_list_clear(obj_player.RaceLanguagesList)
+				ds_list_clear(obj_player.RaceWeaponsList)
+				ds_list_clear(obj_player.RaceArmorList)
+				ds_list_clear(obj_player.RaceToolsList)
 				
 				room_goto(rm_race_selection)
 			}
@@ -65,8 +69,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 6:
 		{
-			obj_player.CharacterName = get_string("Enter Character Name", "Jimbothan")
+			obj_player.CharacterName = get_string("Enter Character Name", "Jimbothyithan")
 		}
+		break;
 		
 		case 7:
 		{
@@ -273,6 +278,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ini_close()
 		
 		break;
+		}
+		
+		case 9:
+		{
+			room_goto(rm_character_creation)
 		}
 	}
 }

@@ -1,4 +1,5 @@
-instance_create_depth(x, y, -1000, obj_player_cursor)
+//instance_create_depth(x, y, -1000, obj_player_cursor)
+cursor_sprite = spr_cursor
 
 ///Character Sheet Information
 
@@ -20,22 +21,28 @@ PlatinumPieces = 0
 
 //Character Stats
 InitialStrength = 12
-StrengthAdded = 0
+RaceStrengthAdded = 0
+ClassStrengthAdded = 0
 
 InitialDexterity = 12
-DexterityAdded = 0
+RaceDexterityAdded = 0
+ClassDexterityAdded = 0
 
 InitialConstitution = 12
-ConstitutionAdded = 0
+RaceConstitutionAdded = 0
+ClassConstitutionAdded = 0
 
 InitialIntelligence = 12
-IntelligenceAdded = 0
+RaceIntelligenceAdded = 0
+ClassIntelligenceAdded = 0
 
 InitialWisdom = 12
-WisdomAdded = 0
+RaceWisdomAdded = 0
+ClassWisdomAdded = 0
 
 InitialCharisma = 12
-CharismaAdded = 0
+RaceCharismaAdded = 0
+ClassCharismaAdded = 0
 
 Speed = 0
 Flight = false
@@ -94,6 +101,31 @@ Bonds = ""
 Flaws = ""
 BackgroundFeatures = ""
 
+//Character Creation Specific Data Structure creation
+
+//Race
+RaceTraitsList = ds_list_create()
+RaceLanguagesList = ds_list_create()
+RaceWeaponsList = ds_list_create()
+RaceArmorList = ds_list_create()
+RaceToolsList = ds_list_create()
+RaceAttacks = ds_list_create()
+RaceCantrips = ds_list_create()
+
+//Class
+
+ClassTraitsList = ds_list_create()
+ClassInventoryList = ds_list_create()
+ClassWeaponsList = ds_list_create()
+ClassArmorList = ds_list_create()
+ClassToolsList = ds_list_create()
+ClassAttacks = ds_list_create()
+ClassCantrips = ds_list_create()
+
+//Background
+BackgroundLanguagesList = ds_list_create()
+BackgroundInventoryList = ds_list_create()
+
 //Data structure list initialization
 TraitsList = ds_list_create()
 LanguagesList = ds_list_create()
@@ -104,6 +136,9 @@ InventoryList = ds_list_create()
 Attacks = ds_list_create()
 Cantrips = ds_list_create()
 OtherMagic = ds_list_create()
+
+
+
 /*
 
 // *** GAMEPLAY TRAITS AND ABILITIES *** // DEPRECATED

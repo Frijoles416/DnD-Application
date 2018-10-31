@@ -2,10 +2,6 @@ if global.pause exit
 
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 {
-	if !ds_exists(obj_player.WeaponsList, ds_type_list) obj_player.WeaponsList = ds_list_create()
-	if !ds_exists(obj_player.ArmorList, ds_type_list) obj_player.ArmorList = ds_list_create()
-	if !ds_exists(obj_player.TraitsList, ds_type_list) obj_player.TraitsList = ds_list_create()
-	if !ds_exists(obj_player.InventoryList, ds_type_list) obj_player.InventoryList = ds_list_create()
 	
 	switch(image_index)
 	{
@@ -17,7 +13,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ds_list_add(obj_player.ArmorList, "Light Armor", "Medium Armor", "Shields")
 			ds_list_add(obj_player.WeaponsList, "Simple Weapons", "Martial Weapons")
 			ds_list_add(obj_player.TraitsList, "Rage", "Unarmored Defense")
-			ds_list_add(obj_player.InventoryList, "Explorer's Pack", "Javalin", "Javalin", "Javalin", "Javalin")
+			ds_list_add(obj_player.ClassInventoryList, "Explorer's Pack", "Javalin", "Javalin", "Javalin", "Javalin")
 			
 			obj_player.StrengthSavingThrow = true
 			obj_player.ConstitutionSavingThrow = true

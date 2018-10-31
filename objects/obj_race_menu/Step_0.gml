@@ -1,54 +1,56 @@
+//Will not need if there isn't a popup selection
+/*
 if place_meeting(x, y, obj_player) && !place_meeting(x, y, obj_variant_menu) self.depth = -1
 else if place_meeting(x, y, obj_variant_menu) depth = obj_variant_menu.depth + 1
 else if place_meeting(x, y, obj_stat_menu) depth = obj_stat_menu.depth + 1
 else if place_meeting(x, y, obj_tool_selection) depth = obj_tool_selection.depth + 1
 else self.depth = 0
+*/
 
-if instance_exists(obj_variant_menu) exit
+//if instance_exists(obj_variant_menu) exit
 
 //Clicking event
-if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
+if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !selected
 {
+	selected = true
 	//pre-initialization
 	
-	ds_list_add(obj_player.LanguagesList, "Common")
+	ds_list_add(obj_player.RaceLanguagesList, "Common")
 	
 	switch(image_index)
 	{
 		case 0: //Aarakocra
 		{
 			obj_player.CharacterRace = "Aarakocra"
-			obj_player.DexterityAdded = 2
-			obj_player.WisdomAdded = 1
+			obj_player.RaceDexterityAdded = 2
+			obj_player.RaceWisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 25
 			obj_player.Flight = true
 			obj_player.FlightSpeed = 50
 			
-			ds_list_add(obj_player.Attacks, "Talons")
+			ds_list_add(obj_player.RaceAttacks, "Talons")
 			
-			ds_list_add(obj_player.TraitsList, "Flight", "Talons")
+			ds_list_add(obj_player.RaceTraitsList, "Flight", "Talons")
 			
-			ds_list_add(obj_player.LanguagesList, "Aarakocra", "Auran")
+			ds_list_add(obj_player.RaceLanguagesList, "Aarakocra", "Auran")
 			
-			ds_list_add(obj_player.WeaponsList, "Unarmed Strikes")
-			
-			room_goto(rm_character_creation)
+			ds_list_add(obj_player.RaceWeaponsList, "Unarmed Strikes")
 		}
 		break;
 		
 		case 1: //Aasimar - 3 variants
 		{
-			obj_player.CharismaAdded = 2
+			obj_player.RaceCharismaAdded = 2
 			obj_player.Speed = 30
 			obj_player.Size = "Medium"
 			obj_player.Flight = false
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Celestial Resistance", "Healing Hands", "Light Bearer")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Celestial Resistance", "Healing Hands", "Light Bearer")
 			
-			ds_list_add(obj_player.LanguagesList, "Celestial")
+			ds_list_add(obj_player.RaceLanguagesList, "Celestial")
 			
-			ds_list_add(obj_player.Cantrips, "Light")
+			ds_list_add(obj_player.RaceCantrips, "Light")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
 			variant1.image_index = 0
@@ -62,14 +64,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 2: //Bugbear
 		{
 			obj_player.CharacterRace = "Bugbear"
-			obj_player.StrengthAdded = 2
-			obj_player.DexterityAdded = 1
+			obj_player.RaceStrengthAdded = 2
+			obj_player.RaceDexterityAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
 			
-			ds_list_add(obj_player.LanguagesList, "Goblin")
+			ds_list_add(obj_player.RaceLanguagesList, "Goblin")
 			
 			room_goto(rm_character_creation)
 		}
@@ -78,20 +80,20 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 3: //Centaur
 		{
 			obj_player.CharacterRace = "Centaur"
-			obj_player.StrengthAdded = 2
-			obj_player.WisdomAdded = 1
+			obj_player.RaceStrengthAdded = 2
+			obj_player.RaceWisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 40
 			
 			obj_player.ProficiencySurvival = true
 			
-			ds_list_add(obj_player.TraitsList, "Charge", "Hooves", "Equine Build", "Survivor", "Hybrid Nature - Humanoid/ Monstrosity")
+			ds_list_add(obj_player.RaceTraitsList, "Charge", "Hooves", "Equine Build", "Survivor", "Hybrid Nature - Humanoid/ Monstrosity")
 			
-			ds_list_add(obj_player.LanguagesList, "Sylvan")
+			ds_list_add(obj_player.RaceLanguagesList, "Sylvan")
 			
-			ds_list_add(obj_player.WeaponsList, "Hooves")
+			ds_list_add(obj_player.RaceWeaponsList, "Hooves")
 			
-			ds_list_add(obj_player.Attacks, "Hooves")
+			ds_list_add(obj_player.RaceAttacks, "Hooves")
 			
 			room_goto(rm_character_creation)
 		}
@@ -100,15 +102,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 4: //Changeling - 19 variants
 		{
 			obj_player.CharacterRace = "Changeling"
-			obj_player.CharismaAdded = 2
+			obj_player.RaceCharismaAdded = 2
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Change Appearance", "Changeling Instincts", "Unsettling Visage", "Divergent Persona")
+			ds_list_add(obj_player.RaceTraitsList, "Change Appearance", "Changeling Instincts", "Unsettling Visage", "Divergent Persona")
 
-			ds_list_add(obj_player.LanguagesList, "Your Choice",  "Your Choice")
+			ds_list_add(obj_player.RaceLanguagesList, "Your Choice",  "Your Choice")
 			
-			ds_list_add(obj_player.WeaponsList, "Your Choice")
+			ds_list_add(obj_player.RaceWeaponsList, "Your Choice")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_tool_selection)
 			variant1.image_index = 1
@@ -154,14 +156,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 5: //Dragonborn
 		{
 			obj_player.CharacterRace = "Dragonborn"
-			obj_player.StrengthAdded = 2
-			obj_player.CharismaAdded = 1
+			obj_player.RaceStrengthAdded = 2
+			obj_player.RaceCharismaAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Breath Weapon", "Breath Weapon", "Damage Resistance")
+			ds_list_add(obj_player.RaceTraitsList, "Breath Weapon", "Breath Weapon", "Damage Resistance")
 			
-			ds_list_add(obj_player.LanguagesList, "Draconic")
+			ds_list_add(obj_player.RaceLanguagesList, "Draconic")
 			
 			room_goto(rm_character_creation)
 		}
@@ -169,15 +171,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 6: //Dwarf - 2 variants
 		{
-			obj_player.ConstitutionAdded = 2
+			obj_player.RaceConstitutionAdded = 2
 			obj_player.Size = "Medium"
 			obj_player.Speed = 25
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Dwarven Resilience", "Stonecunning")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Dwarven Resilience", "Stonecunning")
 
-			ds_list_add(obj_player.LanguagesList, "Dwarvish")
+			ds_list_add(obj_player.RaceLanguagesList, "Dwarvish")
 			
-			ds_list_add(obj_player.WeaponsList, "Battleaxe", "Handaxe", "Throwing Hammer", "Warhammer")
+			ds_list_add(obj_player.RaceWeaponsList, "Battleaxe", "Handaxe", "Throwing Hammer", "Warhammer")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 3
@@ -189,14 +191,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 7: //Elf - 11 variants
 		{
-			obj_player.DexterityAdded = 2
+			obj_player.RaceDexterityAdded = 2
 			obj_player.Size = "Medium"
 			
 			obj_player.ProficiencyPerception = true
 			
-			ds_list_add(obj_player.TraitsList, "Keen Senses", "Fey Ancestry")
+			ds_list_add(obj_player.RaceTraitsList, "Keen Senses", "Fey Ancestry")
 			
-			ds_list_add(obj_player.LanguagesList, "Elvish")
+			ds_list_add(obj_player.RaceLanguagesList, "Elvish")
 			
 			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
 			variant1.image_index = 5
@@ -227,16 +229,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 8: //Yuan-ti Pureblood
 		{
 			obj_player.CharacterRace = "Yuan-ti Pureblood"
-			obj_player.CharismaAdded = 2
-			obj_player.IntelligenceAdded = 1
+			obj_player.RaceCharismaAdded = 2
+			obj_player.RaceIntelligenceAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.Cantrips, "Poison Spray")
+			ds_list_add(obj_player.RaceCantrips, "Poison Spray")
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Innate Spellcasting", "Magic Resistance", "Poison Immunity")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Innate Spellcasting", "Magic Resistance", "Poison Immunity")
 
-			ds_list_add(obj_player.LanguagesList, "Abyssmal", "Draconic")
+			ds_list_add(obj_player.RaceLanguagesList, "Abyssmal", "Draconic")
 			
 			room_goto(rm_character_creation)
 		}
@@ -245,14 +247,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 9: //Firbolg
 		{
 			obj_player.CharacterRace = "Firbolg"
-			obj_player.WisdomAdded = 2
-			obj_player.StrengthAdded = 1
+			obj_player.RaceWisdomAdded = 2
+			obj_player.RaceStrengthAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Firbolg Magic", "Hidden Step", "Powerful Build", "Speech of Beast and Leaf")
+			ds_list_add(obj_player.RaceTraitsList, "Firbolg Magic", "Hidden Step", "Powerful Build", "Speech of Beast and Leaf")
 
-			ds_list_add(obj_player.LanguagesList, "Elvish", "Giant")
+			ds_list_add(obj_player.RaceLanguagesList, "Elvish", "Giant")
 			
 			room_goto(rm_character_creation)
 		}
@@ -260,11 +262,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 10: //Genasi - 4 variants
 		{
-			obj_player.ConstitutionAdded = 2
+			obj_player.RaceConstitutionAdded = 2
 			obj_player.Speed = 30
 			obj_player.Size = "Medium"
 			
-			ds_list_add(obj_player.LanguagesList, "Primordial")
+			ds_list_add(obj_player.RaceLanguagesList, "Primordial")
 
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 16
@@ -280,11 +282,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 11: //Gith - 2 variants
 		{
-			obj_player.IntelligenceAdded = 1
+			obj_player.RaceIntelligenceAdded = 1
 			obj_player.Speed = 30
 			obj_player.Size = "Medium"
 			
-			ds_list_add(obj_player.LanguagesList, "Gith")
+			ds_list_add(obj_player.RaceLanguagesList, "Gith")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 20
@@ -295,13 +297,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 12: //Gnome - 4 variants
 		{
-			obj_player.IntelligenceAdded = 2
+			obj_player.RaceIntelligenceAdded = 2
 			obj_player.Speed = 25
 			obj_player.Size = "Small"
 			
-			ds_list_add(obj_player.TraitsList, "Gnome Cunning")
+			ds_list_add(obj_player.RaceTraitsList, "Gnome Cunning")
 			
-			ds_list_add(obj_player.LanguagesList, "Gnomish")
+			ds_list_add(obj_player.RaceLanguagesList, "Gnomish")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 22
@@ -317,14 +319,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 13: //Goblin
 		{
 			obj_player.CharacterRace = "Goblin"
-			obj_player.DexterityAdded = 2
-			obj_player.ConstitutionAdded = 1
+			obj_player.RaceDexterityAdded = 2
+			obj_player.RaceConstitutionAdded = 1
 			obj_player.Size = "Small"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Fury of the Small", "Nimble Escape")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Fury of the Small", "Nimble Escape")
 
-			ds_list_add(obj_player.LanguagesList, "Goblin")
+			ds_list_add(obj_player.RaceLanguagesList, "Goblin")
 			
 			room_goto(rm_character_creation)
 		}
@@ -333,16 +335,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 14: //Goliath
 		{
 			obj_player.CharacterRace = "Goliath"
-			obj_player.StrengthAdded = 2
-			obj_player.ConstitutionAdded = 1
+			obj_player.RaceStrengthAdded = 2
+			obj_player.RaceConstitutionAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			obj_player.ProficiencyAthletics = true
 			
-			ds_list_add(obj_player.TraitsList, "Powerful Build", "Mountain Born", "Natural Athlete", "Stone's Endurance")
+			ds_list_add(obj_player.RaceTraitsList, "Powerful Build", "Mountain Born", "Natural Athlete", "Stone's Endurance")
 
-			ds_list_add(obj_player.LanguagesList, "Giant")
+			ds_list_add(obj_player.RaceLanguagesList, "Giant")
 			
 			room_goto(rm_character_creation)
 		}
@@ -351,14 +353,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 15: //Half-Elf - 7 variants
 		{
 			obj_player.CharacterRace = "Half-Elf"
-			obj_player.CharismaAdded = 2
+			obj_player.RaceCharismaAdded = 2
 			//additional player choice
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Fey Ancestry")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Fey Ancestry")
 			
-			ds_list_add(obj_player.LanguagesList, "Elven", "Your Choice")
+			ds_list_add(obj_player.RaceLanguagesList, "Elven", "Your Choice")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 26
@@ -379,13 +381,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 16: //Halfling - 4 variants
 		{
-			obj_player.DexterityAdded = 2
+			obj_player.RaceDexterityAdded = 2
 			obj_player.Size = "Small"
 			obj_player.Speed = 25
 			
-			ds_list_add(obj_player.TraitsList, "Lucky", "Brave", "Nimble")
+			ds_list_add(obj_player.RaceTraitsList, "Lucky", "Brave", "Nimble")
 			
-			ds_list_add(obj_player.LanguagesList, "Halfling")
+			ds_list_add(obj_player.RaceLanguagesList, "Halfling")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 33
@@ -400,16 +402,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 17: //Half-Orc - 2 variants
 		{
-			obj_player.StrengthAdded = 2
-			obj_player.ConstitutionAdded = 1
+			obj_player.RaceStrengthAdded = 2
+			obj_player.RaceConstitutionAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			obj_player.ProficiencyIntimidation = true
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Menacing")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Menacing")
 			
-			ds_list_add(obj_player.LanguagesList, "Orc")
+			ds_list_add(obj_player.RaceLanguagesList, "Orc")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 37
@@ -421,16 +423,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 18: //Hobgoblin
 		{
 			obj_player.CharacterRace = "Hobgoblin"
-			obj_player.ConstitutionAdded = 2
-			obj_player.IntelligenceAdded = 1
+			obj_player.RaceConstitutionAdded = 2
+			obj_player.RaceIntelligenceAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Savin' Face")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Savin' Face")
 
-			ds_list_add(obj_player.LanguagesList, "Goblin")
+			ds_list_add(obj_player.RaceLanguagesList, "Goblin")
 			
-			ds_list_add(obj_player.WeaponsList, "Your Choice", "Your Choice")
+			ds_list_add(obj_player.RaceWeaponsList, "Your Choice", "Your Choice")
 			
 			ds_list_add(obj_player.ArmorList, "Light Armor")
 			
@@ -443,7 +445,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.LanguagesList, "Your Choice")
+			ds_list_add(obj_player.RaceLanguagesList, "Your Choice")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 39
@@ -463,15 +465,15 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 20: //Kalashtar
 		{//Add the Quirk
 			obj_player.CharacterRace = "Kalashtar"
-			obj_player.WisdomAdded = 1
-			obj_player.CharismaAdded = 1
+			obj_player.RaceWisdomAdded = 1
+			obj_player.RaceCharismaAdded = 1
 			//Choice option needs to be added
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Severed from Dreams", "Dual Mind", "Mental Discipline", "Mind Link", "Psychic Glamour")
+			ds_list_add(obj_player.RaceTraitsList, "Severed from Dreams", "Dual Mind", "Mental Discipline", "Mind Link", "Psychic Glamour")
 
-			ds_list_add(obj_player.LanguagesList, "Quori", "Your Choice")
+			ds_list_add(obj_player.RaceLanguagesList, "Quori", "Your Choice")
 			
 			//add skill choice
 			
@@ -482,14 +484,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 21: //Kenku
 		{
 			obj_player.CharacterRace = "Kenku"
-			obj_player.DexterityAdded = 2
-			obj_player.WisdomAdded = 1
+			obj_player.RaceDexterityAdded = 2
+			obj_player.RaceWisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Expert Forgery", "Kenku Training", "Mimicry")
+			ds_list_add(obj_player.RaceTraitsList, "Expert Forgery", "Kenku Training", "Mimicry")
 
-			ds_list_add(obj_player.LanguagesList, "Auran")
+			ds_list_add(obj_player.RaceLanguagesList, "Auran")
 			
 			//add skill choice
 			
@@ -500,14 +502,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 22: //Kobold
 		{
 			obj_player.CharacterRace = "Kobold"
-			obj_player.DexterityAdded = 2
-			obj_player.StrengthAdded = -2
+			obj_player.RaceDexterityAdded = 2
+			obj_player.RaceStrengthAdded = -2
 			obj_player.Size = "Small"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Grovel, Cower, and Be", "Pack Tactics", "Sunlight Sensitivity")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Grovel, Cower, and Be", "Pack Tactics", "Sunlight Sensitivity")
 
-			ds_list_add(obj_player.LanguagesList, "Draconic")
+			ds_list_add(obj_player.RaceLanguagesList, "Draconic")
 			
 			room_goto(rm_character_creation)
 		}
@@ -516,16 +518,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 23: //Lizardfolk
 		{
 			obj_player.CharacterRace = "Lizardfolk"
-			obj_player.ConstitutionAdded = 2
-			obj_player.WisdomAdded = 1
+			obj_player.RaceConstitutionAdded = 2
+			obj_player.RaceWisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Bite", "Cunning Artisan", "Hold Breath", "Hunter's Lore", "Natural Armor", "Hungry Jaws")
+			ds_list_add(obj_player.RaceTraitsList, "Bite", "Cunning Artisan", "Hold Breath", "Hunter's Lore", "Natural Armor", "Hungry Jaws")
 
-			ds_list_add(obj_player.LanguagesList, "Draconic")
+			ds_list_add(obj_player.RaceLanguagesList, "Draconic")
 			
-			ds_list_add(obj_player.Attacks, "Bite")
+			ds_list_add(obj_player.RaceAttacks, "Bite")
 			
 			//add skill choice
 			
@@ -536,12 +538,12 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 24: //Loxodon
 		{
 			obj_player.CharacterRace = "Loxodon"
-			obj_player.ConstitutionAdded = 2
-			obj_player.WisdomAdded = 1
+			obj_player.RaceConstitutionAdded = 2
+			obj_player.RaceWisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Powerful Build", "Loxodon Bravery", "Natural Armor", "Stonecunning", "Keen Smell")
+			ds_list_add(obj_player.RaceTraitsList, "Powerful Build", "Loxodon Bravery", "Natural Armor", "Stonecunning", "Keen Smell")
 
 			ds_list_add(obj_player.ToolsList, "Mason's Tools")
 			
@@ -552,20 +554,20 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 25: //Minotaur
 		{
 			obj_player.CharacterRace = "Minotaur"
-			obj_player.StrengthAdded = 2
-			obj_player.ConstitutionAdded = 1
+			obj_player.RaceStrengthAdded = 2
+			obj_player.RaceConstitutionAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			obj_player.ProficiencyIntimidation = true
 			
-			ds_list_add(obj_player.TraitsList, "Goring Rush", "Hammering Horns", "Menacing", "Hybrid Nature")
+			ds_list_add(obj_player.RaceTraitsList, "Goring Rush", "Hammering Horns", "Menacing", "Hybrid Nature")
 
-			ds_list_add(obj_player.LanguagesList, "Minotaur")
+			ds_list_add(obj_player.RaceLanguagesList, "Minotaur")
 			
-			ds_list_add(obj_player.WeaponsList, "Horns")
+			ds_list_add(obj_player.RaceWeaponsList, "Horns")
 			
-			ds_list_add(obj_player.Attacks, "Horns")
+			ds_list_add(obj_player.RaceAttacks, "Horns")
 			
 			
 			room_goto(rm_character_creation)
@@ -575,17 +577,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 26: //Orc
 		{
 			obj_player.CharacterRace = "Orc"
-			obj_player.StrengthAdded = 2
-			obj_player.ConstitutionAdded = 1
-			obj_player.IntelligenceAdded = -2
+			obj_player.RaceStrengthAdded = 2
+			obj_player.RaceConstitutionAdded = 1
+			obj_player.RaceIntelligenceAdded = -2
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			obj_player.ProficiencyIntimidation = true
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Aggressive", "Menacing", "Powerful Build")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Aggressive", "Menacing", "Powerful Build")
 
-			ds_list_add(obj_player.LanguagesList, "Orc")
+			ds_list_add(obj_player.RaceLanguagesList, "Orc")
 			
 			room_goto(rm_character_creation)
 		}
@@ -597,7 +599,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			obj_player.ProficiencyPerception = true
 			
-			ds_list_add(obj_player.TraitsList = "Darkvision", "Keen Senses", "Shifting", "Shifting Feature")
+			ds_list_add(obj_player.RaceTraitsList = "Darkvision", "Keen Senses", "Shifting", "Shifting Feature")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 45
@@ -613,14 +615,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 28: //Simic Hybrid
 		{
 			obj_player.CharacterRace = "Simic Hybrid"
-			obj_player.ConstitutionAdded = 2
+			obj_player.RaceConstitutionAdded = 2
 			//add player stat choice
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Animal Enhancement")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Animal Enhancement")
 
-			ds_list_add(obj_player.LanguagesList, "Elvish")
+			ds_list_add(obj_player.RaceLanguagesList, "Elvish")
 			
 			room_goto(rm_character_creation)
 		}
@@ -629,21 +631,21 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 29: //Tabaxi
 		{
 			obj_player.CharacterRace = "Tabaxi"
-			obj_player.DexterityAdded = 2
-			obj_player.CharismaAdded = 1
+			obj_player.RaceDexterityAdded = 2
+			obj_player.RaceCharismaAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			obj_player.ProficiencyPerception = true
 			obj_player.ProficiencyStealth = true
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Feline Agility", "Cat's Talent")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Feline Agility", "Cat's Talent")
 
-			ds_list_add(obj_player.LanguagesList, "Your Choice")
+			ds_list_add(obj_player.RaceLanguagesList, "Your Choice")
 			
-			ds_list_add(obj_player.WeaponsList, "Claws")
+			ds_list_add(obj_player.RaceWeaponsList, "Claws")
 			
-			ds_list_add(obj_player.Attacks, "Claws")
+			ds_list_add(obj_player.RaceAttacks, "Claws")
 			
 			room_goto(rm_character_creation)
 		}
@@ -653,16 +655,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterRace = "Tiefling"
 			//I am going to add the base traits here since I don't know where to get info on the variants
-			obj_player.IntelligenceAdded = 1
-			obj_player.CharismaAdded = 2
+			obj_player.RaceIntelligenceAdded = 1
+			obj_player.RaceCharismaAdded = 2
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Hellish Resistance", "Infernal Legacy")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Hellish Resistance", "Infernal Legacy")
 			
-			ds_list_add(obj_player.LanguagesList, "Infernal")
+			ds_list_add(obj_player.RaceLanguagesList, "Infernal")
 			
-			ds_list_add(obj_player.Cantrips, "Thaumaturgy")
+			ds_list_add(obj_player.RaceCantrips, "Thaumaturgy")
 			
 			//Variants not created yet
 			
@@ -673,20 +675,20 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 31: //Tortle
 		{
 			obj_player.CharacterRace = "Tortle"
-			obj_player.StrengthAdded = 2
-			obj_player.WisdomAdded = 1
+			obj_player.RaceStrengthAdded = 2
+			obj_player.RaceWisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
 			obj_player.ProficiencySurvival = true
 			
-			ds_list_add(obj_player.TraitsList, "Hold Breath", "Natural Armor", "Shell Defense", "Survival Instinct")
+			ds_list_add(obj_player.RaceTraitsList, "Hold Breath", "Natural Armor", "Shell Defense", "Survival Instinct")
 
-			ds_list_add(obj_player.LanguagesList, "Aquan")
+			ds_list_add(obj_player.RaceLanguagesList, "Aquan")
 			
-			ds_list_add(obj_player.WeaponsList, "Claws")
+			ds_list_add(obj_player.RaceWeaponsList, "Claws")
 			
-			ds_list_add(obj_player.Attacks, "Claws")
+			ds_list_add(obj_player.RaceAttacks, "Claws")
 			
 			
 			room_goto(rm_character_creation)
@@ -696,17 +698,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 32: //Triton
 		{
 			obj_player.CharacterRace = "Triton"
-			obj_player.StrengthAdded = 1
-			obj_player.ConstitutionAdded = 1
-			obj_player.CharismaAdded = 1
+			obj_player.RaceStrengthAdded = 1
+			obj_player.RaceConstitutionAdded = 1
+			obj_player.RaceCharismaAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			obj_player.Swim = true
 			obj_player.SwimSpeed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Control Air and Water", "Emissary of the Sea", "Guardian of the Depths")
+			ds_list_add(obj_player.RaceTraitsList, "Control Air and Water", "Emissary of the Sea", "Guardian of the Depths")
 
-			ds_list_add(obj_player.LanguagesList, "Primordial")
+			ds_list_add(obj_player.RaceLanguagesList, "Primordial")
 			
 			ds_list_add(obj_player.OtherMagic, "Fog Cloud")
 			
@@ -718,12 +720,12 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 33: //Vedalken
 		{
 			obj_player.CharacterRace = "Vedalken"
-			obj_player.IntelligenceAdded = 2
-			obj_player.WisdomAdded = 1
+			obj_player.RaceIntelligenceAdded = 2
+			obj_player.RaceWisdomAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Vedalken Dispassion", "Tireless Precision")
+			ds_list_add(obj_player.RaceTraitsList, "Vedalken Dispassion", "Tireless Precision")
 
 			ds_list_add(obj_player.ToolsList, "Your Choice")
 			
@@ -737,16 +739,16 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		case 34: //Viashino
 		{
 			obj_player.CharacterRace = "Viashino"
-			obj_player.DexterityAdded = 2
-			obj_player.StrengthAdded = 1
+			obj_player.RaceDexterityAdded = 2
+			obj_player.RaceStrengthAdded = 1
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.TraitsList, "Wiry Frame", "Bite", "Lashing Tail")
+			ds_list_add(obj_player.RaceTraitsList, "Wiry Frame", "Bite", "Lashing Tail")
 
-			ds_list_add(obj_player.LanguagesList, "Draconic")
+			ds_list_add(obj_player.RaceLanguagesList, "Draconic")
 			
-			ds_list_add(obj_player.Attacks, "Bite")
+			ds_list_add(obj_player.RaceAttacks, "Bite")
 			
 			//add skill choice
 			
@@ -757,10 +759,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 35: //Warforged - 3 variants
 		{
-			obj_player.ConstitutionAdded = 1
+			obj_player.RaceConstitutionAdded = 1
 			obj_player.Size = "Medium"
 			
-			ds_list_add(obj_player.TraitsList, "Warforged Resilience", "Sentry's Rest", "Integrated Protection")
+			ds_list_add(obj_player.RaceTraitsList, "Warforged Resilience", "Sentry's Rest", "Integrated Protection")
 			
 			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
 			variant1.image_index = 49

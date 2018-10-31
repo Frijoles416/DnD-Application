@@ -1,11 +1,13 @@
 if global.pause exit
 
-if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
+if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !place_meeting(x, y, obj_language_selection)
 {
+	/*
 	CanChooseArtisansTools = false
 	CanChooseInstrument = false
 	CanChooseGamingSet = false
 	CanChooseGladiatorWeapon = false
+	*/
 	
 	switch(image_index)
 	{
@@ -20,14 +22,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 
 			obj_player.BackgroundFeatures = "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.\nYou might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
 			LanguagesChosen = 0
-			MaxLanguages = 2
 			
 			var i
 			var space = 16
 			var lang
 			for (var i = 0; i < 14; i += 1)
 			{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i] = instance_create_depth(room_width - 384, 32 + (space * i), 0, obj_language_selection)
 				lang[i].image_index = i
 			}	
 		}
@@ -43,14 +44,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			
 			ds_list_add(obj_player.InventoryList, "Leather-bound diary", "Bottle of ink", "Ink pen", "Traveler's Clothes", "Trinket of special significance")
 			LanguagesChosen = 0
-			MaxLanguages = 2
 			
 			var i
 			var space = 16
 			var lang
 			for (var i = 0; i < 14; i += 1)
 			{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i] = instance_create_depth(room_width - 384, 32 + (space * i), 0, obj_language_selection)
 				lang[i].image_index = i
 			}	
 		}
@@ -65,18 +65,24 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.BackgroundFeatures = "When you enter a ruin or dungeon, you can correctly ascertain its original purpose and determine its builders. In addition, you can determine the monetary value of art objects more than a century old."
 			
 			ds_list_add(obj_player.InventoryList, "A wooden case containing a map to a ruin/dungeon", "Bullseye lantern", "Miner's pack", "Traveler's clothes", "Shovel", "2-person tent", "Trinket recovered from a dig site")
-			//add tool choice
-			LanguagesChosen = 0
+			//add tool choice. Added it
 			MaxLanguages = 1
+			MaxTools = 1
 			
 			var i
 			var space = 16
 			var lang
 			for (var i = 0; i < 14; i += 1)
 			{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i] = instance_create_depth(room_width - 384, 32 + (space * i), 0, obj_language_selection)
 				lang[i].image_index = i
-			}					
+			}
+			
+			tool1 = instance_create_depth(room_width - 256, 32, 0, obj_tool_selection)
+			tool1.image_index = 4
+			tool2 = instance_create_depth(room_width - 256, 64, 0, obj_tool_selection)
+			tool2.image_index = 17
+								
 		}
 		
 		case 3:
@@ -99,13 +105,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			obj_player.CharacterBackground = "City Watch/ Investigator"
 			obj_player.ProficiencyInsight = true
+			obj_player.ProficiencyAthletics = true
 			//choice between athletics and investigation
+			//Im not reading this as a choice http://dnd5e.wikia.com/wiki/City_Watch
 			obj_player.GoldPieces += 10
 			obj_player.BackgroundFeatures = "Your experience in enforcing the law, and dealing with lawbreakers, gives you a feel for local laws and criminals. You can easily find the local outpost of the watch or a similar organization, and just as easily pick out the dens of criminal activity in a community, although you're more likely to be welcome in the former locations rather than the latter."
 			
 			ds_list_add(obj_player.InventoryList, "Uniform of your unit, indicative of rank", "Horn with which to summon help", "Set of manacles")
-			LanguagesChosen = 0
-			MaxLanguages = 2
+
 			
 			var i
 			var space = 16
@@ -123,10 +130,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			obj_player.CharacterBackground = "Clan Crafter"
 			obj_player.ProficiencyHistory = true
 			obj_player.ProficiencyInsight = true
-			obj_player.GoldPieces +=5
+			obj_player.GoldPieces += 5
 			obj_player.BackgroundFeatures = "You always have free room and board in any place where shield dwarves or gold dwarves dwell, and the individuals in such a settlement might vie among themselves to determine who can offer you (and possibly your compatriots) the finest accommodations and assistance."
 			
 			ds_list_add(obj_player.InventoryList, "Artisan's tools of your choice", "Maker's mark chisel", "Traveler's clothes", "Gem worth 10 gp")
+			/*
 			CanChooseArtisansTools = true
 			
 			var i
@@ -137,10 +145,22 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				tool[i] = instance_create_depth(764, 16 + (space * i), 0, obj_sub_tool_selection)
 				tool[i].image_index = i
 			}	
+			*/
+			
+			ToolsChosen = 0
+		
+			var j
+			var space1 = 32
+			var tool
+			for (var j = 0; j < 17; j += 1)
+			{
+				tool[j] = instance_create_depth(x + 128 + 32, y + (space1 * j), 0, obj_tool_selection)
+				tool[j].image_index = j
+			}
 			
 			if !ds_list_find_index(obj_player.LanguagesList, "Dwarvish") 
 			{
-				LanguagesChosen = 0
+				ds_list_add(obj_player.LanguagesList, "Dwarvish")
 				MaxLanguages = 1
 				
 				var i
@@ -152,7 +172,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				lang[i].image_index = i
 				}
 			}
-			else room_goto(rm_character_creation)
+			//else room_goto(rm_character_creation)
 		}
 		break;
 		

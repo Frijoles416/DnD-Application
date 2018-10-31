@@ -2,24 +2,24 @@ x = mouse_x
 y = mouse_y
 
 //Actual Calculation
-ActualStrength = InitialStrength + StrengthAdded
-ActualDexterity = InitialDexterity + DexterityAdded
-ActualConstitution = InitialConstitution + ConstitutionAdded
-ActualIntelligence = InitialIntelligence + IntelligenceAdded
-ActualWisdom = InitialWisdom + WisdomAdded
-ActualCharisma = InitialCharisma + CharismaAdded
+ActualStrength = InitialStrength + RaceStrengthAdded + ClassStrengthAdded
+ActualDexterity = InitialDexterity + RaceDexterityAdded + ClassDexterityAdded
+ActualConstitution = InitialConstitution + RaceConstitutionAdded + ClassConstitutionAdded
+ActualIntelligence = InitialIntelligence + RaceIntelligenceAdded + ClassIntelligenceAdded
+ActualWisdom = InitialWisdom + RaceWisdomAdded + ClassWisdomAdded 
+ActualCharisma = InitialCharisma + RaceCharismaAdded + ClassCharismaAdded
 
 //Modifier Calculation
-StrengthModifier = floor((InitialStrength + StrengthAdded)/2 - 5)
-DexterityModifier = floor((InitialDexterity + DexterityAdded)/2 - 5)
-ConstitutionModifier = floor((InitialConstitution + ConstitutionAdded)/2 - 5)
-IntelligenceModifier = floor((InitialIntelligence + IntelligenceAdded)/2 - 5)
-CharismaModifier = floor((InitialCharisma + CharismaAdded)/2 - 5)
-WisdomModifier = floor((InitialWisdom + WisdomAdded)/2 - 5)
+StrengthModifier = floor((ActualStrength)/2 - 5)
+DexterityModifier = floor((ActualDexterity)/2 - 5)
+ConstitutionModifier = floor((ActualConstitution)/2 - 5)
+IntelligenceModifier = floor((ActualIntelligence)/2 - 5)
+CharismaModifier = floor((ActualCharisma)/2 - 5)
+WisdomModifier = floor((ActualWisdom)/2 - 5)
 
 
 //Hitpoint Contol
-switch(CharacterRace)
+switch(CharacterClass)
 {
 	case "Barbarian":
 	MaxHP = 12 + ConstitutionModifer
