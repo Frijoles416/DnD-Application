@@ -1,1 +1,1 @@
-image_index = 7
+image_index = 8
