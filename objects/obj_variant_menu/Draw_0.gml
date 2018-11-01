@@ -1,3 +1,7 @@
+scr_button_draw()
+
+
+/*
 var info = ""
 if obj_player.x < 492 var side = 0
 else var side = 1
