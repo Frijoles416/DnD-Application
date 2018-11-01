@@ -1,1 +1,1 @@
-image_index = 28
+image_index = 18
