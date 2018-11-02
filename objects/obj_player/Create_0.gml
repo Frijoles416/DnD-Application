@@ -1,6 +1,10 @@
 //instance_create_depth(x, y, -1000, obj_player_cursor)
 cursor_sprite = spr_cursor
 
+//Global Variables
+global.BaseSelection = 0
+global.VariantSelection = 0
+
 ///Character Sheet Information
 
 // *** RACE VARIABLES *** //

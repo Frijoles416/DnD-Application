@@ -32,6 +32,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				ds_list_clear(obj_player.RaceWeaponsList)
 				ds_list_clear(obj_player.RaceArmorList)
 				ds_list_clear(obj_player.RaceToolsList)
+				ds_list_clear(obj_player.RaceAttacks)
+				ds_list_clear(obj_player.RaceCantrips)
 				
 				room_goto(rm_race_selection)
 			}
@@ -282,6 +284,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 9:
 		{
+			global.BaseSelection = 0
+			global.VariantSelection = 0
+			
 			room_goto(rm_character_creation)
 		}
 	}

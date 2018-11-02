@@ -6,13 +6,15 @@ else if place_meeting(x, y, obj_stat_menu) depth = obj_stat_menu.depth + 1
 else if place_meeting(x, y, obj_tool_selection) depth = obj_tool_selection.depth + 1
 else self.depth = 0
 */
-
+var space = 32
 //if instance_exists(obj_variant_menu) exit
 
 //Clicking event
-if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !selected
+
+if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !selected && global.BaseSelection = 0
 {
 	selected = true
+	global.BaseSelection += 1
 	//pre-initialization
 	
 	ds_list_add(obj_player.RaceLanguagesList, "Common")
@@ -52,11 +54,11 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			
 			ds_list_add(obj_player.RaceCantrips, "Light")
 			
-			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
+			variant1 = instance_create_depth(room_width - 256 - 64, 32, 0,  obj_variant_menu)
 			variant1.image_index = 0
-			variant2 = instance_create_depth(x + 32, y, 0,  obj_variant_menu)
+			variant2 = instance_create_depth(room_width - 256 - 64, 96, 0,  obj_variant_menu)
 			variant2.image_index = 1
-			variant3 = instance_create_depth(x + 32, y + 64, 0,  obj_variant_menu)
+			variant3 = instance_create_depth(room_width - 256 - 64, 160, 0,  obj_variant_menu)
 			variant3.image_index = 2
 		}
 		break;
@@ -73,7 +75,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			
 			ds_list_add(obj_player.RaceLanguagesList, "Goblin")
 			
-			room_goto(rm_character_creation)
 		}
 		break;
 		
@@ -95,7 +96,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			
 			ds_list_add(obj_player.RaceAttacks, "Hooves")
 			
-			room_goto(rm_character_creation)
 		}
 		break;
 		
@@ -108,48 +108,85 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			
 			ds_list_add(obj_player.RaceTraitsList, "Change Appearance", "Changeling Instincts", "Unsettling Visage", "Divergent Persona")
 
-			ds_list_add(obj_player.RaceLanguagesList, "Your Choice",  "Your Choice")
+			lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
+			lang1.image_index = 1
+			lang2 = instance_create_depth(room_width - 192 - 32, space*13, 0,  obj_language_selection)
+			lang2.image_index = 2
+			lang3 = instance_create_depth(room_width - 192 - 32, space*14, 0,  obj_language_selection)
+			lang3.image_index = 3
+			lang4 = instance_create_depth(room_width - 192 - 32, space*15, 0,  obj_language_selection)
+			lang4.image_index = 4
+			lang5 = instance_create_depth(room_width - 192 - 32, space*16, 0,  obj_language_selection)
+			lang5.image_index = 5
+			lang6 = instance_create_depth(room_width - 192 - 32, space*17, 0,  obj_language_selection)
+			lang6.image_index = 6
+			lang7 = instance_create_depth(room_width - 192 - 32, space*18, 0,  obj_language_selection)
+			lang7.image_index = 7
+			lang8 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_language_selection)
+			lang8.image_index = 8
+			lang9 = instance_create_depth(room_width - 192 - 160, space*13, 0,  obj_language_selection)
+			lang9.image_index = 9
+			lang10 = instance_create_depth(room_width - 192 - 160, space*14, 0,  obj_language_selection)
+			lang10.image_index = 10
+			lang11 = instance_create_depth(room_width - 192 - 160, space*15, 0, obj_language_selection)
+			lang11.image_index = 11
+			lang12 = instance_create_depth(room_width - 192 - 160, space*16, 0, obj_language_selection)
+			lang12.image_index = 12
+			lang13= instance_create_depth(room_width - 192 - 160, space*17, 0,  obj_language_selection)
+			lang13.image_index = 13
+			lang14 = instance_create_depth(room_width - 192 - 160, space*18, 0,  obj_language_selection)
+			lang14.image_index = 14
+			lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
+			lang15.image_index = 15
 			
-			ds_list_add(obj_player.RaceWeaponsList, "Your Choice")
 			
-			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_tool_selection)
+			variant1 = instance_create_depth(room_width - 192 - 32, space, 0,  obj_tool_selection)
 			variant1.image_index = 1
-			variant2 = instance_create_depth(x + 32, y, 0,  obj_tool_selection)
+			variant2 = instance_create_depth(room_width - 192 - 32, space*2, 0,  obj_tool_selection)
 			variant2.image_index = 2
-			variant3 = instance_create_depth(x + 32, y + 64, 0,  obj_tool_selection)
+			variant3 = instance_create_depth(room_width - 192 - 32, space*3, 0,  obj_tool_selection)
 			variant3.image_index = 3
-			variant4 = instance_create_depth(x + 160, y - 64, 0,  obj_tool_selection)
+			variant4 = instance_create_depth(room_width - 192 - 32, space*4, 0,  obj_tool_selection)
 			variant4.image_index = 4
-			variant5 = instance_create_depth(x + 160, y, 0,  obj_tool_selection)
+			variant5 = instance_create_depth(room_width - 192 - 32, space*5, 0,  obj_tool_selection)
 			variant5.image_index = 5
-			variant6 = instance_create_depth(x + 160, y + 64, 0,  obj_tool_selection)
+			variant6 = instance_create_depth(room_width - 192 - 32, space*6, 0,  obj_tool_selection)
 			variant6.image_index = 6
-			variant7 = instance_create_depth(x + 288, y - 64, 0,  obj_tool_selection)
+			variant7 = instance_create_depth(room_width - 192 - 32, space*7, 0,  obj_tool_selection)
 			variant7.image_index = 7
-			variant8 = instance_create_depth(x + 288, y, 0,  obj_tool_selection)
+			variant8 = instance_create_depth(room_width - 192 - 32, space*8, 0, obj_tool_selection)
 			variant8.image_index = 8
-			variant9 = instance_create_depth(x + 288, y + 64, 0,  obj_tool_selection)
+			variant9 = instance_create_depth(room_width - 192 - 32, space*9, 0,  obj_tool_selection)
 			variant9.image_index = 9
-			variant10 = instance_create_depth(x + 416, y - 64, 0,  obj_tool_selection)
+			variant10 = instance_create_depth(room_width - 192 - 160, space, 0,  obj_tool_selection)
 			variant10.image_index = 10
-			variant11 = instance_create_depth(x + 416, y, 0,  obj_tool_selection)
+			variant11 = instance_create_depth(room_width - 192 - 160, space*2, 0, obj_tool_selection)
 			variant11.image_index = 11
-			variant12 = instance_create_depth(x + 416, y + 64, 0, obj_tool_selection)
+			variant12 = instance_create_depth(room_width - 192 - 160, space*3, 0, obj_tool_selection)
 			variant12.image_index = 12
-			variant13= instance_create_depth(x + 544, y + 64, 0,  obj_tool_selection)
+			variant13= instance_create_depth(room_width - 192 - 160, space*4, 0,  obj_tool_selection)
 			variant13.image_index = 13
-			variant14 = instance_create_depth(x + 544, y - 64, 0,  obj_tool_selection)
+			variant14 = instance_create_depth(room_width - 192 - 160, space*5, 0,  obj_tool_selection)
 			variant14.image_index = 14
-			variant15 = instance_create_depth(x + 544, y, 0,  obj_tool_selection)
+			variant15 = instance_create_depth(room_width - 192 - 160, space*6, 0,  obj_tool_selection)
 			variant15.image_index = 15
-			variant16 = instance_create_depth(x + 672, y + 64, 0,  obj_tool_selection)
+			variant16 = instance_create_depth(room_width - 192 - 160, space*7, 0,  obj_tool_selection)
 			variant16.image_index = 16
-			variant17 = instance_create_depth(x + 672, y - 64, 0,  obj_tool_selection)
+			variant17 = instance_create_depth(room_width - 192 - 160, space*8, 0,  obj_tool_selection)
 			variant17.image_index = 17
-			variant18 = instance_create_depth(x + 672, y, 0,  obj_tool_selection)
+			variant18 = instance_create_depth(room_width - 192 - 160, space*9, 0,  obj_tool_selection)
 			variant18.image_index = 0
-			variant19 = instance_create_depth(x + 800, y, 0,  obj_tool_selection)
-			variant19.image_index = 0
+			variant19 = instance_create_depth(room_width - 192 - 96, space*10, 0,  obj_tool_selection)
+			variant19.image_index = 18
+			
+			skill1 = instance_create_depth(room_width - 192 - 32, space*21, 0, obj_skill_selection)
+			skill1.image_index = 4
+			skill2 = instance_create_depth(room_width - 192 - 160, space*21, 0, obj_skill_selection)
+			skill2.image_index = 6
+			skill3 = instance_create_depth(room_width - 192 - 32, space*22, 0, obj_skill_selection)
+			skill3.image_index = 7
+			skill4 = instance_create_depth(room_width - 192 - 160, space*22, 0, obj_skill_selection)
+			skill4.image_index = 13
 		}
 		break;
 		
@@ -773,4 +810,37 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 		}
 		break;
 	}
+}
+
+
+else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && selected
+{
+	selected = false
+	global.BaseSelection -= 1
+	
+	obj_player.CharacterRace = ""
+	obj_player.RaceDexterityAdded = 0
+	obj_player.RaceStrengthAdded = 0
+	obj_player.RaceConstitutionAdded = 0
+	obj_player.RaceIntelligenceAdded = 0
+	obj_player.RaceCharismaAdded = 0
+	obj_player.RaceWisdomAdded = 0
+	obj_player.Size = ""
+	obj_player.Speed = 0
+	obj_player.Swim = false
+	obj_player.Flight = false
+			
+	ds_list_clear(obj_player.RaceTraitsList)
+	ds_list_clear(obj_player.RaceLanguagesList)
+	ds_list_clear(obj_player.RaceWeaponsList)
+	ds_list_clear(obj_player.RaceArmorList)
+	ds_list_clear(obj_player.RaceToolsList)
+	ds_list_clear(obj_player.RaceAttacks)
+	ds_list_clear(obj_player.RaceCantrips)
+	
+	if instance_exists(obj_variant_menu) instance_destroy(obj_variant_menu)
+	if instance_exists(obj_language_selection) instance_destroy(obj_language_selection)
+	if instance_exists(obj_tool_selection) instance_destroy(obj_tool_selection)
+	if instance_exists(obj_skill_selection) instance_destroy(obj_skill_selection)
+	
 }
