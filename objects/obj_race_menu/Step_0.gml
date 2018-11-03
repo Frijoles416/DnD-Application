@@ -133,17 +133,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			lang7 = instance_create_depth(room_width - 192 - 32, space*18, 0,  obj_language_selection)
 			lang7.image_index = 13
 			lang8 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_language_selection)
-			lang8.image_index = 8
+			lang8.image_index = 2
 			lang9 = instance_create_depth(room_width - 192 - 160, space*13, 0,  obj_language_selection)
-			lang9.image_index = 9
+			lang9.image_index = 4
 			lang10 = instance_create_depth(room_width - 192 - 160, space*14, 0,  obj_language_selection)
-			lang10.image_index = 10
+			lang10.image_index = 6
 			lang11 = instance_create_depth(room_width - 192 - 160, space*15, 0, obj_language_selection)
-			lang11.image_index = 11
+			lang11.image_index = 8
 			lang12 = instance_create_depth(room_width - 192 - 160, space*16, 0, obj_language_selection)
-			lang12.image_index = 12
+			lang12.image_index = 10
 			lang13= instance_create_depth(room_width - 192 - 160, space*17, 0,  obj_language_selection)
-			lang13.image_index = 13
+			lang13.image_index = 12
 			lang14 = instance_create_depth(room_width - 192 - 160, space*18, 0,  obj_language_selection)
 			lang14.image_index = 14
 			lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
@@ -246,15 +246,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.Size = "Medium"
 			obj_player.Speed = 25
 			
+			global.TotalSelection = 1
+			
 			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Dwarven Resilience", "Stonecunning")
 
 			ds_list_add(obj_player.RaceLanguagesList, "Dwarvish")
 			
 			ds_list_add(obj_player.RaceWeaponsList, "Battleaxe", "Handaxe", "Throwing Hammer", "Warhammer")
 			
-			variant1 = instance_create_depth(x + 32, y - 32, 0,  obj_variant_menu)
+			variant1 = instance_create_depth(room_width - 256 - 64, 32, 0,  obj_variant_menu)
 			variant1.image_index = 3
-			variant2 = instance_create_depth(x + 32, y + 32, 0,  obj_variant_menu)
+			variant2 = instance_create_depth(room_width - 256 - 64, 96, 0,  obj_variant_menu)
 			variant2.image_index = 4
 			
 		}

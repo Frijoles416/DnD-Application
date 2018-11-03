@@ -38,22 +38,18 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 		case 3:
 		{
 			obj_player.CharacterRace = "Hill Dwarf"
-			obj_player.WisdomAdded = 1
+			obj_player.RaceWisdomAdded = 1
 			
-			ds_list_add(obj_player.TraitsList, "Dwarven Toughness")
-			
-			room_goto(rm_character_creation)
+			ds_list_add(obj_player.RaceTraitsList, "Dwarven Toughness")
 		}
 		break;
 		
 		case 4:
 		{
 			obj_player.CharacterRace = "Mountain Dwarf"
-			obj_player.StrengthAdded = 2
+			obj_player.RaceStrengthAdded = 2
 			
-			ds_list_add(obj.player.ArmorList, "Light", "Medium")
-			
-			room_goto(rm_character_creation)
+			ds_list_add(obj_player.RaceArmorList, "Light", "Medium")
 		}
 		break;
 		
@@ -858,23 +854,23 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 		//Dwarf - 2 variants
 		case 3:
 		{
-			obj_player.CharacterRace = "Hill Dwarf"
-			obj_player.WisdomAdded = 1
+			obj_player.CharacterRace = ""
+			obj_player.RaceWisdomAdded = 0
 			
-			ds_list_add(obj_player.TraitsList, "Dwarven Toughness")
-			
-			room_goto(rm_character_creation)
+			pos = ds_list_find_index(obj_player.RaceTraitsList, "Dwarven Toughness")
+			ds_list_delete(obj_player.RaceTraitsList, pos)
 		}
 		break;
 		
 		case 4:
 		{
-			obj_player.CharacterRace = "Mountain Dwarf"
-			obj_player.StrengthAdded = 2
+			obj_player.CharacterRace = ""
+			obj_player.RaceStrengthAdded = 0
 			
-			ds_list_add(obj.player.ArmorList, "Light", "Medium")
-			
-			room_goto(rm_character_creation)
+			pos = ds_list_find_index(obj_player.RaceArmorList, "Light")
+			ds_list_delete(obj_player.RaceArmorList, pos)
+			pos1 = ds_list_find_index(obj_player.RaceArmorList, "Medium")
+			ds_list_delete(obj_player.RaceArmorList, pos1)
 		}
 		break;
 		
