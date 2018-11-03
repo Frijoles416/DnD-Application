@@ -35,6 +35,25 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				ds_list_clear(obj_player.RaceAttacks)
 				ds_list_clear(obj_player.RaceCantrips)
 				
+				obj_player.RaceProficiencyAcrobatics = false
+				obj_player.RaceProficiencyAnimalHandling = false
+				obj_player.RaceProficiencyArcana = false
+				obj_player.RaceProficiencyAthletics = false
+				obj_player.RaceProficiencyDeception = false
+				obj_player.RaceProficiencyHistory = false
+				obj_player.RaceProficiencyInsight = false
+				obj_player.RaceProficiencyIntimidation = false
+				obj_player.RaceProficiencyInvestigation = false
+				obj_player.RaceProficiencyMedicine = false
+				obj_player.RaceProficiencyNature = false
+				obj_player.RaceProficiencyPerception = false
+				obj_player.RaceProficiencyPerformance = false
+				obj_player.RaceProficiencyPersuasion = false
+				obj_player.RaceProficiencyReligion = false
+				obj_player.RaceProficiencySleightofHand = false
+				obj_player.RaceProficiencyStealth = false
+				obj_player.RaceProficiencySurvival = false
+				
 				room_goto(rm_race_selection)
 			}
 		break;
@@ -135,7 +154,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 			ini_write_real("CharacterSave", "Intelligence Saving Throw", obj_player.IntelligenceSavingThrow)
 			ini_write_real("CharacterSave", "Wisdom Saving Throw", obj_player.WisdomSavingThrow)
 			
-			ini_write_real("CharacterSave", "Acrobatics Proficiency", obj_player.ProficiencyAcrobatics)
+			ini_write_real("CharacterSave", "Acrobatics RaceProficiency", obj_player.ProficiencyAcrobatics)
 			ini_write_real("CharacterSave", "Animal Handling Proficiency", obj_player.ProficiencyAnimalHandling)
 			ini_write_real("CharacterSave", "Arcana Proficiency", obj_player.ProficiencyArcana)
 			ini_write_real("CharacterSave", "Athletics Proficiency", obj_player.ProficiencyAthletics)
@@ -286,6 +305,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		{
 			global.BaseSelection = 0
 			global.VariantSelection = 0
+			global.LanguageSelection = 0
+			global.ToolSelection = 0
+			global.SkillSelection = 0
 			
 			room_goto(rm_character_creation)
 		}

@@ -107,7 +107,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.Speed = 30
 			
 			ds_list_add(obj_player.RaceTraitsList, "Change Appearance", "Changeling Instincts", "Unsettling Visage", "Divergent Persona")
-
+			
 			lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
 			lang1.image_index = 1
 			lang2 = instance_create_depth(room_width - 192 - 32, space*13, 0,  obj_language_selection)
@@ -138,7 +138,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			lang14.image_index = 14
 			lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
 			lang15.image_index = 15
-			
+			obj_language_selection.MaxLang = 2
 			
 			variant1 = instance_create_depth(room_width - 192 - 32, space, 0,  obj_tool_selection)
 			variant1.image_index = 1
@@ -178,6 +178,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant18.image_index = 0
 			variant19 = instance_create_depth(room_width - 192 - 96, space*10, 0,  obj_tool_selection)
 			variant19.image_index = 18
+			obj_tool_selection.MaxTools = 1
 			
 			skill1 = instance_create_depth(room_width - 192 - 32, space*21, 0, obj_skill_selection)
 			skill1.image_index = 4
@@ -187,6 +188,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			skill3.image_index = 7
 			skill4 = instance_create_depth(room_width - 192 - 160, space*22, 0, obj_skill_selection)
 			skill4.image_index = 13
+			obj_skill_selection.MaxSkills = 2
 		}
 		break;
 		

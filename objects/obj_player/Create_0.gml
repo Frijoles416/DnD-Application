@@ -4,6 +4,9 @@ cursor_sprite = spr_cursor
 //Global Variables
 global.BaseSelection = 0
 global.VariantSelection = 0
+global.LanguageSelection = 0
+global.SkillSelection = 0
+global.ToolSelection = 0
 
 ///Character Sheet Information
 
@@ -69,25 +72,27 @@ IntelligenceSavingThrow = false
 WisdomSavingThrow = false
 CharismaSavingThrow = false
 
-//Skill Proficiencies
-ProficiencyAcrobatics = false
-ProficiencyAnimalHandling = false
-ProficiencyArcana = false
-ProficiencyAthletics = false
-ProficiencyDeception = false
-ProficiencyHistory = false
-ProficiencyInsight = false
-ProficiencyIntimidation = false
-ProficiencyInvestigation = false
-ProficiencyMedicine = false
-ProficiencyNature = false
-ProficiencyPerception = false
-ProficiencyPerformance = false
-ProficiencyPersuasion = false
-ProficiencyReligion = false
-ProficiencySleightofHand = false
-ProficiencyStealth = false
-ProficiencySurvival = false
+//Skill Proficiencies (Will Be combined into one Prof. once Character Creation is over)
+
+//Race
+RaceProficiencyAcrobatics = false
+RaceProficiencyAnimalHandling = false
+RaceProficiencyArcana = false
+RaceProficiencyAthletics = false
+RaceProficiencyDeception = false
+RaceProficiencyHistory = false
+RaceProficiencyInsight = false
+RaceProficiencyIntimidation = false
+RaceProficiencyInvestigation = false
+RaceProficiencyMedicine = false
+RaceProficiencyNature = false
+RaceProficiencyPerception = false
+RaceProficiencyPerformance = false
+RaceProficiencyPersuasion = false
+RaceProficiencyReligion = false
+RaceProficiencySleightofHand = false
+RaceProficiencyStealth = false
+RaceProficiencySurvival = false
 
 //Other Variables
 ArmorClass = 0
