@@ -210,9 +210,32 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.RaceTraitsList, "Breath Weapon", "Breath Weapon", "Damage Resistance")
+			global.TotalSelection = 1
+			
+			ds_list_add(obj_player.RaceTraitsList, "Damage Resistance")
 			
 			ds_list_add(obj_player.RaceLanguagesList, "Draconic")
+			
+			variant1 = instance_create_depth(room_width - 256 - 64, 32, 0,  obj_variant_menu)
+			variant1.image_index = 52
+			variant2 = instance_create_depth(room_width - 256 - 64, 96, 0,  obj_variant_menu)
+			variant2.image_index = 53
+			variant3 = instance_create_depth(room_width - 256 - 64, 160, 0,  obj_variant_menu)
+			variant3.image_index = 54
+			variant4 = instance_create_depth(room_width - 256 - 64, 224, 0,  obj_variant_menu)
+			variant4.image_index = 55
+			variant5 = instance_create_depth(room_width - 256 - 64, 288, 0,  obj_variant_menu)
+			variant5.image_index = 56
+			variant6 = instance_create_depth(room_width - 256 - 64, 352, 0,  obj_variant_menu)
+			variant6.image_index = 57
+			variant7 = instance_create_depth(room_width - 256 - 64, 416, 0,  obj_variant_menu)
+			variant7.image_index = 58
+			variant8 = instance_create_depth(room_width - 256 - 64, 480, 0,  obj_variant_menu)
+			variant8.image_index = 59
+			variant9 = instance_create_depth(room_width - 256 - 64, 544, 0,  obj_variant_menu)
+			variant9.image_index = 60
+			variant10 = instance_create_depth(room_width - 256 - 64, 608, 0,  obj_variant_menu)
+			variant10.image_index = 61
 			
 		}
 		break;

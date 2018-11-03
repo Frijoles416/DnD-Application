@@ -740,6 +740,77 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			room_goto(rm_character_creation)
 		}
 		break;
+	
+	case 52:
+		{
+			obj_player.CharacterRace = "Dragonborn (Black)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Acid)")
+		}
+		break;
+		
+		case 53:
+		{
+			obj_player.CharacterRace = "Dragonborn (Blue)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Lightning)")
+		}
+		break;
+		
+		case 54:
+		{
+			obj_player.CharacterRace = "Dragonborn (Brass)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Fire)")
+		}
+		break;
+		
+		case 55:
+		{
+			obj_player.CharacterRace = "Dragonborn (Bronze)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Lightning)")
+		}
+		break;
+		
+		case 56:
+		{
+			obj_player.CharacterRace = "Dragonborn (Copper)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Acid)")
+		}
+		break;
+		
+		case 57:
+		{
+			obj_player.CharacterRace = "Dragonborn (Gold)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Fire)")
+		}
+		break;
+		
+		case 58:
+		{
+			obj_player.CharacterRace = "Dragonborn (Green)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Poison)")
+		}
+		break;
+		
+		case 59:
+		{
+			obj_player.CharacterRace = "Dragonborn (Red)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Fire)")
+		}
+		break;
+		
+		case 60:
+		{
+			obj_player.CharacterRace = "Dragonborn (Silver)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Cold)")
+		}
+		break;
+		
+		case 61:
+		{
+			obj_player.CharacterRace = "Dragonborn (White)"
+			ds_list_add(obj_player.RaceAttacks, "Breath Weapon (Cold)")
+		}
+		break;
+		
 	}
 }
 
@@ -755,6 +826,7 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 {
 	selected = false
 	global.VariantSelection -= 1
+	obj_confirm_button.Total -= 1
 	
 	switch(image_index)
 	{
@@ -1443,9 +1515,6 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			obj_player.ProficiencySurvival = true
 			
 			ds_list_add(obj_player.TraitsList, "Natural Tracker", "Mark of the Scent")
-			
-			room_goto(rm_character_creation)
-			
 		}
 		break;
 		
@@ -1461,8 +1530,6 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			ds_list_add(obj_player.LanguagesList, "Your Choice")
 			
 			ds_list_add(obj_player.ToolsList, "Your Choice")
-			
-			room_goto(rm_character_creation)
 		}
 		break;
 		
@@ -1473,8 +1540,6 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			obj_player.Speed = 30
 			
 			ds_list_add(obj_player.TraitsList, "Iron Fists", "Powerful Build")
-			
-			room_goto(rm_character_creation)
 		}
 		break;
 		
@@ -1486,8 +1551,88 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			
 			ds_list_add(obj_player.TraitsList, "Swift", "Light Step")
 			
-			room_goto(rm_character_creation)
 		}
 		break;
+		
+		case 52:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Acid)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 53:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Lightning)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 54:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Fire)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 55:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Lightning)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 56:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Acid)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 57:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Fire)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 58:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Poison)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 59:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Fire)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 60:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Cold)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
+		case 61:
+		{
+			obj_player.CharacterRace = ""
+			pos = ds_list_find_index(obj_player.RaceAttacks, "Breath Weapon (Cold)")
+			ds_list_delete(obj_player.RaceAttacks, pos)
+		}
+		break;
+		
 	}
 }
