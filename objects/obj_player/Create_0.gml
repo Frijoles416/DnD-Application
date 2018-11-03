@@ -7,6 +7,7 @@ global.VariantSelection = 0
 global.LanguageSelection = 0
 global.SkillSelection = 0
 global.ToolSelection = 0
+global.TotalSelection = 0
 
 ///Character Sheet Information
 

@@ -5,6 +5,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 {
 	selected = true
 	global.VariantSelection += 1
+	obj_confirm_button.Total += 1
 	
 	switch(image_index)
 	{

@@ -31,6 +31,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.Flight = true
 			obj_player.FlightSpeed = 50
 			
+			global.TotalSelection = 0
+			
 			ds_list_add(obj_player.RaceAttacks, "Talons")
 			
 			ds_list_add(obj_player.RaceTraitsList, "Flight", "Talons")
@@ -47,6 +49,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.Speed = 30
 			obj_player.Size = "Medium"
 			obj_player.Flight = false
+			
+			global.TotalSelection = 1
 			
 			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Celestial Resistance", "Healing Hands", "Light Bearer")
 			
@@ -71,6 +75,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			global.TotalSelection = 0
+			
 			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
 			
 			ds_list_add(obj_player.RaceLanguagesList, "Goblin")
@@ -86,7 +92,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.Size = "Medium"
 			obj_player.Speed = 40
 			
-			obj_player.ProficiencySurvival = true
+			global.TotalSelection = 0
+			
+			obj_player.RaceProficiencySurvival = true
 			
 			ds_list_add(obj_player.RaceTraitsList, "Charge", "Hooves", "Equine Build", "Survivor", "Hybrid Nature - Humanoid/ Monstrosity")
 			
@@ -105,6 +113,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.RaceCharismaAdded = 2
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
+			
+			global.TotalSelection = 5
 			
 			ds_list_add(obj_player.RaceTraitsList, "Change Appearance", "Changeling Instincts", "Unsettling Visage", "Divergent Persona")
 			
@@ -204,7 +214,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			
 			ds_list_add(obj_player.RaceLanguagesList, "Draconic")
 			
-			room_goto(rm_character_creation)
 		}
 		break;
 		

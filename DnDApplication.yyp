@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "293d5a3b-7e9b-423c-909b-67d6b80e6c21",
+            "Value": {
+                "id": "e29df100-129b-4008-977f-34d3ed788811",
+                "resourcePath": "objects\\obj_confirm_button\\obj_confirm_button.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "29e29d84-37f6-4123-b581-8b1362154975",
             "Value": {
                 "id": "8d4c9688-bcc5-418d-9854-94af08814654",
@@ -620,6 +628,14 @@
                 "id": "db5bacc4-31b1-4c4f-92c0-faaad0cb02b7",
                 "resourcePath": "views\\c2915091-5c9a-4fab-93f1-a3f5c31174cc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c7b1fd9e-63ad-4001-b133-4fe8947086cd",
+            "Value": {
+                "id": "de9c7348-b5c5-4b6a-8997-76e464c05ee5",
+                "resourcePath": "sprites\\spr_confirm_button\\spr_confirm_button.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
