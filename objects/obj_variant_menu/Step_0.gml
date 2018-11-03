@@ -1,5 +1,7 @@
 if global.pause exit
 
+var space = 32
+
 //Clicking event
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !selected && global.VariantSelection = 0
 {
@@ -57,18 +59,78 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 		case 5:
 		{
 			obj_player.CharacterRace = "High Elf"
-			obj_player.IntelligenceAdded = 1
+			obj_player.RaceIntelligenceAdded = 1
 			obj_player.Speed = 30
 			
-			ds_list_add(obj_player.Cantrips, "Your Choice")
+			global.TotalSelection = 3
 			
-			ds_list_add(obj_player.TraitsList, "Darkvision", "Trance", "Elf Weapon Training", "Cantrip")
+			spell1 = instance_create_depth(room_width - 256 - 96, 32, 0,  obj_wizard_spells)
+			spell1.image_index = 0
+			spell2 = instance_create_depth(room_width - 256 - 96 + 128, 32, 0,  obj_wizard_spells)
+			spell2.image_index = 1
+			spell3 = instance_create_depth(room_width - 256 - 96, 64, 0,  obj_wizard_spells)
+			spell3.image_index = 2
+			spell4 = instance_create_depth(room_width - 256 - 96 + 128, 64, 0,  obj_wizard_spells)
+			spell4.image_index = 3
+			spell5 = instance_create_depth(room_width - 256 - 96, 96, 0,  obj_wizard_spells)
+			spell5.image_index = 4
+			spell6 = instance_create_depth(room_width - 256 - 96 + 128, 96, 0,  obj_wizard_spells)
+			spell6.image_index = 5
+			spell7 = instance_create_depth(room_width - 256 - 96, 128, 0,  obj_wizard_spells)
+			spell7.image_index = 6
+			spell8 = instance_create_depth(room_width - 256 - 96 + 128, 128, 0,  obj_wizard_spells)
+			spell8.image_index = 7
+			spell9 = instance_create_depth(room_width - 256 - 96, 160, 0,  obj_wizard_spells)
+			spell9.image_index = 8
+			spell10 = instance_create_depth(room_width - 256 - 96 + 128, 160, 0,  obj_wizard_spells)
+			spell10.image_index = 9
+			spell11 = instance_create_depth(room_width - 256 - 96, 192, 0,  obj_wizard_spells)
+			spell11.image_index = 10
+			spell12 = instance_create_depth(room_width - 256 - 96 + 128, 192, 0,  obj_wizard_spells)
+			spell12.image_index = 11
+			spell13 = instance_create_depth(room_width - 256 - 96, 224, 0,  obj_wizard_spells)
+			spell13.image_index = 12
+			spell14 = instance_create_depth(room_width - 256 - 96 + 128, 224, 0,  obj_wizard_spells)
+			spell14.image_index = 13
+			obj_wizard_spells.Total = 1
 			
-			ds_list_add(obj_player.LanguagesList, "Your Choice")
+			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Trance", "Elf Weapon Training", "Cantrip")
 			
-			ds_list_add(obj_player.WeaponsList, "Shortbow", "Longbow", "Shortswords", "Longswords")
+			lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
+			lang1.image_index = 1
+			lang2 = instance_create_depth(room_width - 192 - 32, space*13, 0,  obj_language_selection)
+			lang2.image_index = 3
+			lang3 = instance_create_depth(room_width - 192 - 32, space*14, 0,  obj_language_selection)
+			lang3.image_index = 5
+			lang4 = instance_create_depth(room_width - 192 - 32, space*15, 0,  obj_language_selection)
+			lang4.image_index = 7
+			lang5 = instance_create_depth(room_width - 192 - 32, space*16, 0,  obj_language_selection)
+			lang5.image_index = 9
+			lang6 = instance_create_depth(room_width - 192 - 32, space*17, 0,  obj_language_selection)
+			lang6.image_index = 11
+			lang7 = instance_create_depth(room_width - 192 - 32, space*18, 0,  obj_language_selection)
+			lang7.image_index = 13
+			lang8 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_language_selection)
+			lang8.image_index = 2
+			lang9 = instance_create_depth(room_width - 192 - 160, space*13, 0,  obj_language_selection)
+			lang9.image_index = 4
+			lang10 = instance_create_depth(room_width - 192 - 160, space*14, 0,  obj_language_selection)
+			lang10.image_index = 6
+			lang11 = instance_create_depth(room_width - 192 - 160, space*15, 0, obj_language_selection)
+			lang11.image_index = 8
+			lang12 = instance_create_depth(room_width - 192 - 160, space*16, 0, obj_language_selection)
+			lang12.image_index = 10
+			lang13= instance_create_depth(room_width - 192 - 160, space*17, 0,  obj_language_selection)
+			lang13.image_index = 12
+			lang14 = instance_create_depth(room_width - 192 - 160, space*18, 0,  obj_language_selection)
+			lang14.image_index = 14
+			lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
+			lang15.image_index = 15
+			obj_language_selection.MaxLang = 1
 			
-			room_goto(rm_character_creation)
+			ds_list_add(obj_player.RaceWeaponsList, "Shortbow", "Longbow", "Shortswords", "Longswords")
+			
+			instance_destroy(obj_variant_menu)
 		}
 		break;
 		

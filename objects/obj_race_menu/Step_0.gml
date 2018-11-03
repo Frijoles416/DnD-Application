@@ -273,28 +273,31 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			
 			ds_list_add(obj_player.RaceLanguagesList, "Elvish")
 			
-			variant1 = instance_create_depth(x + 32, y - 64, 0,  obj_variant_menu)
+			global.TotalSelection = 1
+			
+			variant1 = instance_create_depth(room_width - 256 - 64, 32, 0,  obj_variant_menu)
 			variant1.image_index = 5
-			variant2 = instance_create_depth(x + 32, y, 0,  obj_variant_menu)
+			variant2 = instance_create_depth(room_width - 256 - 64, 96, 0,  obj_variant_menu)
 			variant2.image_index = 6
-			variant3 = instance_create_depth(x + 32, y + 64, 0,  obj_variant_menu)
+			variant3 = instance_create_depth(room_width - 256 - 64, 160, 0,  obj_variant_menu)
 			variant3.image_index = 7
-			variant4 = instance_create_depth(x + 160, y - 64, 0,  obj_variant_menu)
+			variant4 = instance_create_depth(room_width - 256 - 64, 224, 0,  obj_variant_menu)
 			variant4.image_index = 8
-			variant5 = instance_create_depth(x + 160, y, 0,  obj_variant_menu)
+			variant5 = instance_create_depth(room_width - 256 - 64, 288, 0,  obj_variant_menu)
 			variant5.image_index = 9
-			variant6 = instance_create_depth(x + 160, y + 64, 0,  obj_variant_menu)
+			variant6 = instance_create_depth(room_width - 256 - 64, 352, 0,  obj_variant_menu)
 			variant6.image_index = 10
-			variant7 = instance_create_depth(x + 288, y - 64, 0,  obj_variant_menu)
+			variant7 = instance_create_depth(room_width - 256 - 64, 416, 0,  obj_variant_menu)
 			variant7.image_index = 11
-			variant8 = instance_create_depth(x + 288, y, 0,  obj_variant_menu)
+			variant8 = instance_create_depth(room_width - 256 - 64, 480, 0,  obj_variant_menu)
 			variant8.image_index = 12
-			variant9 = instance_create_depth(x + 288, y + 64, 0,  obj_variant_menu)
+			variant9 = instance_create_depth(room_width - 256 - 64, 544, 0,  obj_variant_menu)
 			variant9.image_index = 13
-			variant10 = instance_create_depth(x + 416, y - 64, 0,  obj_variant_menu)
+			variant10 = instance_create_depth(room_width - 256 - 64, 608, 0,  obj_variant_menu)
 			variant10.image_index = 14
-			variant11 = instance_create_depth(x + 416, y, 0,  obj_variant_menu)
-			variant11.image_index = 15
+			variant10 = instance_create_depth(room_width - 256 - 64, 672, 0,  obj_variant_menu)
+			variant10.image_index = 15
+			
 			
 		}
 		break;
@@ -878,5 +881,8 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 	if instance_exists(obj_language_selection) instance_destroy(obj_language_selection)
 	if instance_exists(obj_tool_selection) instance_destroy(obj_tool_selection)
 	if instance_exists(obj_skill_selection) instance_destroy(obj_skill_selection)
+	if instance_exists(obj_wizard_spells) instance_destroy(obj_wizard_spells)
+	
+	global.TotalSelection = 0
 	
 }
