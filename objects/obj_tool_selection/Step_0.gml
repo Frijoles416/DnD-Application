@@ -6,7 +6,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 	global.ToolSelection += 1
 	obj_confirm_button.Total += 1
 	
-	
+	if room = rm_race_selection
+	{
 	switch(image_index)
 	{
 		case 0:
@@ -159,31 +160,66 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 		}
 		break;
 		
-		/*
 		case 25:
 		{
-			ds_list_add(obj_player.RaceToolsList, "Gaming Set")
-			
-			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
-			stat1.image_index = 1
-			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
-			stat2.image_index = 3
-			instance_destroy(obj_tool_selection)
+			ds_list_add(obj_player.RaceToolsList, "Bagpipes")
 		}
 		break;
 		
 		case 26:
 		{
-			ds_list_add(obj_player.RaceToolsList, "Musical Instrument")
-			
-			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
-			stat1.image_index = 1
-			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
-			stat2.image_index = 3
-			instance_destroy(obj_tool_selection)
+			ds_list_add(obj_player.RaceToolsList, "Drum")
 		}
 		break;
-		*/
+		
+		case 27:
+		{
+			ds_list_add(obj_player.RaceToolsList, "Dulcimer")
+		}
+		break;
+		
+		case 28:
+		{
+			ds_list_add(obj_player.RaceToolsList, "Flute")
+		}
+		break;
+		
+		case 29:
+		{
+			ds_list_add(obj_player.RaceToolsList, "Lute")
+		}
+		break;
+		
+		case 30:
+		{
+			ds_list_add(obj_player.RaceToolsList, "Lyre")
+		}
+		break;
+		
+		case 31:
+		{
+			ds_list_add(obj_player.RaceToolsList, "Horn")
+		}
+		break;
+		
+		case 32:
+		{
+			ds_list_add(obj_player.RaceToolsList, "Pan Flute")
+		}
+		break;
+		
+		case 33:
+		{
+			ds_list_add(obj_player.ToolsList, "Shawm")
+		}
+		break;
+		
+		case 34:
+		{
+			ds_list_add(obj_player.ToolsList, "Viol")
+		}
+		break;
+	}
 	}
 }
 
@@ -371,30 +407,74 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 		}
 		break;
 		
-		/*
 		case 25:
 		{
-			ds_list_add(obj_player.RaceToolsList, "Gaming Set")
-			
-			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
-			stat1.image_index = 1
-			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
-			stat2.image_index = 3
-			instance_destroy(obj_tool_selection)
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Bagpipes")
+			ds_list_delete(obj_player.RaceToolsList, pos)
 		}
 		break;
 		
 		case 26:
 		{
-			ds_list_add(obj_player.RaceToolsList, "Musical Instrument")
-			
-			stat1 = instance_create_depth(x + 32, y - 32, 0,  obj_stat_menu)
-			stat1.image_index = 1
-			stat2 = instance_create_depth(x + 32, y + 32, 0,  obj_stat_menu)
-			stat2.image_index = 3
-			instance_destroy(obj_tool_selection)
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Drum")
+			ds_list_delete(obj_player.RaceToolsList, pos)
 		}
 		break;
-		*/
+		
+		case 27:
+		{
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Dulcimer")
+			ds_list_delete(obj_player.RaceToolsList, pos)
+		}
+		break;
+		
+		case 28:
+		{
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Flute")
+			ds_list_delete(obj_player.RaceToolsList, pos)
+		}
+		break;
+		
+		case 29:
+		{
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Lute")
+			ds_list_delete(obj_player.RaceToolsList, pos)
+		}
+		break;
+		
+		case 30:
+		{
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Lyre")
+			ds_list_delete(obj_player.RaceToolsList, pos)
+		}
+		break;
+		
+		case 31:
+		{
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Horn")
+			ds_list_delete(obj_player.RaceToolsList, pos)
+		}
+		break;
+		
+		case 32:
+		{
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Pan Flute")
+			ds_list_delete(obj_player.RaceToolsList, pos)
+		}
+		break;
+		
+		case 33:
+		{
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Shawm")
+			ds_list_delete(obj_player.RaceToolsList, pos)
+		}
+		break;
+		
+		case 34:
+		{
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Viol")
+			ds_list_delete(obj_player.RaceToolsList, pos)
+		}
+		break;
 	}
 }

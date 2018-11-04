@@ -5,7 +5,9 @@ cursor_sprite = spr_cursor
 global.BaseSelection = 0
 global.VariantSelection = 0
 global.LanguageSelection = 0
+global.WeaponsSelection = 0
 global.SkillSelection = 0
+global.StatSelection = 0
 global.ToolSelection = 0
 global.SpellSelection = 0
 global.TotalSelection = 0
@@ -122,6 +124,8 @@ RaceArmorList = ds_list_create()
 RaceToolsList = ds_list_create()
 RaceAttacks = ds_list_create()
 RaceCantrips = ds_list_create()
+Race1stMagic = ds_list_create()
+Race2ndMagic = ds_list_create()
 
 //Class
 
