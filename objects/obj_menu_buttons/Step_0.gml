@@ -90,7 +90,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 6:
 		{
-			obj_player.CharacterName = get_string("Enter Character Name", "Jimbothyithan")
+			obj_player.CharacterName = get_string("Enter Character Name", "Elongated Muskrat")
 		}
 		break;
 		
