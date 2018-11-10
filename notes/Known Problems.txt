@@ -1,0 +1,13 @@
+
+ADDED BY LEVI
+Color Code Profienceies
+Text hasn't been added to the Race buttons to show selection clauses
+Acolyte needs to have god choice
+There are spaceing problems when drawing text for background infromation (Archeologist)
+Alarms for Menu Button objects
+Fix Collison for all button sprites
+Button spacing for all menus needs to be fixed
+Add tool list to the Added by Background List
+Background de-selects
+
+ADDED BY JAMES

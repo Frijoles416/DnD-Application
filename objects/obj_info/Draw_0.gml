@@ -87,6 +87,9 @@ if room = rm_character_creation
 	draw_text(x + 32, y + 704, "Stealth + " + string(obj_player.DexterityModifier))
 	draw_text(x + 32, y + 720, "Survival + " + string(obj_player.WisdomModifier))
 	
+	draw_text(x + 32, y + 768, "Personality Traits : ")
+	draw_text_ext(x + 32, y + 784, obj_player.PersonalityTraits, 16, 512)
+	
 	draw_text(x + room_width/2, y + 32, "Added By Race")
 	draw_text(x + room_width/2, y + 48, "Traits : ")
 	var m
@@ -95,21 +98,21 @@ if room = rm_character_creation
 		draw_text(x + room_width/2, y + 64 + (m * 16), ds_list_find_value(obj_player.RaceTraitsList, m))
 	}
 	
-	draw_text(x + room_width/2, y + 192, "Languages Known: ")
+	draw_text(x + room_width/2, y + 192, "Languages Known : ")
 	var m
 	for(m = 0; m < ds_list_size(obj_player.RaceLanguagesList); m += 1)
 	{
 		draw_text(x + room_width/2, y + 208 + (m * 16), ds_list_find_value(obj_player.RaceLanguagesList, m))
 	}
 
-	draw_text(x + room_width/2, y + 384, "Weapon Proficiencies: ")
+	draw_text(x + room_width/2, y + 384, "Weapon Proficiencies : ")
 	var m
 	for(m = 0; m < ds_list_size(obj_player.RaceWeaponsList); m += 1)
 	{
 		draw_text(x + 416, y + 400 + (m * 16), ds_list_find_value(obj_player.RaceWeaponsList, m))
 	}
 
-	draw_text(x + room_width/2, y + 528, "Armor Proficiencies: ")
+	draw_text(x + room_width/2, y + 528, "Armor Proficiencies : ")
 	var m
 	for(m = 0; m < ds_list_size(obj_player.RaceArmorList); m += 1)
 	{
@@ -203,13 +206,16 @@ if room = rm_character_creation
 		draw_text(x + room_width/1.25, y + 208 + (m * 16), ds_list_find_value(obj_player.BackgroundInventoryList, m))
 	}
 	
+	draw_text(x + room_width/1.25, y + 448, "Background Traits : ")
+	draw_text_ext(x + room_width/1.25, y + 464, obj_player.BackgroundFeatures, 16, 256)
+	
 	
 	draw_set_color(c_black)
 	draw_rectangle(0, room_height - 96, room_width, room_height, false)
 	
 }
 
-if room = rm_race_selection
+if room = rm_race_selection || room = rm_background_selection
 {
 	draw_set_color(c_white)
 	draw_rectangle(0, room_height - 192, room_width - 256 - 128, room_height - 14, false)

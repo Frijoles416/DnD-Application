@@ -100,6 +100,26 @@ RaceProficiencySleightofHand = false
 RaceProficiencyStealth = false
 RaceProficiencySurvival = false
 
+//Background
+BackgroundProficiencyAcrobatics = false
+BackgroundProficiencyAnimalHandling = false
+BackgroundProficiencyArcana = false
+BackgroundProficiencyAthletics = false
+BackgroundProficiencyDeception = false
+BackgroundProficiencyHistory = false
+BackgroundProficiencyInsight = false
+BackgroundProficiencyIntimidation = false
+BackgroundProficiencyInvestigation = false
+BackgroundProficiencyMedicine = false
+BackgroundProficiencyNature = false
+BackgroundProficiencyPerception = false
+BackgroundProficiencyPerformance = false
+BackgroundProficiencyPersuasion = false
+BackgroundProficiencyReligion = false
+BackgroundProficiencySleightofHand = false
+BackgroundProficiencyStealth = false
+BackgroundProficiencySurvival = false
+
 //Other Variables
 ArmorClass = 0
 DeathSaveSuccesses = 0
@@ -141,6 +161,7 @@ ClassCantrips = ds_list_create()
 
 //Background
 BackgroundLanguagesList = ds_list_create()
+BackgroundToolsList = ds_list_create()
 BackgroundInventoryList = ds_list_create()
 
 //Data structure list initialization

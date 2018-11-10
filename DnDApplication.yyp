@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "27894be3-0a29-4094-aae1-520caa2362a4",
+            "Value": {
+                "id": "a6d75471-359e-489a-8f74-a66e2f9a8376",
+                "resourcePath": "notes\\Known Problems.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "293d5a3b-7e9b-423c-909b-67d6b80e6c21",
             "Value": {
                 "id": "e29df100-129b-4008-977f-34d3ed788811",
@@ -499,14 +507,6 @@
             "Value": {
                 "id": "40c40763-c826-4b1e-b9ae-4a6f3d0850ad",
                 "resourcePath": "sprites\\spr_tool_selection\\spr_tool_selection.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "a7e02b81-7fe6-4a54-bc21-de5fde442962",
-            "Value": {
-                "id": "5c449be8-9516-465d-af47-484cd4e3a8e7",
-                "resourcePath": "sprites\\spr_musical_instruments\\spr_musical_instruments.yy",
                 "resourceType": "GMSprite"
             }
         },
