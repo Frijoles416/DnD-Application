@@ -1468,55 +1468,42 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 	global.VariantSelection -= 1
 	obj_confirm_button.Total -= 1
 	
-	switch(image_index)
-	{
-		//Aasimar - 3 variants
-		case 0:
-		{
-			obj_player.CharacterRace = ""
-			obj_player.RaceWisdomAdded = 0
+	obj_player.CharacterRace = ""
+	obj_player.RaceDexterityAdded = 0
+	obj_player.RaceStrengthAdded = 0
+	obj_player.RaceConstitutionAdded = 0
+	obj_player.RaceIntelligenceAdded = 0
+	obj_player.RaceCharismaAdded = 0
+	obj_player.RaceWisdomAdded = 0
+	obj_player.Size = ""
+	obj_player.Speed = 0
+	obj_player.Swim = false
+	obj_player.Flight = false
 			
-		}
-		break;
-		
-		case 1:
-		{
-			obj_player.CharacterRace = ""
-			obj_player.RaceConstitutionAdded = 0
-			
-		}
-		break;
-		
-		case 2:
-		{
-			obj_player.CharacterRace = ""
-			obj_player.RaceStrengthAdded = 0
-			
-		}
-		break;
-		
-		//Dwarf - 2 variants
-		case 3:
-		{
-			obj_player.CharacterRace = ""
-			obj_player.RaceWisdomAdded = 0
-			
-			pos = ds_list_find_index(obj_player.RaceTraitsList, "Dwarven Toughness")
-			ds_list_delete(obj_player.RaceTraitsList, pos)
-		}
-		break;
-		
-		case 4:
-		{
-			obj_player.CharacterRace = ""
-			obj_player.RaceStrengthAdded = 0
-			
-			pos = ds_list_find_index(obj_player.RaceArmorList, "Light")
-			ds_list_delete(obj_player.RaceArmorList, pos)
-			pos1 = ds_list_find_index(obj_player.RaceArmorList, "Medium")
-			ds_list_delete(obj_player.RaceArmorList, pos1)
-		}
-		break;
-		
-	}
+	ds_list_clear(obj_player.RaceTraitsList)
+	ds_list_clear(obj_player.RaceLanguagesList)
+	ds_list_clear(obj_player.RaceWeaponsList)
+	ds_list_clear(obj_player.RaceArmorList)
+	ds_list_clear(obj_player.RaceToolsList)
+	ds_list_clear(obj_player.RaceAttacks)
+	ds_list_clear(obj_player.RaceCantrips)
+	ds_list_clear(obj_player.Race1stMagic)
+	ds_list_clear(obj_player.Race2ndMagic)
+	
+	/* Hve to figure out a fix for Half Elf Human Simic Hybrid and Teifling
+	if instance_exists(obj_language_selection) instance_destroy(obj_language_selection)
+	if instance_exists(obj_tool_selection) instance_destroy(obj_tool_selection)
+	if instance_exists(obj_skill_selection) instance_destroy(obj_skill_selection)
+	if instance_exists(obj_wizard_spells) instance_destroy(obj_wizard_spells)
+	if instance_exists(obj_equipment_selection) instance_destroy(obj_equipment_selection)
+	if instance_exists(obj_stat_menu) instance_destroy(obj_stat_menu)
+	*/
+	
+	global.VariantSelection = 0
+	global.LanguageSelection = 0
+	global.ToolSelection = 0
+	global.SkillSelection = 0
+	global.StatSelection = 0
+	global.SpellSelection = 0
+	
 }

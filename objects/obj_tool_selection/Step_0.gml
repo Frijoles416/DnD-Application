@@ -318,7 +318,7 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 		
 		case 12:
 		{
-			pos = ds_list_find_index(obj_player.RaceToolsList, "Potter's Supplies")
+			pos = ds_list_find_index(obj_player.RaceToolsList, "Potter's Tools")
 			ds_list_delete(obj_player.RaceToolsList, pos)
 		}
 		break;

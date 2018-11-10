@@ -7,6 +7,12 @@ if height > 0 && !race_info
 	draw_rectangle(128 + 32, 0, room_width, 31, false)
 }
 
+//Deving
+draw_text(room_width - 32, 16, global.TotalSelection)
+if instance_exists(obj_confirm_button)
+draw_text(room_width - 32, 32, obj_confirm_button.Total)
+
+
 ///Draw character information
 
 draw_set_font(fnt_1)

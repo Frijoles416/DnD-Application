@@ -618,6 +618,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.Size = "Medium"
 			obj_player.Speed = 30
 			
+			global.TotalSelection = 2
+			
 			lang1 = instance_create_depth(room_width - 400, space, 0,  obj_language_selection)
 			lang1.image_index = 0
 			lang2 = instance_create_depth(room_width - 400 + 128, space, 0, obj_language_selection)
@@ -1294,6 +1296,7 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 {
 	selected = false
 	global.BaseSelection -= 1
+	obj_confirm_button.Total = 0
 	
 	obj_player.CharacterRace = ""
 	obj_player.RaceDexterityAdded = 0
