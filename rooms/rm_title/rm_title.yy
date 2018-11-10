@@ -26,7 +26,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_73631E83","id": "cad41b62-5717-4416-8688-2a9d54cb19fd","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_73631E83","objId": "7baf02b2-04bc-4a06-abcf-e042508f6e9e","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 320,"y": 0},
+{"name": "inst_73631E83","id": "cad41b62-5717-4416-8688-2a9d54cb19fd","colour": { "Value": 4294967295 },"creationCodeFile": "InstanceCreationCode_inst_73631E83.gml","creationCodeType": ".gml","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_73631E83","objId": "7baf02b2-04bc-4a06-abcf-e042508f6e9e","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 320,"y": 0},
 {"name": "inst_6583A36","id": "3fc5e492-7f45-41db-9ea7-e106444232b5","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_6583A36","objId": "f21e6554-8d73-4576-a88d-329d1e7cdfa6","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 0,"y": 0}
             ],
             "layers": [
@@ -89,12 +89,12 @@
     },
     "roomSettings":     {
         "id": "c2320d40-bc3f-42f3-9a2b-852435db30ff",
-        "Height": 810,
+        "Height": 864,
         "inheritRoomSettings": false,
         "modelName": "GMRoomSettings",
         "persistent": false,
         "mvc": "1.0",
-        "Width": 1440
+        "Width": 1536
     },
     "mvc": "1.0",
     "views": [

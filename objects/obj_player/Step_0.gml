@@ -29,3 +29,5 @@ switch(CharacterClass)
 	MaxHP = 8 + ConstitutionModifer
 	break;
 }
+
+if keyboard_check_released(vk_escape) game_end()

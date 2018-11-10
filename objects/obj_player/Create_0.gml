@@ -12,6 +12,8 @@ global.ToolSelection = 0
 global.SpellSelection = 0
 global.TotalSelection = 0
 
+global.pause = false
+
 ///Character Sheet Information
 
 // *** RACE VARIABLES *** //

@@ -8,6 +8,8 @@ if getinfo = true
 
 height = string_height_ext(info, 16, (room_width - 224))
 
+if global.pause
+{
 if mouse_wheel_down()&& y >  ((height * -1) + 404)
 {
 	y -= 32
@@ -16,4 +18,18 @@ if mouse_wheel_down()&& y >  ((height * -1) + 404)
 if mouse_wheel_up() && y < 36
 {
 	y += 32
+}
+}
+
+if room = rm_character_creation
+{
+if mouse_wheel_down() && y > -320
+{
+	y -= 32
+}
+
+if mouse_wheel_up() && y != 0
+{
+	y += 32
+}
 }
