@@ -30,4 +30,8 @@ switch(CharacterClass)
 	break;
 }
 
+//Deving
 if keyboard_check_released(vk_escape) game_end()
+if keyboard_check_released(ord("B")) room_goto(rm_Deving_Buttons)
+if room = rm_Deving_Buttons && keyboard_check_released(ord("B")) room_goto(rm_character_creation)
+

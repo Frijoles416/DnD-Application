@@ -663,6 +663,14 @@
             }
         },
         {
+            "Key": "d9eaac1b-e4d6-4bea-a368-fad05b0930fd",
+            "Value": {
+                "id": "bd8c349c-c646-4bd4-bb03-8687460c8152",
+                "resourcePath": "rooms\\rm_Deving_Buttons\\rm_Deving_Buttons.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "da39445f-7a3a-40e4-87e9-4a588c9ed1e1",
             "Value": {
                 "id": "4a9fea42-8891-42a6-af3c-ac1f032ec563",
