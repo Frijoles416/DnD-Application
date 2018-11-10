@@ -1273,6 +1273,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 					obj_player.PersonalityTraits = "War is the only thing that makes sense to you, and you’re always looking for a fight."
 				}
 				break;
+			}
 			
 			global.TotalSelection = 1
 			
@@ -1288,7 +1289,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			}
 			break;
 		}
-	}
 }
 
 
@@ -1309,6 +1309,7 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 	obj_player.Speed = 0
 	obj_player.Swim = false
 	obj_player.Flight = false
+	obj_player.PersonalityTraits = ""
 			
 	ds_list_clear(obj_player.RaceTraitsList)
 	ds_list_clear(obj_player.RaceLanguagesList)

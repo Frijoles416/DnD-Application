@@ -1,7 +1,3 @@
-if obj_info.height > 0 self.depth = obj_info.depth - 1
-
-if global.pause exit
-
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 {
 	switch(image_index)
@@ -26,6 +22,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 				obj_player.FlightSpeed = 0
 				obj_player.Swim = false
 				obj_player.SwimSpeed = 0
+				obj_player.PersonalityTraits = ""
 				
 				ds_list_clear(obj_player.RaceTraitsList)
 				ds_list_clear(obj_player.RaceLanguagesList)
@@ -66,6 +63,33 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 2:
 			{
+				obj_player.CharacterBackground = ""
+				obj_player.BackgroundFeatures = ""
+				obj_player.GoldPieces = 0
+				
+				ds_list_clear(obj_player.BackgroundInventoryList)
+				ds_list_clear(obj_player.BackgroundLanguagesList)
+				ds_list_clear(obj_player.BackgroundToolsList)
+				
+				obj_player.BackgroundProficiencyAcrobatics = false
+				obj_player.BackgroundProficiencyAnimalHandling = false
+				obj_player.BackgroundProficiencyArcana = false
+				obj_player.BackgroundProficiencyAthletics = false
+				obj_player.BackgroundProficiencyDeception = false
+				obj_player.BackgroundProficiencyHistory = false
+				obj_player.BackgroundProficiencyInsight = false
+				obj_player.BackgroundProficiencyIntimidation = false
+				obj_player.BackgroundProficiencyInvestigation = false
+				obj_player.BackgroundProficiencyMedicine = false
+				obj_player.BackgroundProficiencyNature = false
+				obj_player.BackgroundProficiencyPerception = false
+				obj_player.BackgroundProficiencyPerformance = false
+				obj_player.BackgroundProficiencyPersuasion = false
+				obj_player.BackgroundProficiencyReligion = false
+				obj_player.BackgroundProficiencySleightofHand = false
+				obj_player.BackgroundProficiencyStealth = false
+				obj_player.BackgroundProficiencySurvival = false
+				
 				room_goto(rm_background_selection)
 			}
 		break;
@@ -90,7 +114,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 		
 		case 6:
 		{
-			obj_player.CharacterName = get_string("Enter Character Name", "Elongated Muskrat")
+			obj_player.CharacterName = get_string("Enter Character Name", "Jimbothyithan")
 		}
 		break;
 		
