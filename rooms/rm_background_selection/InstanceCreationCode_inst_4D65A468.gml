@@ -1,1 +1,1 @@
-image_index = 36
+image_index = 35

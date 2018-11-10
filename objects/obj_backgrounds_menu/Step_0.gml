@@ -174,7 +174,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 		
 		case 4:
 		{
-			obj_player.CharacterBackground = "City Watch/ Investigator"
+			obj_player.CharacterBackground = "City Watch"
 			obj_player.BackgroundProficiencyInsight = true
 			obj_player.BackgroundProficiencyAthletics = true
 			obj_player.GoldPieces += 10
@@ -320,7 +320,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 		
 		case 8:
 		{
-			obj_player.CharacterBackground = "Criminal/ Spy"
+			obj_player.CharacterBackground = "Criminal"
 			obj_player.BackgroundProficiencyDeception = true
 			obj_player.BackgroundProficiencyStealth = true
 			obj_player.GoldPieces += 15
@@ -459,30 +459,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 				tool[i].image_index = i
 			}
 			
-			LanguagesChosen = 0
-			MaxLanguages = 1
-			
-			var i
-			var space = 16
-			var lang
-			for (var i = 0; i < 14; i += 1)
-			{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
-				lang[i].image_index = i
-			}
-		}
-		break;
-		
-		case 14.5: //split from guild artisan for simplicity
-		{
-			obj_player.CharacterBackground = "Guild Merchant"
-			obj_player.BackgroundProficiencyInsight = true
-			obj_player.BackgroundProficiencyPersuasion = true
-			obj_player.GoldPieces += 15
-			obj_player.BackgroundFeatures = "As an established and respected member of a guild, you can rely on certain benefits that membership provides. \nYour fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers. You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces."
-			
-			ds_list_add(obj_player.BackgroundInventoryList, "Letter of introduction from guild", "Traveler's clothes", "Mule", "Cart")
-			ds_list_add(obj_player.ToolsList, "Navigator's Tools")
 			LanguagesChosen = 0
 			MaxLanguages = 1
 			
@@ -1033,6 +1009,44 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			CanChooseInstrument = true
 			LanguagesChosen = 0
 			MaxLanguages = 2
+			
+			var i
+			var space = 16
+			var lang
+			for (var i = 0; i < 14; i += 1)
+			{
+				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
+				lang[i].image_index = i
+			}
+		}
+		break;
+		
+		case 44:
+		{
+			obj_player.CharacterBackground = "Investigator"
+			//placeholder
+		}
+		break;
+		
+		case 45:
+		{
+			obj_player.CharacterBackground = "Spy"
+			//placeholder
+		}
+		break;
+		
+		case 46: 
+		{
+			obj_player.CharacterBackground = "Guild Merchant"
+			obj_player.BackgroundProficiencyInsight = true
+			obj_player.BackgroundProficiencyPersuasion = true
+			obj_player.GoldPieces += 15
+			obj_player.BackgroundFeatures = "As an established and respected member of a guild, you can rely on certain benefits that membership provides. \nYour fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers. You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces."
+			
+			ds_list_add(obj_player.BackgroundInventoryList, "Letter of introduction from guild", "Traveler's clothes", "Mule", "Cart")
+			ds_list_add(obj_player.ToolsList, "Navigator's Tools")
+			LanguagesChosen = 0
+			MaxLanguages = 1
 			
 			var i
 			var space = 16
