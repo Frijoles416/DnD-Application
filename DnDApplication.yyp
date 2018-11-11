@@ -327,14 +327,6 @@
             }
         },
         {
-            "Key": "5b5c7f60-bcd2-44aa-9e81-9e5780ad714d",
-            "Value": {
-                "id": "554dab5f-edf0-47ff-9a23-c9df50405922",
-                "resourcePath": "scripts\\create_button_list\\create_button_list.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "5f9b0a61-f6bc-44a3-9a51-d00a3fdcf833",
             "Value": {
                 "id": "59ed5951-33d9-4168-a253-08379f3e5fa7",
@@ -356,14 +348,6 @@
                 "id": "f5860a4e-ff5a-4b9f-957a-0d2b4bea0ac8",
                 "resourcePath": "views\\678b6fa3-7a22-440c-9c97-d8352679c89c.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "6836405e-a3d2-4ffe-9d72-17c8a43ab71c",
-            "Value": {
-                "id": "19adc972-d801-4c9f-8eae-a61a7e7bc44f",
-                "resourcePath": "scripts\\scr_button_collision_and_depth\\scr_button_collision_and_depth.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -428,6 +412,14 @@
                 "id": "7e5817ca-5f29-4ccb-872f-e9417d485260",
                 "resourcePath": "objects\\obj_title_screen\\obj_title_screen.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "83a574fa-0d55-4359-a807-9f4db3937e70",
+            "Value": {
+                "id": "b2dd30a3-d0f9-4ac4-abff-7697859836e2",
+                "resourcePath": "views\\83a574fa-0d55-4359-a807-9f4db3937e70.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -759,14 +751,6 @@
             }
         },
         {
-            "Key": "f18afce2-cb65-4d86-948e-6d4db65c6a09",
-            "Value": {
-                "id": "aef3bb6b-7245-4e00-b1d3-f103aab30378",
-                "resourcePath": "rooms\\rm_equipment_selection\\rm_equipment_selection.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "f1ef2698-13fd-4dc2-88b3-4ccb7f11ef4b",
             "Value": {
                 "id": "7455af39-cbb5-413d-a764-1a9c79cb25f8",
@@ -825,8 +809,6 @@
         "29e29d84-37f6-4123-b581-8b1362154975",
         "3b436826-bb8f-40bb-85cf-19e645a2e8f9",
         "94234cb8-3bda-4067-ac37-619ced4e0a89",
-        "6836405e-a3d2-4ffe-9d72-17c8a43ab71c",
-        "5b5c7f60-bcd2-44aa-9e81-9e5780ad714d",
         "76cfc004-c840-47cc-910e-b2171c926e93"
     ],
     "tutorial": ""

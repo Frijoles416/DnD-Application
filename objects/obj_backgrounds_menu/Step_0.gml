@@ -168,7 +168,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.BackgroundFeatures = "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. \nAdditionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy."
 			
 			ds_list_add(obj_player.BackgroundInventoryList, "Fine clothes", "Disguise Kit", "Tools of the con of your choice")
-			ds_list_add(obj_player.ToolsList, "Disguise Kit", "Forgery Kit")
+			ds_list_add(obj_player.BackgroundToolsList, "Disguise Kit", "Forgery Kit")
 		}
 		break;
 		
