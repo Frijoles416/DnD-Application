@@ -13,6 +13,11 @@ var space = 32
 
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !selected && global.BaseSelection = 0
 {
+	//Information display stuff
+	obj_info.x = 0
+	obj_info.y = room_height - 194
+	obj_info.cooldown = 150
+	
 	selected = true
 	global.BaseSelection += 1
 	//pre-initialization
@@ -40,6 +45,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceLanguagesList, "Aarakocra", "Auran")
 			
 			ds_list_add(obj_player.RaceWeaponsList, "Unarmed Strikes")
+			
+			scr_information(Aarakocra)
 		}
 		break;
 		
@@ -1297,6 +1304,7 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 	selected = false
 	global.BaseSelection -= 1
 	obj_confirm_button.Total = 0
+	obj_info.info = ""
 	
 	obj_player.CharacterRace = ""
 	obj_player.RaceDexterityAdded = 0

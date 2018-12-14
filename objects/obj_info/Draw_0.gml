@@ -1,5 +1,5 @@
 draw_set_color(c_lime)
-draw_text_ext(x , y , info, 16, (room_width - 224))
+//draw_text_ext(x , y , info, 16, (room_width - 224))
 if height > 0 && !race_info
 {
 	draw_set_color(c_black)
@@ -215,12 +215,24 @@ if room = rm_character_creation
 	
 }
 
-if room = rm_race_selection || room = rm_background_selection
+
+if room = rm_race_selection
 {
-	draw_set_color(c_white)
-	draw_rectangle(0, room_height - 192, room_width - 256 - 128, room_height - 14, false)
+	
 	draw_set_color(c_black)
-	draw_rectangle(2, room_height - 190, room_width - 256 - 130, room_height - 16, false)
+	draw_rectangle(2, room_height - 192, room_width - 256 - 128, room_height - 16, false)
+	
+	
+	draw_set_color(c_lime)
+	draw_text_ext(x + 8 , y , info, 16, room_width - 256 - 136)
+	
 	draw_set_color(c_white)
-	draw_text_ext(x , y , info, 16, room_width - 16)
+	draw_rectangle(2, room_height - 192, room_width - 256 - 128, room_height - 16, true)
+	draw_set_color(c_white)
+	draw_rectangle(3, room_height - 191, room_width - 256 - 127, room_height - 15, true)
+	
+	draw_set_color(c_black)
+	draw_rectangle(0, 0, room_width - 256 - 128, room_height - 193, false)
+	draw_set_color(c_black)
+	draw_rectangle(0, room_height - 14, room_width - 256 - 128, room_height, false)
 }

@@ -8,6 +8,9 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && gl
 	global.SkillSelection = 0
 	global.StatSelection = 0
 	global.SpellSelection = 0
+	
+	obj_info.x = 0
+	obj_info.y = 0
 			
 	room_goto(rm_character_creation)
 }
