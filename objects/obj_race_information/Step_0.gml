@@ -1,4 +1,4 @@
-if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
+if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && obj_UI_menu_2.open = true
 {
 	switch(image_index)
 	{

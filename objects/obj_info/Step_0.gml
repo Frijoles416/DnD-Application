@@ -6,21 +6,19 @@ if getinfo = true
 	getinfo = false
 }
 
-height = string_height_ext(info, 16, (room_width - 224))
+height = string_height_ext(info, 16, (room_width - 256 - 132))
 
-if global.pause
-{
-if mouse_wheel_down()&& y >  ((height * -1) + 404)
+if mouse_wheel_down() && y > (room_height - 32 - height)
 {
 	y -= 32
 }
 
-if mouse_wheel_up() && y < 36
+if mouse_wheel_up() && y < room_height - 192
 {
 	y += 32
 }
-}
 
+/*
 if room = rm_character_creation
 {
 if mouse_wheel_down() && y > -320

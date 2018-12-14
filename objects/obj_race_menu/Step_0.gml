@@ -16,6 +16,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 	selected = true
 	global.BaseSelection += 1
 	//pre-initialization
+	obj_info.x = 0
+	obj_info.y = room_height - 192
 	
 	ds_list_add(obj_player.RaceLanguagesList, "Common")
 	
@@ -1299,6 +1301,7 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 	selected = false
 	global.BaseSelection -= 1
 	obj_confirm_button.Total = 0
+	obj_info.info = ""
 	
 	obj_player.CharacterRace = ""
 	obj_player.RaceDexterityAdded = 0
