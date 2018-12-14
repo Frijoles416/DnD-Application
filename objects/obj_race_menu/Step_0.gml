@@ -40,6 +40,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceLanguagesList, "Aarakocra", "Auran")
 			
 			ds_list_add(obj_player.RaceWeaponsList, "Unarmed Strikes")
+			
+			scr_information(Aarakocra)
 		}
 		break;
 		
