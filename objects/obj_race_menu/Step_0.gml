@@ -17,6 +17,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 	obj_info.x = 0
 	obj_info.y = room_height - 194
 	obj_info.cooldown = 150
+	obj_info.scroll = false
 	
 	selected = true
 	global.BaseSelection += 1

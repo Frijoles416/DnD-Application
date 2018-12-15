@@ -17,6 +17,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.CharacterRace = "Protector Aasimiar"
 			obj_player.RaceWisdomAdded = 1
 			
+			scr_information(Protector)
+			
 		}
 		break;
 		

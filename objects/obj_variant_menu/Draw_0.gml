@@ -1,11 +1,11 @@
 scr_button_draw()
 
-
-/*
 var info = ""
 if obj_player.x < 492 var side = 0
 else var side = 1
 
+draw_set_color(c_lime)
+if place_meeting(x, y, obj_player) draw_text(x, y, Popupinfo)
 
 draw_self()
 if place_meeting(x, y, obj_player)
