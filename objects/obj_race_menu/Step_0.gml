@@ -71,6 +71,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant2.image_index = 1
 			variant3 = instance_create_depth(room_width - 256 - 64, 160, 0,  obj_variant_menu)
 			variant3.image_index = 2
+			
+			scr_information(Aasimar)
 		}
 		break;
 		
@@ -87,6 +89,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Long Limbed", "Powerful Build", "Sneaky", "Surprise Attack")
 			
 			ds_list_add(obj_player.RaceLanguagesList, "Goblin")
+			
+			scr_information(Bugbear)
 			
 		}
 		break;
@@ -110,6 +114,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceWeaponsList, "Hooves")
 			
 			ds_list_add(obj_player.RaceAttacks, "Hooves")
+			
+			scr_information(Centaur)
 			
 		}
 		break;
@@ -206,6 +212,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			skill4 = instance_create_depth(room_width - 192 - 160, space*22, 0, obj_skill_selection)
 			skill4.image_index = 13
 			obj_skill_selection.MaxSkills = 2
+			
+			scr_information(Changeling)
 		}
 		break;
 		
@@ -244,6 +252,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant10 = instance_create_depth(room_width - 256 - 64, 608, 0,  obj_variant_menu)
 			variant10.image_index = 61
 			
+			scr_information(Dragonborn)
+			
 		}
 		break;
 		
@@ -265,6 +275,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant1.image_index = 3
 			variant2 = instance_create_depth(room_width - 256 - 64, 96, 0,  obj_variant_menu)
 			variant2.image_index = 4
+			
+			scr_information(Dwarf)
 			
 		}
 		break;
@@ -305,7 +317,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant10 = instance_create_depth(room_width - 256 - 64, 672, 0,  obj_variant_menu)
 			variant10.image_index = 15
 			
-			
+			scr_information(Elf)
 		}
 		break;
 		
@@ -322,6 +334,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Innate Spellcasting", "Magic Resistance", "Poison Immunity")
 
 			ds_list_add(obj_player.RaceLanguagesList, "Abyssmal", "Draconic")
+			
+			scr_information(YuanTi)
 		}
 		break;
 		
@@ -338,6 +352,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceLanguagesList, "Elvish", "Giant")
 			
 			ds_list_add(obj_player.Race1stMagic, "Dectect Magic", "Disguise Self")//Can only be used to make yourself look like a human
+			
+			scr_information(Firbolg)
 		}
 		break;
 		
@@ -360,6 +376,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant4 = instance_create_depth(room_width - 256 - 64, 224, 0,  obj_variant_menu)
 			variant4.image_index = 19
 			
+			scr_information(Genasi)
+			
 		}
 		break;
 		
@@ -377,6 +395,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant1.image_index = 20
 			variant2 = instance_create_depth(room_width - 256 - 64, 96, 0,  obj_variant_menu)
 			variant2.image_index = 21
+			
+			scr_information(Gith)
 		}
 		break;
 		
@@ -400,6 +420,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant3.image_index = 24
 			variant4 = instance_create_depth(room_width - 256 - 64, 224, 0,  obj_variant_menu)
 			variant4.image_index = 25
+			
+			scr_information(Gnome)
 		}
 		break;
 		
@@ -414,6 +436,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Fury of the Small", "Nimble Escape")
 
 			ds_list_add(obj_player.RaceLanguagesList, "Goblin")
+			
+			scr_information(Goblin)
 		}
 		break;
 		
@@ -430,6 +454,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceTraitsList, "Powerful Build", "Mountain Born", "Natural Athlete", "Stone's Endurance")
 
 			ds_list_add(obj_player.RaceLanguagesList, "Giant")
+			
+			scr_information(Goliath)
 		}
 		break;
 		
@@ -505,7 +531,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant7 = instance_create_depth(room_width - 256 - 64, space*21, 0,  obj_variant_menu)
 			variant7.image_index = 32
 			
-			
+			scr_information(HalfElf)
 		}
 		break;
 		
@@ -529,6 +555,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant3.image_index = 35
 			variant4 = instance_create_depth(room_width - 256 - 64, space*7, 0,  obj_variant_menu)
 			variant4.image_index = 36
+			
+			scr_information(Halfling)
 		}
 		break;
 		
@@ -551,6 +579,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant1.image_index = 37
 			variant2 = instance_create_depth(room_width - 256 - 64, space*3, 0,  obj_variant_menu)
 			variant2.image_index = 38
+			
+			scr_information(HalfOrc)
 		}
 		break;
 		
@@ -617,6 +647,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_equipment_selection.MaxWeapons = 2
 			
 			ds_list_add(obj_player.RaceArmorList, "Light Armor")
+			
+			scr_information(Hobgoblin)
 		}
 		break;
 		
@@ -672,6 +704,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant6 = instance_create_depth(room_width - 256 - 64, space*19, 0,  obj_variant_menu)
 			variant6.image_index = 44
 			
+			scr_information(Human)
 		}
 		break;
 		
@@ -810,6 +843,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			skill4 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_skill_selection)
 			skill4.image_index = 13
 			obj_skill_selection.MaxSkills = 1
+			
+			scr_information(Kalashtar)
 		}
 		break;
 		
@@ -836,6 +871,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			skill4 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_skill_selection)
 			skill4.image_index = 15
 			obj_skill_selection.MaxSkills = 1
+			
+			scr_information(Kenku)
 		}
 		break;
 		
@@ -850,6 +887,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Grovel, Cower, and Be", "Pack Tactics", "Sunlight Sensitivity")
 
 			ds_list_add(obj_player.RaceLanguagesList, "Draconic")
+			
+			scr_information(Kobold)
 		}
 		break;
 		
@@ -881,6 +920,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			skill5.image_index = 17
 			obj_skill_selection.MaxSkills = 1
 			
+			scr_information(Lizardfolk)
 		}
 		break;
 		
@@ -895,6 +935,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceTraitsList, "Powerful Build", "Loxodon Bravery", "Natural Armor", "Stonecunning", "Keen Smell")
 
 			ds_list_add(obj_player.RaceToolsList, "Mason's Tools")
+			
+			scr_information(Loxodon)
 		}
 		break;
 		
@@ -918,6 +960,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			
 			ds_list_add(obj_player.RaceToolsList, "Navigator's Tools", "Water Vehicles")
 			
+			scr_information(Minotaur)
+			
 		}
 		break;
 		
@@ -935,6 +979,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceTraitsList, "Darkvision", "Aggressive", "Menacing", "Powerful Build")
 
 			ds_list_add(obj_player.RaceLanguagesList, "Orc")
+			
+			scr_information(Orc)
 		}
 		break;
 		
@@ -957,6 +1003,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant3.image_index = 47
 			variant4 = instance_create_depth(room_width - 256 - 64, space*15, 0,  obj_variant_menu)
 			variant4.image_index = 48
+			
+			scr_information(Shifter)
 		}
 		break;
 		
@@ -994,6 +1042,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant2.image_index = 46
 			variant3 = instance_create_depth(room_width - 256 - 64, space*7, 0,  obj_variant_menu)
 			variant3.image_index = 47
+			
+			scr_information(SimicHybrid)
 		}
 		break;
 		
@@ -1047,6 +1097,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			lang15 = instance_create_depth(room_width - 192 - 96, space*10, 0, obj_language_selection)
 			lang15.image_index = 15
 			obj_language_selection.MaxLang = 1
+			
+			scr_information(Tabaxi)
 		}
 		break;
 		
@@ -1078,6 +1130,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant3.image_index = 67
 			variant4 = instance_create_depth(room_width - 256 - 64, space*9, 0,  obj_variant_menu)
 			variant4.image_index = 68
+			
+			scr_information(Tiefling)
 		}
 		break;
 		
@@ -1098,6 +1152,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceWeaponsList, "Claws")
 			
 			ds_list_add(obj_player.RaceAttacks, "Claws")
+			
+			scr_information(Tortle)
 		}
 		break;
 		
@@ -1117,6 +1173,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			ds_list_add(obj_player.RaceLanguagesList, "Primordial")
 			
 			ds_list_add(obj_player.Race1stMagic, "Fog Cloud")
+			
+			scr_information(Triton)
 		}
 		
 		break;
@@ -1184,6 +1242,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			skill6 = instance_create_depth(room_width - 192 - 160, space*13, 0, obj_skill_selection)
 			skill6.image_index = 15
 			obj_skill_selection.MaxSkills = 1
+			
+			scr_information(Vedalken)
 		}
 		
 		break;
@@ -1209,6 +1269,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			skill2 = instance_create_depth(room_width - 192 - 160, space*11, 0,  obj_skill_selection)
 			skill2.image_index = 16
 			obj_skill_selection.MaxSkills = 1
+			
+			scr_information(Viashino)
 		}	
 
 		break;
@@ -1293,9 +1355,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			variant3 = instance_create_depth(room_width - 256 - 64, space*5, 0,  obj_variant_menu)
 			variant3.image_index = 51
 			
-			}
-			break;
+			scr_information(Warforged)
 		}
+		break;
+	}
 }
 
 
