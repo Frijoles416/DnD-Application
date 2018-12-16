@@ -1,38 +1,5 @@
 image_speed = 0
 selected = false
+scr_button_initialization()
 
-Aarakocra = 0
-Aasimar = 0
-Bugbear = 0
-Centaur = 0
-Dragonborn = 0
-Dwarf = 0
-Elf = 0
-YuanTi = 0
-Firbolg = 0
-Genasi = 0
-Gith = 0
-Gnome = 0
-Goblin = 0
-Goliath = 0
-HalfElf = 0
-Halfling = 0
-HalfOrc = 0
-Hobgoblin = 0
-Human = 0
-Kalashtar = 0
-Kenku = 0
-Kobold = 0
-Lizardfolk = 0
-Loxodon = 0
-Minotaur = 0
-Orc = 0
-Shifter = 0
-SimicHybrid = 0
-Tabaxi = 0
-Tiefling = 0
-Tortle = 0
-Triton = 0
-Vedalken = 0
-Viashino = 0
-Warforged = 0
+
