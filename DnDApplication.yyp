@@ -975,6 +975,14 @@
             }
         },
         {
+            "Key": "dd0a42a4-45d9-4462-a523-dde896c604b5",
+            "Value": {
+                "id": "1a1107dc-8a87-458a-a13c-53071e0ffa5c",
+                "resourcePath": "tilesets\\Dungeon\\Dungeon.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "df69b04c-dab2-4821-9d30-c932e0112284",
             "Value": {
                 "id": "dd699c6c-8566-429e-9a95-2b84266c3ad1",

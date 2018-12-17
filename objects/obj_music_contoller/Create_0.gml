@@ -27,7 +27,9 @@ ds_list_add(DefaultPlaylist, Track_24_Journey)
 ds_list_add(DefaultPlaylist, Track_25_Summer_Wars)
 ds_list_add(DefaultPlaylist, Track_26_World_10)
 
-Current_Track = 24 //irandom(25)
+Current_Track = irandom(25)
 audio_stop_all()
 TrackPlaying = ds_list_find_value(DefaultPlaylist, Current_Track)
 audio_play_sound(TrackPlaying, 0, false)
+
+MusicPause = false

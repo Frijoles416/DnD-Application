@@ -20,3 +20,9 @@ if keyboard_check_released(vk_space)
 	TrackPlaying = ds_list_find_value(DefaultPlaylist, Current_Track)
 	audio_play_sound(TrackPlaying, 0, false)
 }
+
+if keyboard_check_released(vk_tab) && MusicPause = false MusicPause = true
+else if keyboard_check_released(vk_tab) && MusicPause = true MusicPause = false
+
+if MusicPause = true audio_pause_all()
+else audio_resume_all()
