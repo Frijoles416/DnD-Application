@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "284a62ed-80c3-406b-86da-fcc2e7914746",
+            "Value": {
+                "id": "5b501a04-4ea5-4598-87b5-24352e6c2421",
+                "resourcePath": "sprites\\Tileset_Dungeon\\Tileset_Dungeon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "293d5a3b-7e9b-423c-909b-67d6b80e6c21",
             "Value": {
                 "id": "e29df100-129b-4008-977f-34d3ed788811",
@@ -460,6 +468,14 @@
                 "id": "1c0678bb-c122-46cc-8ace-fb2df30f4e1b",
                 "resourcePath": "scripts\\scr_button_initialization\\scr_button_initialization.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5c0c01f8-2434-4a07-8ce6-f8417160ed15",
+            "Value": {
+                "id": "6ef97473-9fd6-4dcd-bf09-4c2dbe75ea3f",
+                "resourcePath": "views\\5c0c01f8-2434-4a07-8ce6-f8417160ed15.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
