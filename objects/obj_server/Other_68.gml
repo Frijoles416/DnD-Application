@@ -1,4 +1,3 @@
-
 switch (async_load[? "type"])
 {
     case network_type_connect:

@@ -1,6 +1,6 @@
 mousex = x
 mousey = y
-Speed = 69
+Speed = 16
 
 ///Character Sheet Information
 /*

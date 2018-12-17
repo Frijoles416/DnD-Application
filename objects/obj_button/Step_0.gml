@@ -13,12 +13,14 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 	
 	case 1:
 	{
+		room_goto(rm_player_lobby)
+		/*
 		with(obj_button) instance_destroy()
 		instance_create_depth(0,0,0, obj_client)
 		instance_create_depth(100, 100, 0, obj_player_character)
 		newChar = instance_create_depth(room_width - 96, room_height - 96, 0, obj_button)
 		newChar.image_index = 2
-		
+		*/
 	}
 	break;
 	
