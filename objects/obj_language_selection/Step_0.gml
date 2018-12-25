@@ -217,6 +217,13 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
 				
 			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Dwarvish");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
+				
+			}
 		}
 		break;
 		
@@ -226,6 +233,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			{
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Elvish");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
+			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Elvish");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
 			}
 		}
 		break;
@@ -237,13 +250,28 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Giant");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
 			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Giant");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
+			}
 		}
 		break;
 		
 		case 3:
 		{
-			pos = ds_list_find_index(obj_player.RaceLanguagesList, "Gnomish");
+			if room = rm_race_selection
+			{
+				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Gnomish");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
+			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Gnomish");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
+			}
 		}
 		break;
 		
@@ -253,6 +281,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			{
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Goblin");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
+			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Goblin");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
 			}
 		}
 		break;
@@ -264,6 +298,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Halfling");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
 			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Halfling");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
+			}
 		}
 		break;
 		
@@ -273,6 +313,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			{
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Orc");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
+			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Orc");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
 			}
 		}
 		break;
@@ -284,6 +330,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Abysmal");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
 			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Abysmal");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
+			}
 		}
 		break;
 		
@@ -293,6 +345,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			{
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Celestial");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
+			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Celestial");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
 			}
 		}
 		break;
@@ -304,6 +362,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Draconic");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
 			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Draconic");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
+			}
 		}
 		break;
 		
@@ -313,6 +377,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			{
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Deep Speech");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
+			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Deep Speech");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
 			}
 		}
 		break;
@@ -324,6 +394,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Infernal");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
 			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Infernal");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
+			}
 		}
 		break;
 		
@@ -333,6 +409,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			{
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Primordial");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
+			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Primordial");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
 			}
 		}
 		break;
@@ -344,6 +426,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Sylvan");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
 			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Sylvan");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
+			}
 		}
 		break;
 		
@@ -353,6 +441,12 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 			{
 				pos = ds_list_find_index(obj_player.RaceLanguagesList, "Undercommon");
 				ds_list_delete(obj_player.RaceLanguagesList, pos)
+			}
+			
+			if room = rm_background_selection
+			{
+				pos = ds_list_find_index(obj_player.BackgroundLanguagesList, "Undercommon");
+				ds_list_delete(obj_player.BackgroundLanguagesList, pos)
 			}
 		}
 		break;

@@ -6,14 +6,13 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 {
 	case 0:
 	{
-		with(obj_button) instance_destroy()
-		instance_create_depth(0,0,0, obj_server)
+		
 	}
 	break;
 	
 	case 1:
 	{
-		room_goto(rm_player_lobby)
+		room_goto(rm_player_connect)
 		/*
 		with(obj_button) instance_destroy()
 		instance_create_depth(0,0,0, obj_client)
@@ -26,13 +25,17 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player)
 	
 	case 2:
 	{
-		if instance_exists(obj_player_character)
-		{
-			instance_destroy(obj_player_character)
-		}
 		
 		room_goto(rm_character_creation)
 	}
 	break;
+	
+	case 3:
+	{
+		room_goto(rm_dungeon1)
+	}
+	break;
+	
+	
 }
 }

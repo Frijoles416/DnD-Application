@@ -1,4 +1,4 @@
-#macro GRID_SIZE 32
+#macro GRID_SIZE 16
 globalvar map;
 
 MapWidth = room_width/GRID_SIZE

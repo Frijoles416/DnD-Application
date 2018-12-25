@@ -1,4 +1,5 @@
 if global.pause exit
+var space = 32
 
 if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !place_meeting(x, y, obj_language_selection)
 {
@@ -19,7 +20,6 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			
 			global.TotalSelection = 2
 			
-			var space = 32
 			
 			lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
 			lang1.image_index = 1
@@ -174,7 +174,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 		
 		case 4:
 		{
-			obj_player.CharacterBackground = "City Watch"
+			obj_player.CharacterBackground = "City Watchman"
 			obj_player.BackgroundProficiencyInsight = true
 			obj_player.BackgroundProficiencyAthletics = true
 			obj_player.GoldPieces += 10
@@ -230,45 +230,80 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.BackgroundFeatures = "You always have free room and board in any place where shield dwarves or gold dwarves dwell, and the individuals in such a settlement might vie among themselves to determine who can offer you (and possibly your compatriots) the finest accommodations and assistance."
 			
 			ds_list_add(obj_player.BackgroundInventoryList, "Artisan's tools of your choice", "Maker's mark chisel", "Traveler's clothes", "Gem worth 10 gp")
-			/*
-			CanChooseArtisansTools = true
 			
-			var i
-			var space = 16
-			var tool
-			for (var i = 0; i < 17; i += 1)
-			{
-				tool[i] = instance_create_depth(764, 16 + (space * i), 0, obj_sub_tool_selection)
-				tool[i].image_index = i
-			}	
-			*/
+			global.TotalSelection = 1
 			
-			ToolsChosen = 0
-		
-			var j
-			var space1 = 32
-			var tool
-			for (var j = 0; j < 17; j += 1)
-			{
-				tool[j] = instance_create_depth(x + 128 + 32, y + (space1 * j), 0, obj_tool_selection)
-				tool[j].image_index = j
-			}
+			variant1 = instance_create_depth(room_width - 192 - 32, space, 0,  obj_tool_selection)
+			variant1.image_index = 1
+			variant2 = instance_create_depth(room_width - 192 - 32, space*2, 0,  obj_tool_selection)
+			variant2.image_index = 2
+			variant3 = instance_create_depth(room_width - 192 - 32, space*3, 0,  obj_tool_selection)
+			variant3.image_index = 3
+			variant4 = instance_create_depth(room_width - 192 - 32, space*4, 0,  obj_tool_selection)
+			variant4.image_index = 4
+			variant5 = instance_create_depth(room_width - 192 - 32, space*5, 0,  obj_tool_selection)
+			variant5.image_index = 5
+			variant6 = instance_create_depth(room_width - 192 - 32, space*6, 0,  obj_tool_selection)
+			variant6.image_index = 6
+			variant7 = instance_create_depth(room_width - 192 - 32, space*7, 0,  obj_tool_selection)
+			variant7.image_index = 7
+			variant8 = instance_create_depth(room_width - 192 - 32, space*8, 0, obj_tool_selection)
+			variant8.image_index = 8
+			variant9 = instance_create_depth(room_width - 192 - 32, space*9, 0,  obj_tool_selection)
+			variant9.image_index = 9
+			variant10 = instance_create_depth(room_width - 192 - 160, space, 0,  obj_tool_selection)
+			variant10.image_index = 10
+			variant11 = instance_create_depth(room_width - 192 - 160, space*2, 0, obj_tool_selection)
+			variant11.image_index = 11
+			variant12 = instance_create_depth(room_width - 192 - 160, space*3, 0, obj_tool_selection)
+			variant12.image_index = 12
+			variant13= instance_create_depth(room_width - 192 - 160, space*4, 0,  obj_tool_selection)
+			variant13.image_index = 13
+			variant14 = instance_create_depth(room_width - 192 - 160, space*5, 0,  obj_tool_selection)
+			variant14.image_index = 14
+			variant15 = instance_create_depth(room_width - 192 - 160, space*6, 0,  obj_tool_selection)
+			variant15.image_index = 15
+			variant16 = instance_create_depth(room_width - 192 - 160, space*7, 0,  obj_tool_selection)
+			variant16.image_index = 16
+			obj_tool_selection.MaxTools = 1
 			
-			if !ds_list_find_index(obj_player.LanguagesList, "Dwarvish") 
+			if ds_list_find_index(obj_player.BackgroundLanguagesList, "Dwarvish") 
 			{
-				ds_list_add(obj_player.LanguagesList, "Dwarvish")
-				MaxLanguages = 1
+			
+				lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
+				lang1.image_index = 1
+				lang2 = instance_create_depth(room_width - 192 - 32, space*13, 0,  obj_language_selection)
+				lang2.image_index = 3
+				lang3 = instance_create_depth(room_width - 192 - 32, space*14, 0,  obj_language_selection)
+				lang3.image_index = 5
+				lang4 = instance_create_depth(room_width - 192 - 32, space*15, 0,  obj_language_selection)
+				lang4.image_index = 7
+				lang5 = instance_create_depth(room_width - 192 - 32, space*16, 0,  obj_language_selection)
+				lang5.image_index = 9
+				lang6 = instance_create_depth(room_width - 192 - 32, space*17, 0,  obj_language_selection)
+				lang6.image_index = 11
+				lang7 = instance_create_depth(room_width - 192 - 32, space*18, 0,  obj_language_selection)
+				lang7.image_index = 13
+				lang8 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_language_selection)
+				lang8.image_index = 2
+				lang9 = instance_create_depth(room_width - 192 - 160, space*13, 0,  obj_language_selection)
+				lang9.image_index = 4
+				lang10 = instance_create_depth(room_width - 192 - 160, space*14, 0,  obj_language_selection)
+				lang10.image_index = 6
+				lang11 = instance_create_depth(room_width - 192 - 160, space*15, 0, obj_language_selection)
+				lang11.image_index = 8
+				lang12 = instance_create_depth(room_width - 192 - 160, space*16, 0, obj_language_selection)
+				lang12.image_index = 10
+				lang13= instance_create_depth(room_width - 192 - 160, space*17, 0,  obj_language_selection)
+				lang13.image_index = 12
+				lang14 = instance_create_depth(room_width - 192 - 160, space*18, 0,  obj_language_selection)
+				lang14.image_index = 14
+				lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
+				lang15.image_index = 15
+				obj_language_selection.MaxLang = 2
 				
-				var i
-				var space = 16
-				var lang
-				for (var i = 0; i < 14; i += 1)
-				{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
-				lang[i].image_index = i
-				}
+				global.TotalSelection = 2
 			}
-			//else room_goto(rm_character_creation)
 		}
 		break;
 		
@@ -276,22 +311,54 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 		{
 			obj_player.CharacterBackground = "Cloistered Scholar"
 			obj_player.BackgroundProficiencyHistory = true
-			//choice from arcana, nature, religion
+			
+			skill1 = instance_create_depth(room_width - 192 - 160, space*10, 0,  obj_skill_selection)
+			skill1.image_index = 2
+			skill2 = instance_create_depth(room_width - 192 - 32, space*11, 0, obj_skill_selection)
+			skill2.image_index = 10
+			skill3 = instance_create_depth(room_width - 192 - 160, space*11, 0, obj_skill_selection)
+			skill3.image_index = 14
+			obj_skill_selection.MaxSkills = 1
+			
 			obj_player.GoldPieces += 10
 			obj_player.BackgroundFeatures = "Though others must often endure extensive interviews and significant fees to gain access to even the most common archives in your library, you have free and easy access to the majority of the library, though it might also have repositories of lore that are too valuable, magical, or secret to permit anyone immediate access.You have a working knowledge of your cloister's personnel and bureaucracy, and you know how to navigate those connections with some ease. Additionally, you are likely to gain preferential treatment at other libraries across the Realms, as professional courtesy shown to a fellow scholar."
 			
 			ds_list_add(obj_player.BackgroundInventoryList, "Scholar's robes of your cloister", "Writing kit (quill, ink, parchment, penknife)", "Borrowed book on your current study")
-			LanguagesChosen = 0
-			MaxLanguages = 2
 			
-			var i
-			var space = 16
-			var lang
-			for (var i = 0; i < 14; i += 1)
-			{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
-				lang[i].image_index = i
-			}
+			global.TotalSelection = 3
+			
+			lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
+			lang1.image_index = 1
+			lang2 = instance_create_depth(room_width - 192 - 32, space*13, 0,  obj_language_selection)
+			lang2.image_index = 3
+			lang3 = instance_create_depth(room_width - 192 - 32, space*14, 0,  obj_language_selection)
+			lang3.image_index = 5
+			lang4 = instance_create_depth(room_width - 192 - 32, space*15, 0,  obj_language_selection)
+			lang4.image_index = 7
+			lang5 = instance_create_depth(room_width - 192 - 32, space*16, 0,  obj_language_selection)
+			lang5.image_index = 9
+			lang6 = instance_create_depth(room_width - 192 - 32, space*17, 0,  obj_language_selection)
+			lang6.image_index = 11
+			lang7 = instance_create_depth(room_width - 192 - 32, space*18, 0,  obj_language_selection)
+			lang7.image_index = 13
+			lang8 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_language_selection)
+			lang8.image_index = 2
+			lang9 = instance_create_depth(room_width - 192 - 160, space*13, 0,  obj_language_selection)
+			lang9.image_index = 4
+			lang10 = instance_create_depth(room_width - 192 - 160, space*14, 0,  obj_language_selection)
+			lang10.image_index = 6
+			lang11 = instance_create_depth(room_width - 192 - 160, space*15, 0, obj_language_selection)
+			lang11.image_index = 8
+			lang12 = instance_create_depth(room_width - 192 - 160, space*16, 0, obj_language_selection)
+			lang12.image_index = 10
+			lang13= instance_create_depth(room_width - 192 - 160, space*17, 0,  obj_language_selection)
+			lang13.image_index = 12
+			lang14 = instance_create_depth(room_width - 192 - 160, space*18, 0,  obj_language_selection)
+			lang14.image_index = 14
+			lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
+			lang15.image_index = 15
+			obj_language_selection.MaxLang = 2
+			
 		}
 		break;
 		
@@ -304,17 +371,41 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.BackgroundFeatures = "Your knowledge of how bureaucracies function lets you gain access to the records and inner workings of any noble court or government you encounter. You know who the movers and shakers are, whom to go to for the favors you seek, and what the current intrigues of interest in the group are."
 			
 			ds_list_add(obj_player.BackgroundInventoryList, "Fine clothes")
-			LanguagesChosen = 0
-			MaxLanguages = 2
 			
-			var i
-			var space = 16
-			var lang
-			for (var i = 0; i < 14; i += 1)
-			{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
-				lang[i].image_index = i
-			}
+			global.TotalSelection = 2
+			
+			lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
+			lang1.image_index = 1
+			lang2 = instance_create_depth(room_width - 192 - 32, space*13, 0,  obj_language_selection)
+			lang2.image_index = 3
+			lang3 = instance_create_depth(room_width - 192 - 32, space*14, 0,  obj_language_selection)
+			lang3.image_index = 5
+			lang4 = instance_create_depth(room_width - 192 - 32, space*15, 0,  obj_language_selection)
+			lang4.image_index = 7
+			lang5 = instance_create_depth(room_width - 192 - 32, space*16, 0,  obj_language_selection)
+			lang5.image_index = 9
+			lang6 = instance_create_depth(room_width - 192 - 32, space*17, 0,  obj_language_selection)
+			lang6.image_index = 11
+			lang7 = instance_create_depth(room_width - 192 - 32, space*18, 0,  obj_language_selection)
+			lang7.image_index = 13
+			lang8 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_language_selection)
+			lang8.image_index = 2
+			lang9 = instance_create_depth(room_width - 192 - 160, space*13, 0,  obj_language_selection)
+			lang9.image_index = 4
+			lang10 = instance_create_depth(room_width - 192 - 160, space*14, 0,  obj_language_selection)
+			lang10.image_index = 6
+			lang11 = instance_create_depth(room_width - 192 - 160, space*15, 0, obj_language_selection)
+			lang11.image_index = 8
+			lang12 = instance_create_depth(room_width - 192 - 160, space*16, 0, obj_language_selection)
+			lang12.image_index = 10
+			lang13= instance_create_depth(room_width - 192 - 160, space*17, 0,  obj_language_selection)
+			lang13.image_index = 12
+			lang14 = instance_create_depth(room_width - 192 - 160, space*18, 0,  obj_language_selection)
+			lang14.image_index = 14
+			lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
+			lang15.image_index = 15
+			obj_language_selection.MaxLang = 2
+			
 		}
 		break;
 		
@@ -326,11 +417,18 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.GoldPieces += 15
 			obj_player.BackgroundFeatures = "You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
 			
-			ds_list_add(obj_player.BackgroundInventoryList, "Crowbar", "Dark common clothes with hood")
-			ds_list_add(obj_player.ToolsList, "Gaming Set", "Thieves' Tools")
-			CanChooseGamingSet = true
+			//Have to add Specialty
 			
-			room_goto(rm_character_creation)
+			ds_list_add(obj_player.BackgroundInventoryList, "Crowbar", "Dark common clothes with hood")
+			ds_list_add(obj_player.ToolsList, "Thieves' Tools")
+			
+			global.TotalSelection = 1
+			
+			variant1 = instance_create_depth(room_width - 192 - 32, space, 0,  obj_tool_selection)
+			variant1.image_index = 35
+			variant2 = instance_create_depth(room_width - 192 - 32, space*2, 0,  obj_tool_selection)
+			variant2.image_index = 36
+			
 		}
 		break;
 		
@@ -342,11 +440,10 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.GoldPieces += 15
 			obj_player.BackgroundFeatures = "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
 			
-			ds_list_add(obj_player.BackgroundInventoryList, "Musical instrument of your choice", "Favor of an admirer (love letter, lock of hair, or trinket)", "Costume")
+			ds_list_add(obj_player.BackgroundInventoryList, "Costume")
 			ds_list_add(obj_player.ToolsList, "Disguise Kit", "Musical Instrument")
-			CanChooseInstrument = true
 			
-			room_goto(rm_character_creation)
+			
 		}
 		break;
 		

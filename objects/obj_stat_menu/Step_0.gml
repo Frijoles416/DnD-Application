@@ -10,37 +10,37 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 	{
 		case 0:
 		{
-			obj_player.RaceStrengthAdded += 1
+			if room = rm_race_selection obj_player.RaceStrengthAdded += 1
 		}
 		break;
 		
 		case 1:
 		{
-			obj_player.RaceDexterityAdded += 1
+			if room = rm_race_selection obj_player.RaceDexterityAdded += 1
 		}
 		break;
 		
 		case 2:
 		{
-			obj_player.RaceConstitutionAdded += 1
+			if room = rm_race_selection obj_player.RaceConstitutionAdded += 1
 		}
 		break;
 		
 		case 3:
 		{
-			obj_player.RaceIntelligenceAdded += 1
+			if room = rm_race_selection obj_player.RaceIntelligenceAdded += 1
 		}
 		break;
 		
 		case 4:
 		{
-			obj_player.RaceWisdomAdded += 1
+			if room = rm_race_selection obj_player.RaceWisdomAdded += 1
 		}
 		break;
 		
 		case 5:
 		{
-			obj_player.RaceCharismaAdded += 1
+			if room = rm_race_selection obj_player.RaceCharismaAdded += 1
 		}
 		break;
 	}
@@ -56,37 +56,37 @@ else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) 
 	{
 		case 0:
 		{
-			obj_player.RaceStrengthAdded -= 1
+			if room = rm_race_selection obj_player.RaceStrengthAdded -= 1
 		}
 		break;
 		
 		case 1:
 		{
-			obj_player.RaceDexterityAdded -= 1
+			if room = rm_race_selection obj_player.RaceDexterityAdded -= 1
 		}
 		break;
 		
 		case 2:
 		{
-			obj_player.RaceConstitutionAdded -= 1
+			if room = rm_race_selection obj_player.RaceConstitutionAdded -= 1
 		}
 		break;
 		
 		case 3:
 		{
-			obj_player.RaceIntelligenceAdded -= 1
+			if room = rm_race_selection obj_player.RaceIntelligenceAdded -= 1
 		}
 		break;
 		
 		case 4:
 		{
-			obj_player.RaceWisdomAdded -= 1
+			if room = rm_race_selection obj_player.RaceWisdomAdded -= 1
 		}
 		break;
 		
 		case 5:
 		{
-			obj_player.RaceCharismaAdded -= 1
+			if room = rm_race_selection obj_player.RaceCharismaAdded -= 1
 		}
 		break;
 	}
