@@ -29,7 +29,15 @@
         "4f9b755a-e76d-40b0-bb7a-3dd9f79be040",
         "2aa615e3-bb2a-4790-9252-f83b765f2717",
         "0e75cf6f-f75e-4a27-9074-2d319baa15ad",
-        "408af3ab-aeaf-40b3-902d-3ca85569e08a"
+        "408af3ab-aeaf-40b3-902d-3ca85569e08a",
+        "d82afddc-8fa7-4c2c-ae87-d764e503e561",
+        "de1b5a25-fa11-4060-8538-aa60a03805ae",
+        "e48d1d9c-5ee3-455b-9242-13d826bae5a8",
+        "81d61045-347a-4e48-b0e4-87ad0db3ac24",
+        "6527fd3f-a910-4cf2-bfa5-937a54558acc",
+        "d4b48456-dbde-425f-8978-dfbf463475f7",
+        "7928425e-c487-48a7-af2a-337c9a5569b5",
+        "ecfbdd51-674f-4962-9d04-7bd015715ded"
     ],
     "filterType": "GMSound",
     "folderName": "AzureFlex Music",
