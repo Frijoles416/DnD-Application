@@ -35,3 +35,20 @@ if keyboard_check_released(vk_escape) game_end()
 if keyboard_check_released(ord("B")) room_goto(rm_Deving_Buttons)
 if room = rm_Deving_Buttons && keyboard_check_released(ord("B")) room_goto(rm_character_creation)
 
+//Gameplay
+if room = rm_dungeon1
+	{
+	Gridx = floor(x/GRID_SIZE)
+	Gridy = floor(y/GRID_SIZE)
+
+	if (Gridx < 0 || Gridy < 0 || Gridx >= room_width/GRID_SIZE || Gridy >= room_height/GRID_SIZE)
+	{
+		HoverNode = noone
+	}
+	else
+	{
+		HoverNode = map[Gridx, Gridy]
+	}
+	
+	
+}

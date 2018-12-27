@@ -441,8 +441,33 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.BackgroundFeatures = "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
 			
 			ds_list_add(obj_player.BackgroundInventoryList, "Costume")
-			ds_list_add(obj_player.ToolsList, "Disguise Kit", "Musical Instrument")
+			ds_list_add(obj_player.BackgroundToolsList, "Disguise Kit")
 			
+			//add favor of admirer and Routine choices
+			
+			global.TotalSelection = 1
+			
+			variant1 = instance_create_depth(room_width - 192 - 32, space, 0,  obj_tool_selection)
+			variant1.image_index = 25
+			variant2 = instance_create_depth(room_width - 192 - 32, space*2, 0,  obj_tool_selection)
+			variant2.image_index = 26
+			variant3 = instance_create_depth(room_width - 192 - 32, space*3, 0,  obj_tool_selection)
+			variant3.image_index = 27
+			variant4 = instance_create_depth(room_width - 192 - 32, space*4, 0,  obj_tool_selection)
+			variant4.image_index = 28
+			variant5 = instance_create_depth(room_width - 192 - 32, space*5, 0,  obj_tool_selection)
+			variant5.image_index = 29
+			variant6 = instance_create_depth(room_width - 192 - 32, space*6, 0,  obj_tool_selection)
+			variant6.image_index = 30
+			variant7 = instance_create_depth(room_width - 192 - 32, space*7, 0,  obj_tool_selection)
+			variant7.image_index = 31
+			variant8 = instance_create_depth(room_width - 192 - 32, space*8, 0, obj_tool_selection)
+			variant8.image_index = 32
+			variant9 = instance_create_depth(room_width - 192 - 32, space*9, 0,  obj_tool_selection)
+			variant9.image_index = 33
+			variant10 = instance_create_depth(room_width - 192 - 160, space, 0,  obj_tool_selection)
+			variant10.image_index = 34
+			obj_tool_selection.MaxTools = 1
 			
 		}
 		break;
@@ -451,22 +476,46 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 		{
 			obj_player.CharacterBackground = "Faction Agent"
 			obj_player.BackgroundProficiencyInsight = true
-			//choice of intelligence, wisdom, charisma
+			//Faction Choices
 			obj_player.GoldPieces += 15
 			obj_player.BackgroundFeatures = "As a faction agent, you have access to a secret network of supporters and operatives who can provide assistance on your adventures. You know a set of secret signs and passwords you can use to identify such operatives, who can provide you with access to a hidden safe house, free room and board, or assistance in finding information. \nThese agents never risk their lives for you or risk revealing their true identities."
 			
 			ds_list_add(obj_player.BackgroundInventoryList, "Badge/emblem of your faction", "Copy of seminal faction text", "Common clothes")
-			LanguagesChosen = 0
-			MaxLanguages = 2
 			
-			var i
-			var space = 16
-			var lang
-			for (var i = 0; i < 14; i += 1)
-			{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
-				lang[i].image_index = i
-			}
+			global.TotalSelection = 2
+			
+			lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
+			lang1.image_index = 1
+			lang2 = instance_create_depth(room_width - 192 - 32, space*13, 0,  obj_language_selection)
+			lang2.image_index = 3
+			lang3 = instance_create_depth(room_width - 192 - 32, space*14, 0,  obj_language_selection)
+			lang3.image_index = 5
+			lang4 = instance_create_depth(room_width - 192 - 32, space*15, 0,  obj_language_selection)
+			lang4.image_index = 7
+			lang5 = instance_create_depth(room_width - 192 - 32, space*16, 0,  obj_language_selection)
+			lang5.image_index = 9
+			lang6 = instance_create_depth(room_width - 192 - 32, space*17, 0,  obj_language_selection)
+			lang6.image_index = 11
+			lang7 = instance_create_depth(room_width - 192 - 32, space*18, 0,  obj_language_selection)
+			lang7.image_index = 13
+			lang8 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_language_selection)
+			lang8.image_index = 2
+			lang9 = instance_create_depth(room_width - 192 - 160, space*13, 0,  obj_language_selection)
+			lang9.image_index = 4
+			lang10 = instance_create_depth(room_width - 192 - 160, space*14, 0,  obj_language_selection)
+			lang10.image_index = 6
+			lang11 = instance_create_depth(room_width - 192 - 160, space*15, 0, obj_language_selection)
+			lang11.image_index = 8
+			lang12 = instance_create_depth(room_width - 192 - 160, space*16, 0, obj_language_selection)
+			lang12.image_index = 10
+			lang13= instance_create_depth(room_width - 192 - 160, space*17, 0,  obj_language_selection)
+			lang13.image_index = 12
+			lang14 = instance_create_depth(room_width - 192 - 160, space*18, 0,  obj_language_selection)
+			lang14.image_index = 14
+			lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
+			lang15.image_index = 15
+			obj_language_selection.MaxLang = 2
+			
 		}
 		break;
 		
@@ -478,21 +527,44 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.GoldPieces += 5
 			obj_player.BackgroundFeatures = "Your accent, mannerisms, figures of speech, and perhaps even your appearance all mark you as foreign. Curious glances are directed your way wherever you go, which can be a nuisance, but you also gain the friendly interest of scholars and others intrigued by far-off lands, to say nothing of everyday folk who are eager to hear stories of your homeland. You can parley this attention into access to people and places you might not otherwise have, for you and your traveling companions. Noble lords, scholars, and merchant princes, to name a few, might be interested in hearing about your distant homeland and people."
 			
-			ds_list_add(obj_player.BackgroundInventoryList, "Traveler's clothes", "Musical instrument OR Gaming set", "Poorly wrought maps from your homeland", "Small piece of jewelry worth 10 gp")
-			CanChooseInstrument = true
-			CanChooseGamingSet = true
+			//Why are you here and where did you come from Selection
 			
-			LanguagesChosen = 0
-			MaxLanguages = 1
+			ds_list_add(obj_player.BackgroundInventoryList, "Traveler's clothes", "A small piece of jewelry worth 10 gp in the style of your homeland's craftsmanship", "Poorly wrought maps from your homeland that depict where you are in Faerun")
 			
-			var i
-			var space = 16
-			var lang
-			for (var i = 0; i < 14; i += 1)
-			{
-				lang[i] = instance_create_depth(x + 32, y + (space * i), 0, obj_language_selection)
-				lang[i].image_index = i
-			}
+			global.TotalSelection = 1
+			
+			lang1 = instance_create_depth(room_width - 192 - 32, space*12, 0,  obj_language_selection)
+			lang1.image_index = 1
+			lang2 = instance_create_depth(room_width - 192 - 32, space*13, 0,  obj_language_selection)
+			lang2.image_index = 3
+			lang3 = instance_create_depth(room_width - 192 - 32, space*14, 0,  obj_language_selection)
+			lang3.image_index = 5
+			lang4 = instance_create_depth(room_width - 192 - 32, space*15, 0,  obj_language_selection)
+			lang4.image_index = 7
+			lang5 = instance_create_depth(room_width - 192 - 32, space*16, 0,  obj_language_selection)
+			lang5.image_index = 9
+			lang6 = instance_create_depth(room_width - 192 - 32, space*17, 0,  obj_language_selection)
+			lang6.image_index = 11
+			lang7 = instance_create_depth(room_width - 192 - 32, space*18, 0,  obj_language_selection)
+			lang7.image_index = 13
+			lang8 = instance_create_depth(room_width - 192 - 160, space*12, 0, obj_language_selection)
+			lang8.image_index = 2
+			lang9 = instance_create_depth(room_width - 192 - 160, space*13, 0,  obj_language_selection)
+			lang9.image_index = 4
+			lang10 = instance_create_depth(room_width - 192 - 160, space*14, 0,  obj_language_selection)
+			lang10.image_index = 6
+			lang11 = instance_create_depth(room_width - 192 - 160, space*15, 0, obj_language_selection)
+			lang11.image_index = 8
+			lang12 = instance_create_depth(room_width - 192 - 160, space*16, 0, obj_language_selection)
+			lang12.image_index = 10
+			lang13= instance_create_depth(room_width - 192 - 160, space*17, 0,  obj_language_selection)
+			lang13.image_index = 12
+			lang14 = instance_create_depth(room_width - 192 - 160, space*18, 0,  obj_language_selection)
+			lang14.image_index = 14
+			lang15 = instance_create_depth(room_width - 192 - 96, space*19, 0, obj_language_selection)
+			lang15.image_index = 15
+			obj_language_selection.MaxLang = 1
+			
 		}
 		break;
 		
@@ -505,18 +577,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.BackgroundFeatures = "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you."
 			
 			ds_list_add(obj_player.BackgroundInventoryList, "Shovel", "Iron Pot", "Common clothes")
-			//add choice of artisan's tools
 			ds_list_add(obj_player.ToolsList, "Land Vehicles")
-			CanChooseArtisansTools = true
 			
-			var i
-			var space = 16
-			var tool
-			for (var i = 0; i < 16; i += 1)
-			{
-				tool[i] = instance_create_depth(764, 16 + (space * i), 0, obj_sub_tool_selection)
-				tool[i].image_index = i
-			}
 		}
 		break;
 		

@@ -175,6 +175,15 @@ Attacks = ds_list_create()
 Cantrips = ds_list_create()
 OtherMagic = ds_list_create()
 
+//Gameplay
+Gridx = 0
+Gridy = 0
+
+HoverNode = noone
+
+
+
+
 
 
 /*
