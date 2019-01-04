@@ -8,7 +8,7 @@ if getinfo = true
 
 height = string_height_ext(info, 16, (room_width - 256 - 132))
 
-if room = rm_race_selection
+if room = rm_race_selection || room = rm_background_selection
 {
 	if mouse_wheel_down() && y > (room_height - 32 - height)
 	{

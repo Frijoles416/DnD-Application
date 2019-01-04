@@ -216,7 +216,7 @@ if room = rm_character_creation
 }
 
 
-if room = rm_race_selection
+if room = rm_race_selection || room = rm_background_selection
 {
 	
 	draw_set_color(c_black)

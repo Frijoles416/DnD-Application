@@ -1055,6 +1055,14 @@
             }
         },
         {
+            "Key": "ee05375b-3dcc-4e2b-acb3-3091598561e8",
+            "Value": {
+                "id": "bbcfc471-fe9b-42ee-81e1-85bfd9446650",
+                "resourcePath": "rooms\\rm_castle1\\rm_castle1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "ee0a9b3d-3dc0-45d0-a199-85af70672583",
             "Value": {
                 "id": "2db0c7fb-feb3-4f3f-bca2-bf1b35463270",

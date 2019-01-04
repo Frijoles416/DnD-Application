@@ -1,8 +1,16 @@
 if global.pause exit
 var space = 32
 
-if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !place_meeting(x, y, obj_language_selection)
+if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !selected && global.BaseSelection = 0
 {
+	//Information display stuff
+	obj_info.x = 0
+	obj_info.y = room_height - 194
+	obj_info.cooldown = 150
+	obj_info.scroll = false
+	
+	selected = true
+	global.BaseSelection += 1
 	switch(image_index)
 	{
 		case 0:
@@ -640,6 +648,8 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 			obj_player.BackgroundProficiencyPersuasion = true
 			obj_player.GoldPieces += 15
 			obj_player.BackgroundFeatures = "As an established and respected member of a guild, you can rely on certain benefits that membership provides. \nYour fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers. You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces."
+			
+			//Guild Choices
 			
 			ds_list_add(obj_player.BackgroundInventoryList, "Letter of introduction from guild", "Traveler's clothes")
 			
@@ -1861,4 +1871,47 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !p
 		}
 		break;
 	}
+}
+
+else if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && selected
+{
+	selected = false
+	global.BaseSelection -= 1
+	obj_confirm_button.Total = 0
+	obj_info.info = ""
+	
+	obj_player.CharacterBackground = ""
+	obj_player.BackgroundProficiencyAcrobatics = false
+	obj_player.BackgroundProficiencyAnimalHandling = false
+	obj_player.BackgroundProficiencyArcana = false
+	obj_player.BackgroundProficiencyAthletics = false
+	obj_player.BackgroundProficiencyDeception = false
+	obj_player.BackgroundProficiencyHistory = false
+	obj_player.BackgroundProficiencyInsight = false
+	obj_player.BackgroundProficiencyIntimidation = false
+	obj_player.BackgroundProficiencyInvestigation = false
+	obj_player.BackgroundProficiencyMedicine = false
+	obj_player.BackgroundProficiencyNature = false
+	obj_player.BackgroundProficiencyPerception = false
+	obj_player.BackgroundProficiencyPerformance = false
+	obj_player.BackgroundProficiencyPersuasion = false
+	obj_player.BackgroundProficiencyReligion = false
+	obj_player.BackgroundProficiencySleightofHand = false
+	obj_player.BackgroundProficiencyStealth = false
+	obj_player.BackgroundProficiencySurvival = false
+	obj_player.BackgroundFeatures = ""
+			
+	ds_list_clear(obj_player.BackgroundLanguagesList)
+	ds_list_clear(obj_player.BackgroundToolsList)
+	ds_list_clear(obj_player.BackgroundInventoryList)
+	
+	if instance_exists(obj_language_selection) instance_destroy(obj_language_selection)
+	if instance_exists(obj_tool_selection) instance_destroy(obj_tool_selection)
+	if instance_exists(obj_skill_selection) instance_destroy(obj_skill_selection)
+	
+	global.LanguageSelection = 0
+	global.ToolSelection = 0
+	global.SkillSelection = 0
+	global.TotalSelection = 0
+	
 }

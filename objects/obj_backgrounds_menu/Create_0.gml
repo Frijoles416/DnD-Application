@@ -1,11 +1,2 @@
 image_speed = 0
-LanguagesChosen = 0
-MaxLanguages = 2
-MaxInstru = 0
-ChosenInstru = 0 
-MaxTools = 0
-ToolsChosen = 0 
-SkillsChosen = 0
-MaxSkills = 0
-ProfChosen = 0
-MaxProf = 0
+selected = false
