@@ -1776,4 +1776,380 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 "
 	}
 	break;
+	
+	case Acolyte:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Anthropologist:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Archaeologist:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Charlatan:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case CityWatch:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Investigator:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case ClanCrafter:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case CloisteredScholar:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Courtier:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Criminal:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Spy:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Entertainer:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case FactionAgent:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case FarTraveler:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case FolkHero:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Gladiator:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case GuildArtisan:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case GuildMerchant:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HauntedOne:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Hermit:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HACannith:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HADeneith:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HAGhallanda:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HAJorasco:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HAKundarak:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HALyrandar:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HAMedani:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HAOrien:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HAPhiarlan:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HASivis:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HATharashk:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HAThuranni:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case HAVadalis:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Inheritor:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Knight:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case KnightOfTheOrder:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case MercenaryVeteran:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Noble:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Outlander:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Pirate:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Sage:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Sailor:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Soldier:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case UrbanBountyHunter:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case Urchin:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case TribeMember:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
+	
+	case WaterdhavianNoble:
+	{
+		obj_info.info = @"
+
+"
+	}
+	break;
 }
