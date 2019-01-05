@@ -128,7 +128,7 @@ Initiative = 0
 Inspiration = 0
 ProficiencyBonus = 0
 Perception = 0
-
+GodFollowing = ""
 
 PersonalityTraits = ""
 Ideals = ""

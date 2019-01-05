@@ -19,6 +19,7 @@ if mouse_check_button_released(mb_left) && place_meeting(x, y, obj_player) && !s
 			obj_player.BackgroundProficiencyInsight = true
 			obj_player.BackgroundProficiencyReligion = true
 			obj_player.GoldPieces += 15
+			scr_information(Acolyte)
 			
 			//Have to select a god
 			
