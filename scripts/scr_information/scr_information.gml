@@ -105,25 +105,65 @@ You can speak, read, and write Common and Goblin.
 	case Changeling:
 	{
 		obj_info.info = @"
-Changelings are subtle shapeshifters capable of disguising their appearance. Their ability to adopt other creatures’ guises makes them consummate spies and criminals.
+Long ago there was a woman named Jes, and she had one hundred children. Her rivals conspired against her and swore to kill her children. Jes begged the Sovereigns for help, but their only answer was the wind and rain. In the depths of her despair, a lonely traveler took her hand. ‘I will protect your children if they follow my path. Let them wander the world. They may be shunned and feared, but they will never be destroyed.’ Jes agreed, and the traveler gave her his cloak. When she draped it over her children their old faces melted away and they could be whoever they wanted to be. And so it remains. Though the Children are shunned by all, the gift of the Traveler protects them still.
+
+— Chance, changeling priest
+
+A changeling can shift its face and form with a thought. Many changelings use this gift as a form of artistic and emotional expression, but it’s an invaluable tool for grifters, spies, and others who wish to deceive. This leads many people to treat known changelings with fear and suspicion.
+
+Hidden People
+Wherever humans can be found, there are changelings; the question is whether their presence is known.
+
+Changelings are born to one of three paths. A few are raised in stable communities where changelings are true to their nature and deal openly with the people around them. Some are orphans, raised by other races, who find their way in the world without ever knowing another like themselves. Others are part of nomadic changeling clans spread across the Five Nations who keep their true nature hidden from the single-skins. Some clans maintain safe havens in major cities and communities, but most prefer to wander the unpredictable path of the Traveler.
+
+In creating a changeling adventurer, consider the character’s relationships with people around them. Does the character conceal their true changeling nature? Do they embrace it? Do they have connections to other changelings or are they alone and in search of companions?
+
+Masks and Personas
+In their natural form changelings are slender and pale, with colorless eyes and silver-white hair. A changeling can alter its physical appearance with a thought. While this can be used to deceive others, it is a natural form of expression for the changeling. A changeling shifts shapes the way others might change clothes. A casual shape — one created on the spur of the moment, with no depth or history — is called a mask. A mask can be used to express a mood or to serve a specific purpose and then never used again. However, many changelings develop identities that have more depth. They build an identity over time, crafting a persona with a history and beliefs. This focused identity helps a changeling pinpoint a particular skill or emotion. A changeling adventurer might have personas for many situations, including negotiation, investigation, and combat. Personas can be shared by multiple changelings; there might be three healers in a community, but whoever is on duty will adopt the persona of Tek, the kindly old medic. Personas can even be passed down through a family, allowing a younger changeling to take advantage of contacts established by previous users of the persona.
+
+Changeling Names
+A changeling might use a different name for each mask and persona and adopt new names as easily as they develop new faces. The true name of a changeling tends to be simple and monosyllabic; however, there are often accents to a changeling’s name that are expressed through shapeshifting, something single-skins will likely miss. So, two changelings might have the name Jin, but one is Jin-with-vivid-blue-eyes and one is Jin-with-golden-cheeks.
+
+Changelings have a fluid relationship with gender, seeing it as one characteristic to change among many others.
+
+Changeling Names: Bin, Cas, Dox, Fie, Hars, Jin, Lam, Mas, Nix, Ot, Paik, Ruz, Sim, Toox, Vil, Yug.
 
 Changeling Traits
-Ability Score Increase. 
-Your Dexterity and Charisma scores increase by 1.
+Your changeling character has the following traits.
+Ability Score Increase
+Your Charisma score increases by 2, and either your Dexterity or your Intelligence increases by 1 (your choice).
 
-Size. 
-Changelings are built much like humans, but a little leaner. Your size is Medium.
+Age
+Changelings mature slightly faster than humans but share a similar lifespan — typically a century or less. While a changeling can shapeshift to conceal their age, the effects of aging still catch up to them.
 
-Speed. 
+Alignment
+Changelings hate to be bound in any way, and those who follow the path of the Traveler believe that chaos and change are important aspects of life. Most tend toward pragmatic neutrality as opposed to being concerned with lofty ideals. Despite common fears, few changelings embrace evil.
+
+Size
+In their natural forms, changelings average between 5 to 6 feet in height, with a slender build. Your size is Medium.
+
+Speed
 Your base walking speed is 30 feet.
 
-Duplicity. 
-You gain proficiency in the Deception skill.
+Change Appearance
+As an action, you can transform your appearance or revert to your natural form. You can’t duplicate the appearance of a creature you’ve never seen, and you revert to your natural form if you die.
 
-Shapechanger. 
-As an action, you can polymorph into any humanoid of your size that you have seen, or back into your true form. However, your equipment does not change with you. If you die, you revert to your natural appearance.
+You decide what you look like, including your height, weight, facial features, the sound of your voice, coloration, hair length, sex, and any other distinguishing characteristics. You can make yourself appear as a member of another race, though none of your game statistics change. You also can’t appear as a creature of a different size than you, and your basic shape stays the same; if you’re bipedal, you can’t use this trait to become quadrupedal, for instance. Your clothing and other equipment don’t change in appearance, size, or shape to match your new form, requiring you to keep a few extra outfits on hand to make the most compelling disguise possible.
 
-Languages. 
+Even to the most astute observers, your ruse is usually indiscernible. If you rouse suspicion, or if a wary creature suspects something is amiss, you have advantage on any Charisma (Deception) check you make to avoid detection.
+
+Changeling Instincts
+You gain proficiency with two of the following skills of your choice: Deception, Intimidation, Insight, and Persuasion.
+
+Unsettling Visage
+When a creature you can see makes an attack roll against you, you can use your reaction to impose disadvantage on the roll. You must use this feature before knowing whether the attack hits or misses.
+
+Using this trait reveals your shapeshifting nature to any creature within 30 feet that can see you. Once you use this trait, you can’t use it again until you finish a short or long rest.
+
+Divergent Persona
+You gain proficiency with one tool of your choice. Define a unique identity associated with that proficiency; establish the name, race, gender, age, and other details. While you are in the form of this persona, the related proficiency bonus is doubled for any ability check you make that uses that proficiency.
+
+Languages
 You can speak, read, and write Common and two other languages of your choice.
 "
 	}
@@ -1290,7 +1330,6 @@ You can speak, read, and write Common and Draconic.
  IF YOU'RE CONSIDERING TAKING A SCALED ONE ALONG on an adventure, remember this important fact. The strange, inhuman glint in its eyes as it looksyou over is the same look you might give a freshly grilled steak. - Tordek, dwarf fighter and adventurer
 Only a fool looks at the lizardfolk and sees nothing more than scaly humanoids. Their physical shape notwithstanding, lizardfolk have more in common with iguanas or dragons than they do with humans, dwarves, or elves. Lizardfolk possess an alien and inscrutable mindset, their desires and thoughts driven by a different set of basic principles than those of warm-blooded creatures. Their dismal swamp homes might lie hundreds of miles from the nearest human settlement, but the gap between their way of thinking and that of the smooth-skins is far greater. Despite their alien outlook, some lizardfolk make an effort to understand and, in their own manner, befriend people of other races. Such lizardfolk make faithful and skilled allies.
 
-latest?cb%5Cu003d20120116182554
 LIZARDFOLK TRAITS
 Your lizardfolk character has the following racial traits.
 
@@ -1478,32 +1517,68 @@ You count as one size larger when determining your carrying capacity and the wei
 	case Shifter:
 	{
 		obj_info.info = @"
-Ability Score Increase.
-Your Wisdom (WIS) score increases by 1.
+Geth’s ancient heritage rose up from deep within him, spreading out from the core of his being. Some shifters manifested terrible claws, others massive fangs, still others astounding speed or heightened senses. Geth’s gift from his lycanthrope ancestors was sheer toughness. Strength seeped into his bones and flooded his flesh. His skin hardened, and his hair became coarse like an animal’s tough hide. A sense of invincibility spread through him. For the moment at least, he felt unstoppable!
 
-Age. 
-Shifters mature and age at the same rate as humans.
+— Don Bassingthwaite, The Binding Stone
 
-Alignment. 
-When it comes to good or evil, shifters are usually neutral, since they embody the spirit of the wild. Most shifters tend to be wild and free and therefore favor chaos over law.
+Shifters are sometimes called the weretouched, as many believe that they are the descendants of humans and lycanthropes. They are humanoids with a bestial aspect; while they cannot fully change shape they can temporarily enhance their animalistic features — a state they call shifting. Whatever their origins, shifters have evolved into a unique race. A shifter walks on the knife’s edge between the wilds and the world around them. Do they embrace their primal instincts or the path of civilization?
 
-Size. 
-Shifters range from just over 5 to just over 6 feet tall and have lean builds. Your size is Medium.
+The Beast Within
+Early in childhood, a shifter forms a bond with a beast within: a totemic force that shapes their body and mind. Some shifters believe that these spirits are independent entities, and they may speak of Bear or Wolf as ancestors or guides. Most just see the beast within as a formidable expression of their inner nature, something that emerges over time as the shifter’s personality takes shape. The beast within is a pool of powerful instincts, and its influence is revealed by a shifter’s personality: a feline shifter may be cool and distant, driven by predatory instincts, while a shifter with a lupine spirit is drawn to find and protect a pack. When a shifter fully embraces this beast within they physically transform for a short time.
 
-Speed. 
-Your base speed is 30 feet
+This beast within is reflected by the shifter’s subrace. Four subraces are especially common:
 
-Languages. 
-You can speak, read, and write Common and one other language of your choice.
+Beasthide often signifies the bear or boar: stoic, stubborn and thick-skinned.
+Longtooth shifters typically have lupine traits and prefer to run with a pack.
+Swiftstride are often predatory and feline, but a swiftstride could also be a cunning rat who darts through the shadows.
+Wildhunt shifters are born from any creature that tracks its prey.
+While the beast within certainly has a physical impact on a shifter, it has a spiritual and psychological effect. Two beasthide shifters share the same special ability, but if one has the aspect of the boar and the other is more like a bear, they’ll be quite different in personality. With any shifter, identifying the beast within is a crucial part of understanding the character.
 
-Darkvision 
-Thanks to your lycanthrope heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+Similar and Diverse
+Shifters are similar to humans in height and build but are more naturally lithe and flexible. Their facial features have a bestial cast, with large eyes, flat noses, and pointed ears; most shifters also have prominent canine teeth. They grow fur-like hair on nearly every part of their bodies.
 
-Keen Smell 
-You have advantage on Wisdom (Perception) checks that rely on smell.
+The traits of the beast within affect a shifter’s appearance as well. A swiftstride shifter may have catlike eyes and delicate build, while a beasthide shifter might be a massive brute built like a bear. While a shifter’s appearance might remind an onlooker of an animal, they remain clearly identifiable as shifters even when at their most feral.
 
-Shifting Nature 
-Shifting allows you to tap into your wilder side, and gain temporal bonuses depending on your heritage. As a reaction after receiving damage, you may shift, entering your more bestial state for one minute. You can end the shift at any moment as a bonus action. While you are in this state, you cannot cast spells that require concentration. You can’t shift again until you finish a long rest. At 5th level, you have achieved more control of your shifting. You can shift a second time before taking a long rest, and can shift at will as a bonus action.
+The Journey Yet to Come
+Shifters have a strong presence in the Eldeen Reaches, and they often live among humans and can be found in rural areas across Khorvaire. While they form powerful bonds to friends and kin, shifters place great value on self-reliance and freedom. It’s a shifter proverb to “always be prepared for the journey yet to come,” and most shifters strive to be ready for change or opportunity.
+
+Shifters have a natural inclination toward classes with a primal connection. A shifter barbarian draws their rage from the beast within. A shifter ranger indulges their urge to wander and hunt. A shifter rogue harnesses their own predatory instincts. But shifters can pursue any path or faith.
+
+Shifter Names
+Shifters have no language of their own and often live in blended communities. Their names typically overlap with the names of other cultures in their region. Many shifters prefer to keep their personal names for their friends and use “wandering names” with strangers. These are usually tied to a physical or personality trait.
+
+Shifter Names: Badger, Bear, Cat, Fang, Grace, Grim, Moon, Rain, Red, Scar, Stripe, Swift, Talon, Whiskers, Wolf.
+
+Shifter Traits
+Your shifter character has the following traits.
+Ability Score Increase
+Your Dexterity score increases by 1.
+
+Age
+Shifters are quick to mature both physically and emotionally, reaching young adulthood at age 10. They rarely live to be more than 70 years old.
+
+Alignment
+Shifters tend toward neutrality, being more focused on survival than concepts of good and evil. A love of personal freedom can drive shifters toward chaotic alignments.
+
+Size
+Shifters range from 5 to almost 7 feet tall, depending on their subrace. Your size is Medium.
+
+Speed
+Your base walking speed is 30 feet.
+
+Darkvision
+You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+
+Keen Senses
+You have proficiency with the Perception skill.
+
+Shifting
+As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below.
+
+Once you shift, you can’t do so again until you finish a short or long rest.
+
+Languages
+You can speak, read, and write Common.
 "
 	}
 	break;
@@ -1772,7 +1847,87 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Warforged:
 	{
 		obj_info.info = @"
+“Pierce was built by design, while you were built by accident,” Lakashtai said. “The soul is what matters, not the shape of the vessel.”
 
+“What makes you think he has a soul?” Gerrion said.
+
+“What makes you think you do?”
+
+— Keith Baker, The Shattered Land
+
+The warforged were built to fight in the Last War. The first warforged were mindless automatons, but House Cannith devoted vast resources to improving these steel soldiers. An unexpected breakthrough produced fully sentient soldiers, blending organic and inorganic materials. Warforged are made from wood and metal, but they can feel pain and emotion. Built as weapons, they must now find a purpose beyond the war. A warforged can be a steadfast ally, a cold-hearted killing machine, or a visionary in search of purpose and meaning.
+
+Living Steel and Stone
+Warforged are formed from a blend of organic and inorganic materials. Root-like cords infused with alchemical fluids serve as their muscles, wrapped around a framework of steel, darkwood or stone. Armored plates form a protective outer shell and reinforce joints. All warforged share a common facial design, with a hinged jaw and crystal eyes embedded beneath a reinforced brow ridge. A sigil is engraved into the center of the forehead; this is unique to each warforged. Beyond these common elements of warforged design, the precise materials and build of a warforged vary based on the purpose for which it was designed. A juggernaut warrior is a massive brute with a heavy steel frame, while a skirmisher can be crafted from wood and light mithral to grant it lithe and elegant movement.
+
+While they’re formed from stone and steel, warforged are living humanoids. Resting, healing magic, and the Medicine skill all provide the same benefits to warforged that they do to other humanoids. A warforged can focus its mind on its body as it rests, adjusting its shape and form to assume one of a few defensive postures. A warforged who expects heavy combat might focus on durability, while during a time of peace they might be content to adopt a lighter, less aggressive form.
+
+Warforged Personality
+The warforged were built to serve and to fight. For most of their existence, warforged had a clearly defined function and were encouraged to focus purely on that role. The Treaty of Thronehold gave them freedom, but many warforged struggle both to find a place in the post-war world and to relate to the creatures that created them.
+
+The typical warforged shows little emotion. Many warforged embrace a concrete purpose — protecting allies, completing a contract, or other pursuits — and devote themselves to this task as they once did to war. However, there are warforged who delight in exploring their feelings and their freedom. Most warforged have no interest in religion, but some embrace faith and mysticism, seeking higher purpose and deeper meaning.
+
+The typical warforged has a muscular, sexless body shape. Some warforged ignore the concept of gender entirely, while others adopt a gender identity in emulation of creatures around them.
+
+Quirks
+Whether due to some flaw in their creation or simple ignorance of how other creatures operate, warforged often acquire an odd personality trait or two. A warforged player can choose to roll or select a trait from the Warforged Quirks table.
+
+1d10	Quirk
+1	You analyze (out loud) the potential threat posed by every creature you meet.
+2	You don’t understand emotions and often misread emotional cues.
+3	You are fiercely protective of anyone you consider a friend.
+4	You often say the things you are thinking aloud without realizing it.
+5	You try to apply wartime tactics and discipline to every situation.
+6	You don’t know how to filter your feelings and are prone to dramatic emotional outbursts.
+7	You don’t understand clothing beyond its utility and assume that what a creature wears denotes its job and status.
+8	You are obsessed with your appearance, and constantly polish and buff your armor.
+9	You are deeply concerned with following proper procedures and protocols.
+10	War is the only thing that makes sense to you, and you’re always looking for a fight.
+ Warforged Names
+Warforged were assigned numerical designations for use in military service. Many of them adopted nicknames, often given to them by their comrades. As free individuals, some have chosen new names as a way to express their path in life. A few take on human names, often the name of a fallen friend or mentor.
+
+Warforged Names: Anchor, Banner, Bastion, Blade, Blue, Bow, Church, Crunch, Crystal, Dagger, Dent, Five, Glaive, Hammer, Iron, Lucky, Mace, Pants, Pierce, Red, Rusty, Scout, Seven, Shield, Slash, Smith, Spike, Stone, Temple, Vault, Wall, Wood.
+
+ 
+
+Warforged Traits
+Your warforged character has the following traits.
+Ability Score Increase
+Your Constitution score increases by 1.
+
+Age
+A typical warforged is between two and thirty years old. The maximum lifespan of the warforged remains a mystery; so far, warforged have shown no signs of deterioration due to age.
+
+Alignment
+Most warforged take comfort in order and discipline, tending toward law and neutrality. But some have absorbed the morality — or lack thereof — of the beings with which they served.
+
+Size
+Your size is Medium. Most warforged stand between 5 and 6 1/2 feet tall. Weight and build are affected by subrace.
+
+Speed
+Your base walking speed is 30 feet.
+
+Warforged Resilience
+You were created to have remarkable fortitude, represented by the following benefits.
+
+You have advantage on saving throws against being poisoned, and you have resistance to poison damage.
+You are immune to disease.
+You don’t need to eat, drink, or breathe.
+You don’t need to sleep and don’t suffer the effects of exhaustion due to lack of rest, and magic can’t put you to sleep.
+Sentry's Rest
+When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn’t render you unconscious, and you can see and hear as normal.
+
+Integrated Protection
+Your body has built-in defensive layers, which determine your armor class. You gain no benefit from wearing armor, but if you are using a shield, you apply its bonus as normal.
+
+You can alter your body to enter different defensive modes; each time you finish a long rest, choose one mode to adopt from the Integrated Protection table, provided you meet the mode’s prerequisite.
+
+Mode	Prerequisite	Effect
+Darkwood Core (unarmored)	None	11 + your Dexterity modifier (add proficiency bonus if proficient with light armor)
+Composite Plating (armor)	Medium armor proficiency	13 + your Dexterity modifier (maximum of 2) + your proficiency bonus.
+Heavy Plating (armor)	Heavy armor proficiency	16 + your proficiency bonus; disadvantage on Dexterity (Stealth) checks.
+Languages
+You can speak, read, and write Common.
 "
 	}
 	break;
@@ -1780,7 +1935,24 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Acolyte:
 	{
 		obj_info.info = @"
+You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power.
 
+Choose a god, a pantheon of gods, or some other quasi-divine being, and work with your DM to detail the nature of your religious service. The Gods of the Multiverse section contains a sample pantheon, from the Forgotten Realms setting. Were you a lesser functionary in a temple, raised from childhood to assist the priests in the sacred rites? Or were you a high priest who suddenly experienced a call to serve your god in a different way? Perhaps you were the leader of a small cult outside of any established temple structure, or even an occult group that served a fiendish master that you now deny. 
+
+ 
+Skill Proficiencies: Insight, Religion
+Languages: Two of your choice
+Equipment: A holy symbol (a gift to you when you entered the priesthood), a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common clothes, and a pouch containing 15 gp
+ 
+Feature: Shelter of the Faithful
+As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.
+
+You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple.
+
+ 
+ 
+Suggested Characteristics
+Acolytes are shaped by their experience in temples or other religious communities. Their study of the history and tenets of their faith and their relationships to temples, shrines, or hierarchies affect their mannerisms and ideals. Their flaws might be some hidden hypocrisy or heretical idea, or an ideal or bond taken to an extreme.
 "
 	}
 	break;
@@ -1788,7 +1960,16 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Anthropologist:
 	{
 		obj_info.info = @"
+A character with this background has studied other cultures in great detail and has even adopted some of the characteristics of one.
 
+Contents[show]
+Basic Features
+Skill Proficiency: Insight, Religion
+Languages: Two of your choice
+Equipment: A leather-bound diary, a bottle of ink, an ink pen, a set of traveler's clothes, one trinket of special significance, and a pouch containing 10 gp
+
+Feature
+Adept Linguist: You can communicate with humanoids who don't speak any language you know so long as you observe them interacting with each other for at least one day.
 "
 	}
 	break;
@@ -1796,7 +1977,17 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Archaeologist:
 	{
 		obj_info.info = @"
+Archaeologists study ancient cultures by looking at artifacts from the time period. They often travel around, seeking more knowledge.
 
+Contents[show]
+Basic Features
+Skill Proficiencies: History, Survival
+Tool Proficiencies: Cartographer's tools or Navigator's tools
+Languages: One of your choice
+Equipment: A wooden case containing a map to a ruin or dungeon, a bullseye lantern, a miner's pick, a set of traveler's clothes, a shovel, a two-person tent, a trinket recovered from a dig site, and a pouch containing 25 gp
+
+Feature
+Historical Knowledge: When you enter a ruin or dungeon, you can correctly ascertain its original purpose and determine its builders. In addition, you can determine the monetary value of art objects more than a century old.
 "
 	}
 	break;
@@ -1804,7 +1995,24 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Charlatan:
 	{
 		obj_info.info = @"
+Overview
+You have always had a way with people. You know what makes them tick, you can tease out their heart’s desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It’s a useful talent, and one that you’re perfectly willing to use for your advantage. You know what people want and you deliver, or rather, you promise to deliver. Common sense should steer people away from things that sound too good to be true, but common sense seems to be in short supply when you’re around. The bottle of pink coloured liquid will surely cure that unseemly rash, this ointment—nothing more than a bit of fat with a sprinkle of silver dust—can restore youth and vigor, and there’s a bridge in the city that just happens to be for sale. These marvels sound implausible, but you make them sound like the real deal.
 
+Skill Proficiencies: Deception, Sleight of Hand
+Tool Proficiencies: Disguise Kit, Forgery Kit
+Equipment: A set of fine clothes, a disguise kit, tools of the con of your choice (ten stoppered bottles filled with colored liquid, a set of weighted dice, a deck of marked cards, or a signet ring of an imaginary duke), and a belt pouch containing 15 gp
+
+Favorite Schemes
+Every charlatan has an angle they use in preference to other schemes. Choose a favorite scam or roll on the table below.
+
+Feature: False Identity
+You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona.
+Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy.
+
+Suggested Characteristics
+Charlatans are colorful characters who conceal their true selves behind the masks they construct.
+They reflect what people want to see, what they want to believe, and how they see the world.
+But their true selves are sometimes plagued by an uneasy conscience, an old enemy, or deep-seated trust issues.
 "
 	}
 	break;
@@ -1812,7 +2020,22 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case CityWatch:
 	{
 		obj_info.info = @"
+Overview
+You have served the community where you grew up, standing as its first line of defense against crime. You aren't a soldier, directing your gaze outward at possible enemies. Instead, your service to your hometown was to help police its populace, protecting the citizenry from lawbreakers and malefactors of every stripe.
 
+You might have been part of the City Watch of Waterdeep, the baton-wielding police force of the City of Splendors, protecting the common folk from thieves and rowdy nobility alike. Or you might have been one of the valiant defenders of Silverymoon, a member of the Silverwatch or even one of the magic-wielding Spellguard. Perhaps you hail from Neverwinter and have served as one of its Wintershield watchmen, the newly founded branch of guards who vow to keep safe the City of Skilled Hands.
+
+Even if you're not city-born or city-bred, this background can describe your early years as a member of law enforcement. Most settlements of any size have their own constables and police forces, and even smaller communities have sheriffs and bailiffs who stand ready to protect their community.
+
+Skill Proficiencies: Athletics, Insight
+Languages: Two of your choice
+Equipment: A uniform in the style of your unit and indicative of your rank, a horn with which to summon help, a set of manacles, and a pouch containing 10 gp
+
+Feature: Watcher's Eye
+Your experience in enforcing the law, and dealing with lawbreakers, gives you a feel for local laws and criminals. You can easily find the local outpost of the watch or a similar organization, and just as easily pick out the dens of criminal activity in a community, although you're more likely to be welcome in the former locations rather than the latter.
+
+Suggested Characteristics
+Use the tables for the Soldier background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a member of the city watch. Your bond is likely associated with your fellow watch members or the watch organization itself and almost certainly concerns your community. Your ideal probably involves the fostering of peace and safety. An investigator is likely to have an ideal connected to achieving justice by successfully solving crimes.
 "
 	}
 	break;
@@ -1820,7 +2043,11 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Investigator:
 	{
 		obj_info.info = @"
+Variant: Investigator
+Rarer than watch or patrol members are a community's investigators, who are responsible for solving crimes after the fact. Though such folk are seldom found in rural areas, nearly every settlement of decent size has at least one or two watch members who have the skill to investigate crime scenes and track down criminals. If your prior experience is as an investigator, you have proficiency in Investigation rather than Athletics.
 
+Suggested Characteristics
+Use the tables for the Soldier background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a member of the city watch. Your bond is likely associated with your fellow watch members or the watch organization itself and almost certainly concerns your community. Your ideal probably involves the fostering of peace and safety. An investigator is likely to have an ideal connected to achieving justice by successfully solving crimes.
 "
 	}
 	break;
@@ -1828,7 +2055,21 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case ClanCrafter:
 	{
 		obj_info.info = @"
+Overview
+The Stout Folk are well known for their artisanship and the worth of their handiwork, and you have been trained in that ancient tradition. For years you labored under a dwarf master of the craft, enduring long hours, and dismissive, sour-tempered treatment in order to gain the fine skills you possess today. You are most likely a dwarf, but not necessarily -- particularly in the North, the shield dwarf clans learned long ago that only proud fools who are more concerned for their egos than their craft turn away promising apprentices, even those of other races.
 
+If you aren't a dwarf, however, you have taken a solemn oath never to take on an apprentice in the craft: it is not for non-dwarves to pass on the skills of Moradin's favored children. You would have no difficulty, however, finding a dwarf master who was willing to receive potential apprentices who came with your recommendation.
+
+Skill Proficiencies: History, Insight
+Tool Proficiencies: One type of artisan's tools
+Languages: Dwarvish or one other of your choice if you already speak Dwarvish
+Equipment: A set of artisan's tools with which you are proficient, a maker's mark chisel used to mark your handiwork with the symbol of the clan of crafters you learned your skill from, a set of traveler's clothes, and a pouch containing 5 gp and a gem worth 10 gp
+
+Feature: Respect of the Stout Folk
+As well respected as clan crafters are among outsiders, no one esteems them quite so highly as dwarves do. You always have free room and board in any place where shield dwarves or gold dwarves dwell, and the individuals in such a settlement might vie among themselves to determine who can offer you (and possibly your compatriots) the finest accommodations and assistance.
+
+Suggested Characteristics
+Use the tables for the guild artisan background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a clan crafter. (For instance, consider the words guild and clan to be interchangeable.) Your bond is almost certainly related to the master or the clan that taught you, or else to the work that you produce. Your ideal might have to do with maintaining the high quality of your work or preserving the dwarven traditions of craftsmanship.
 "
 	}
 	break;
@@ -1836,7 +2077,20 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case CloisteredScholar:
 	{
 		obj_info.info = @"
+Overview
+As a child, you were inquisitive when your playmates were possessive or raucous. In your formative years, you found your way to one of Faerun's great institutes of learning, where you were apprenticed and taught that knowledge is a more valuable treasure than gold or gems. Now you are ready to leave your home, not to abandon it, but to quest for new lore to add to its storehouse of knowledge. The most well known of Faerun's fonts of knowledge is Candlekeep. The great library is always in need of workers and attendants, some of whom rise through the ranks to assume roles of greater responsibility and prominence.
 
+You might be one of Candlekeep's own, dedicated to the curatorship of what is likely the most complete body of lore and history in all the world. Perhaps instead you were taken in by the scholars of the Vault of the Sages or the Map House in Silverymoon, and now you have struck out to increase your knowledge and to make yourself available to help those in other places who seek your expertise. You might be one of the few who aid Herald's Holdfast, helping to catalog and maintain records of the information that arrives daily from across Faerun.
+
+Skill Proficiencies: History, plus your choice of one from among Arcana, Nature, and Religion
+Languages: Two of your choice
+Equipment: The scholar's robes of your cloister, a writing kit (small pouch with a quill, ink, folded parchment, and a small penknife), a borrowed book on the subject of your current study, and a pouch containing 10 gp
+
+Feature: Library Access
+Though others must often endure extensive interviews and significant fees to gain access to even the most common archives in your library, you have free and easy access to the majority of the library, though it might also have repositories of lore that are too valuable, magical, or secret to permit anyone immediate access.You have a working knowledge of your cloister's personnel and bureaucracy, and you know how to navigate those connections with some ease. Additionally, you are likely to gain preferential treatment at other libraries across the Realms, as professional courtesy shown to a fellow scholar.
+
+Suggested Characteristics
+Use the tables for the Sage background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a cloistered scholar. Your bond is almost certainly associated either with the place where you grew up or with the knowledge you hope to acquire through adventuring. Your ideal is no doubt related to how you view the quest for knowledge and truth- perhaps as a worthy goal in itself, or maybe as a means to a desirable end.
 "
 	}
 	break;
@@ -1844,7 +2098,20 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Courtier:
 	{
 		obj_info.info = @"
+Overview
+In your earlier days, you were a personage of some significance in a noble court or a bureaucratic organization. You might or might not come from an upper-class family; your talents, rather than the circumstances of your birth, could have secured you this position. You might have been one of the many functionaries, attendants, and other hangers-on in the Court of Silverymoon, or perhaps you traveled in Waterdeep's baroque and sometimes cutthroat conglomeration of guilds, nobles, adventurers, and secret societies.
 
+You might have been one of the behind-the-scenes law-keepers or functionaries in Baldur's Gate or Neverwinter, or you might have grown up in and around the castle of Daggerford. Even if you are no longer a full-fledged member of the group that gave you your start in life, your relationships with your former fellows can be an advantage for you and your adventuring comrades. You might undertake missions with your new companions that further the interest of the organization that gave you your start in life. In any event, the abilities that you honed while serving as a courtier will stand you in good stead as an adventurer.
+
+Skill Proficiencies: Insight, Persuasion
+Languages: Two of your choice
+Equipment: A set of fine clothes and a pouch containing 5 gp
+
+Feature: Court Functionary
+Your knowledge of how bureaucracies function lets you gain access to the records and inner workings of any noble court or government you encounter. You know who the movers and shakers are, whom to go to for the favors you seek, and what the current intrigues of interest in the group are.
+
+Suggested Characteristics
+Use the tables for the guild artisan background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a courtier. The noble court or bureaucratic organization where you got your start is directly or indirectly associated with your bond (which could pertain to certain individuals in the group, such as your sponsor or mentor). Your ideal might be concerned with the prevailing philosophy of your court or organization.
 "
 	}
 	break;
@@ -1852,7 +2119,21 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Criminal:
 	{
 		obj_info.info = @"
+Overview
+You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You’re far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.
 
+Skill Proficiencies: Deception, Stealth
+Tool Proficiencies: One type of gaming set, thieves’ tools
+Equipment: A crowbar, a set of dark common clothes including a hood, and a belt pouch containing 15 GP.
+
+Criminal Specialty
+There are many kinds of criminals, and within a thieves guild or similar criminal organization, individual members have particular specialties. Even criminals who operate outside of such organizations have strong preferences for certain kinds of crimes over others. Choose the role you played in your criminal life, or roll on the table below.
+
+Feature: Criminal Contact
+You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you.
+
+Suggested Characteristics
+Criminals might seem like villains on the surface, and many of them are villainous to the core. But some have an abundance of endearing, if not redeeming, characteristics. There might be honor among thieves, but criminals rarely show any respect for law or authority.
 "
 	}
 	break;
@@ -1860,7 +2141,11 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Spy:
 	{
 		obj_info.info = @"
+Variant: Spy
+Although your capabilities are not much different from those of a burglar or smuggler, you learned and practiced them in a very different context: as an espionage agent. You might have been an officially sanctioned agent of the crown, or perhaps you sold the secrets you uncovered to the highest bidder.
 
+Feature: Criminal Contact
+You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you.
 "
 	}
 	break;
@@ -1868,7 +2153,60 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Entertainer:
 	{
 		obj_info.info = @"
+Overview
+You thrive in front of an audience. You know how to entrance them, entertain them, and even inspire them. Your poetics can stir the hearts of those who hear you, awakening grief or joy, laughter or anger. Your music raises their spirits or captures their sorrow. Your dance steps captivate, your humour cuts to the quick. Whatever techniques you use, your art is your life.
 
+Skill Proficiencies: Acrobatics, Performance
+Tool Proficiencies: Disguise kit, one type of musical instrument
+Equipment: A musical instrument (one of your choice), the favor of an admirer (love letter, lock of hair, or trinket), a costume, and a belt pouch containing 15 gp
+
+Entertainer Routines
+A good entertainer is versatile, spicing up every performance with a variety of different routines.
+Choose one to three routines or roll on the table below to define your expertise as an entertainer.
+
+Feature: By Popular Demand
+You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.
+
+
+in:
+Backgrounds, Player's Handbook
+Entertainer
+EDIT
+ 
+COMMENTS
+ 
+SHARE
+Contents[show]
+Overview
+You thrive in front of an audience. You know how to entrance them, entertain them, and even inspire them. Your poetics can stir the hearts of those who hear you, awakening grief or joy, laughter or anger. Your music raises their spirits or captures their sorrow. Your dance steps captivate, your humour cuts to the quick. Whatever techniques you use, your art is your life.
+
+Skill Proficiencies: Acrobatics, Performance
+Tool Proficiencies: Disguise kit, one type of musical instrument
+Equipment: A musical instrument (one of your choice), the favor of an admirer (love letter, lock of hair, or trinket), a costume, and a belt pouch containing 15 gp
+Entertainer Routines
+A good entertainer is versatile, spicing up every performance with a variety of different routines.
+Choose one to three routines or roll on the table below to define your expertise as an entertainer.
+
+D10	
+Entertainer Routines
+
+D10	
+Entertainer Routines
+
+1	Actor	6	Instrumentalist
+2	Dancer	7	Poet
+3	Fire-eater	8	Singer
+4	Jester	9	Storyteller
+5	Juggler	10	Tumbler
+Feature: By Popular Demand
+You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.
+
+Variant: Gladiator
+A gladiator is as much an entertainer as any minstrel or circus performer, trained to make the arts of combat into a spectacle the crowd can enjoy. This kind of flashy combat is your entertainer routine, though you might also have some skills as a tumbler or actor. Using your By Popular Demand feature, you can find a place to perform in any place that features combat for entertainment—perhaps a gladiatorial arena or secret pit fighting club. You can replace the musical instrument in your equipment package with an inexpensive but unusual weapon, such as a trident or net.
+
+Suggested Characteristics
+Successful entertainers have to be able to capture and hold an audience’s attention, so they tend to have flamboyant or forceful personalities.
+They’re inclined toward the romantic and often cling to high-minded ideals about the practice of art and the appreciation of beauty.
 "
 	}
 	break;
@@ -1876,7 +2214,37 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case FactionAgent:
 	{
 		obj_info.info = @"
+Overview
+Many organizations active in the North and across the face of Faerun aren't bound by strictures of geography. These factions pursue their agendas without regard for political boundaries, and their members operate anywhere the organization deems necessary. These groups employ listeners, rumormongers, smugglers, sellswords, cache-holders (people who guard caches of wealth or magic for use by the faction's operatives), haven keepers, and message drop minders, to name a few.
 
+At the core of every faction are those who don't merely fulfill a small function for that organization, but who serve as its hands, head, and heart. As a prelude to your adventuring career (and in preparation for it), you served as an agent of a particular faction in Faerun. You might have operated openly or secretly, depending on the faction and its goals, as well as how those goals mesh with your own. Becoming an adventurer doesn't necessarily require you to relinquish membership in your faction (though you can choose to do so), and it might enhance your status in the faction.
+
+Skill Proficiencies: Insight and one Intelligence, Wisdom, or Charisma skill of your choice, as appropriate to your faction
+Languages: Two of your choice
+Equipment: Badge or emblem of your faction, a copy of a seminal faction text (or a code-book for a covert faction), a set of common clothes, and a pouch containing 15 gp
+Factions of the Sword Coast
+The lack of large, centralized governments in the North and along the Sword Coast is likely directly responsible for the proliferation of secret societies and conspiracies in those lands. If your background is as an agent for one of the main factions of the North and Sword Coast, here are some possibilities.
+
+The Harpers
+Founded more than a millennium ago, disbanded and reorganized several times, the Harpers remain a powerful, behind-the-scenes agency, which acts to thwart evil and promote fairness through knowledge, rather than brute force. Harper agents are often proficient in Investigation, enabling them to be adept at snooping and spying. They often seek aid from other Harpers, sympathetic bards and innkeepers, rangers, and the clergy of gods that are aligned with the Harpers' ideals.
+
+The Order of the Gauntlet
+One of the newest power groups in Faerun, the Order of the Gauntlet has an agenda similar to that of the Harpers. Its methods are vastly different, however: bearers of the gauntlet are holy warriors on a righteous quest to crush evil and promote justice, and they never hide in the shadows. Order agents tend to be proficient in Religion, and frequently seek aid from law enforcement friendly to the order's ideals, and the clergy of the order's patron gods.
+
+The Emerald Enclave
+Maintaining balance in the natural order and combating the forces that threaten that balance is the twofold goal of the Emerald Enclave. Those who serve the faction are masters of survival and living off the land. They are often proficient in Nature, and can seek assistance from woodsmen, hunters, rangers, barbarian tribes, druid circles, and priests who revere the gods of nature.
+
+The Lords' Alliance
+On one level, the agents of the Lords' Alliance are representatives of the cities and other governments that constitute the alliance. But, as a faction with interests and concerns that transcend local politics and geography, the Alliance has its own cadre of individuals who work on behalf of the organizations, wider agenda. Alliance agents are required to be knowledgeable in History, and can always rely on the aid of the governments that are part of the Alliance, plus other leaders and groups who uphold the Alliance's ideals.
+
+The Zhentarim
+In recent years, the Zhentarim have become more visible in the world at large, as the group works to improve its reputation among the common people. The faction draws employees and associates from many walks of life, setting them to tasks that serve the goals of the Black Network but aren't necessarily criminal in nature. Agents of the Black Network must often work in secret, and are frequently proficient in Deception. They seek aid from the wizards, mercenaries, merchants and priesthoods allied with the Zhentarim.
+
+Feature: Safe Haven
+As a faction agent, you have access to a secret network of supporters and operatives who can provide assistance on your adventures. You know a set of secret signs and passwords you can use to identify such operatives, who can provide you with access to a hidden safe house, free room and board, or assistance in finding information. These agents never risk their lives for you or risk revealing their true identities.
+
+Suggested Characteristics
+Use the tables for the Acolyte background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a faction agent. (For instance, consider the words faith and faction to be interchangeable.) Your bond might be associated with other members of your faction, or a location or an object that is important to your faction. The ideal you strive for is probably in keeping with the tenets and principles of your faction, but might be more personal in nature.
 "
 	}
 	break;
@@ -1884,7 +2252,45 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case FarTraveler:
 	{
 		obj_info.info = @"
+Overview
+Almost all of the common people and other folk that one might encounter along the Sword Coast or in the North have one thing in common: they live out their lives without ever traveling more than a few miles from where they were born. You aren't one of those folk. You are from a distant place, one so remote that few of the common folk in the North realize that it exists, and chances are good that even if some people you meet have heard of your homeland, they know merely the name and perhaps a few outrageous stories.
 
+You have come to this part of Faerun for your own reasons, which you might or might not choose to share. Although you will undoubtedly find some of this land's ways to be strange and discomfiting, you can also be sure that some things its people take for granted will be to you new wonders that you've never laid eyes on before. By the same token, you're a person of interest, for good or ill, to those around you almost anywhere you go.
+
+Skill Proficiencies: Insight, Perception
+Tool Proficiencies: Any one musical instrument or gaming set of your choice, likely something native to your homeland
+Languages: Any one of your choice
+Equipment: One set of traveler's clothes, any one musical instrument or gaming set you are proficient with, poorly wrought maps from your homeland that depict where you are in Faerun, a small piece of jewelry worth 10 gp in the style of your homeland's craftsmanship, and a pouch containing 5 gp
+
+Why Are You Here?
+A far traveler might have set out on a journey for one of a number of reasons, and the departure from their homeland could have been voluntary or involuntary. To determine why you are so far from home, roll on the table below or choose from the options provided. The following section, discussing possible homelands, includes some suggested reasons that are appropriate for each location.
+
+Where Are You From?
+The most important decision in creating a far traveler background is determining your homeland. The places discussed here are all sufficiently distant from the North and the Sword Coast to justify the use of this background.
+
+Evermeet
+The fabled elven islands far to the west are home to elves who have never been to Faerun. They often find it a harsher place than they expected when they do make the trip. If you are an elf, Evermeet is a logical (though not mandatory) choice for your homeland. Most of those who emigrate from Evermeet are either exiles, forced out for committing some infraction of elven law, or emissaries who come to Faerun for a purpose that benefits elven culture or society.
+
+Halruaa
+Located on the southern edges of the Shining South, and hemmed in by mountains all around, the magocracy of Halruaa is a bizarre land to most in Faerun who know about it. Many folk have heard of the strange skyships the Halruaans sail, and a few know of the tales that even the least of their people can work magic. Halruaans usually make their journeys into Faerun for personal reasons, since their government has a strict stance against unauthorized involvement with other nations and organizations. You might have been exiled for breaking one of Halruaa's many byzantine laws, or you could be a pilgrim who seeks the shrines of the gods of magic.
+
+Kara-Tur
+The continent of Kara-Tur, far to the east of Faerun, is home to people whose customs are unfamiliar to the folk of the Sword Coast. If you come from Kara-Tur, the people of Faerun likely refer to you as Shou, even if that isn't your true ethnicity, because that's the blanket term they use for everyone who shares your origin. The folk of Kara-Tur occasionally travel to Faerun as diplomats or to forge trade relations with prosperous merchant cartels. You might have come here as part of some such delegation, then decided to stay when the mission was over.
+
+Mulhorand
+From the terrain to the architecture to the god-kings who rule over these lands, nearly everything about Mulhorand is alien to someone from the Sword Coast. You likely experienced the same sort of culture shock when you left your desert home and traveled to the unfamiliar climes of northern Faerun. Recent events in your homeland have led to the abolition of slavery, and a corresponding increase in the traffic between Mulhorand and the distant parts of Faerun. Those who leave behind Mulhorand's sweltering deserts and ancient pyramids for a glimpse at a different life do so for many reasons. You might be in the North simply to see the strangeness this wet land has to offer, or because you have made too many enemies among the desert communities of your home.
+
+Sossal
+Few have heard of your homeland, but many have questions about it upon seeing you. Humans from Sossal seem crafted from snow, with alabaster skin and white hair, and typically dressed in white. Sossal exists far to the northeast, hard up against the endless ice to the north and bounded on its other sides by hundreds of miles of the Great Glacier and the Great Ice Sea. No one from your nation makes the effort to cross such colossal barriers without a convincing reason. You must fear something truly terrible or seek something incredibly important.
+
+Zakhara
+As the saying goes among those in Faerun who know of the place, To get to Zakhara, go south. Then go south some more. Of course, you followed an equally long route when you came north from your place of birth. Though it isn't unusual for Zakharans to visit the southern extremes of Faerun for trading purposes, few of them stray as far from home as you have. You might be traveling to discover what wonders are to be found outside the deserts and sword-like mountains of your homeland, or perhaps you are on a pilgrimage to understand the gods that others worship, so that you might better appreciate your own deities.
+
+The Underdark
+Though your home is physically closer to the Sword Coast than the other locations discussed here, it is far more unnatural. You hail from one of the settlements in the Underdark, each of which has its own strange customs and laws. If you are a native of one of the great subterranean cities or settlements, you are probably a member of the race that occupies the place but you might also have grown up there after being captured and brought below when you were a child. If you are a true Underdark native, you might have come to the surface as an emissary of your people, or perhaps to escape accusations of criminal behavior (whether warranted or not). If you aren't a native, your reason for leaving home probably has something to do with getting away from a bad situation.
+
+Feature: All Eyes On You
+Your accent, mannerisms, figures of speech, and perhaps even your appearance all mark you as foreign. Curious glances are directed your way wherever you go, which can be a nuisance, but you also gain the friendly interest of scholars and others intrigued by far-off lands, to say nothing of everyday folk who are eager to hear stories of your homeland. You can parley this attention into access to people and places you might not otherwise have, for you and your traveling companions. Noble lords, scholars, and merchant princes, to name a few, might be interested in hearing about your distant homeland and people.
 "
 	}
 	break;
@@ -1892,7 +2298,21 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case FolkHero:
 	{
 		obj_info.info = @"
+Overview
+You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.
 
+Skill Proficiencies: Animal Handling, Survival
+Tool Proficiencies: One type of artisan’s tools, vehicles (land)
+Equipment: A set of artisan’s tools (one of your choice), a shovel, an iron pot, a set of common clothes, and a belt pouch containing 10 gp
+
+Defining Event
+You previously pursued a simple profession among the peasantry, perhaps as a farmer, miner, servant, shepherd, woodcutter, or gravedigger. But something happened that set you on a different path and marked you for greater things. Choose or randomly determine a defining event that marked you as a hero of the people.
+
+Feature: Rustic Hospitality
+Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you.
+
+Suggested Characteristics
+A folk hero is one of the common people, for better or for worse. Most folk heroes look on their humble origins as a virtue, not a shortcoming, and their home communities remain very important to them.
 "
 	}
 	break;
@@ -1900,7 +2320,15 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Gladiator:
 	{
 		obj_info.info = @"
+Feature: By Popular Demand
+You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.
 
+Variant: Gladiator
+A gladiator is as much an entertainer as any minstrel or circus performer, trained to make the arts of combat into a spectacle the crowd can enjoy. This kind of flashy combat is your entertainer routine, though you might also have some skills as a tumbler or actor. Using your By Popular Demand feature, you can find a place to perform in any place that features combat for entertainment—perhaps a gladiatorial arena or secret pit fighting club. You can replace the musical instrument in your equipment package with an inexpensive but unusual weapon, such as a trident or net.
+
+Suggested Characteristics
+Successful entertainers have to be able to capture and hold an audience’s attention, so they tend to have flamboyant or forceful personalities.
+They’re inclined toward the romantic and often cling to high-minded ideals about the practice of art and the appreciation of beauty.
 "
 	}
 	break;
@@ -1908,7 +2336,25 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case GuildArtisan:
 	{
 		obj_info.info = @"
+Overview
+You are a member of an artisan’s guild, skilled in a particular field and closely associated with other artisans.
+You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artisan, under the sponsorship of your guild, until you became a master in your own right.
 
+Skill Proficiencies: Insight, Persuasion
+Tool Proficiencies: One type of artisan’s tools
+Languages: One of your choice
+Equipment: A set of artisan’s tools (one of your choice), a letter of introduction from your guild, a set of traveler’s clothes, and a belt pouch containing 15 gp
+
+Guild Business
+Guilds are generally found in cities large enough to support several artisans practicing the same trade.
+However, your guild might instead be a loose network of artisans who each work in a different village within a larger realm. Work with your DM to determine the nature of your guild. You can select your guild business from the Guild Business table or roll randomly. As a member of your guild, you know the skills needed to create finished items from raw materials (reflected in your proficiency with a certain kind of artisan’s tools), as well as the principles of trade and good business practices. The question now is whether you abandon your trade for adventure, or take on the extra effort to weave adventuring and trade together.
+
+Feature: Guild Membership
+As an established and respected member of a guild, you can rely on certain benefits that membership provides.
+Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers. You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces.
+
+Suggested Characteristics
+Guild artisans are among the most ordinary people in the world—until they set down their tools and take up an adventuring career. They understand the value of hard work and the importance of community, but they’re vulnerable to sins of greed and covetousness.
 "
 	}
 	break;
@@ -1916,7 +2362,16 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case GuildMerchant:
 	{
 		obj_info.info = @"
+Feature: Guild Membership
+As an established and respected member of a guild, you can rely on certain benefits that membership provides.
+Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers. You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces.
 
+Variant: Guild Merchant
+Instead of an artisans’ guild, you might belong to a guild of traders, caravan masters, or shopkeepers.
+You don’t craft items yourself but earn a living by buying and selling the works of others (or the raw materials artisans need to practice their craft). Your guild might be a large merchant consortium (or family) with interests across the region. Perhaps you transported goods from one place to another, by ship, wagon, or caravan, or bought them from traveling traders and sold them in your own little shop. In some ways, the traveling merchant’s life lends itself to adventure far more than the life of an artisan. Rather than proficiency with artisan’s tools, you might be proficient with navigator’s tools or an additional language. And instead of artisan’s tools, you can start with a mule and a cart.
+
+Suggested Characteristics
+Guild artisans are among the most ordinary people in the world—until they set down their tools and take up an adventuring career. They understand the value of hard work and the importance of community, but they’re vulnerable to sins of greed and covetousness.
 "
 	}
 	break;
@@ -1924,7 +2379,15 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HauntedOne:
 	{
 		obj_info.info = @"
+Proficiencies
+Skill Proficiencies: Choose two from Arcana, Investigation, Religion, and Survival
+Languages: Choose one exotic language
+Equipment: A monster hunter’s pack, a set of common clothes, and one Gothic Trinket
+Monster Hunter's Pack
+The monster hunter's pack includes a chest, a crowbar, a hammer, three wooden stakes, a holy symbol, a flask of holy water, a set of manacles, a silver mirror, a flask of oil, a tinderbox, and three torches. Purchasing the pack costs 33 gp, which is cheaper than buying its contents individually.
 
+Feature: Heart of Darkness
+Those who look into your eyes can see that you have faced unimaginable horror and that you are no stranger to darkness. Though they might fear you, commoners will extend you every courtesy and do their utmost to help you. Unless you have shown yourself to be a danger to them, they will even take up arms to fight alongside you, should you find yourself facing an enemy alone.
 "
 	}
 	break;
@@ -1932,7 +2395,28 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Hermit:
 	{
 		obj_info.info = @"
+Overview
+You lived in seclusion—either in a sheltered community such as a monastery, or entirely alone—for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.
 
+Skill Proficiencies: Medicine, Religion
+Tool Proficiencies: Herbalism kit
+Languages: One of your choice
+Equipment: A scroll case stuffed full of notes from your studies or prayers, a winter blanket, a set of common clothes, a herbalism kit, and 5 gp
+
+Life of Seclusion
+What was the reason for your isolation, and what changed to allow you to end your solitude? You can work with your DM to determine the exact nature of your seclusion, or you can choose or roll on the table below to determine the reason behind your seclusion.
+
+Feature: Discovery
+The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the people who consigned you to exile, and hence the reason for your return to society. Work with your DM to determine the details of your discovery and its impact on the campaign.
+
+Other Hermits
+This hermit background assumes a contemplative sort of seclusion that allows room for study and prayer.
+If you want to play a rugged wilderness recluse who lives off the land while shunning the company of other people, look at the outlander background. On the other hand, if you want to go in a more religious direction, the acolyte might be what you’re looking for. Or you could even be a charlatan, posing as a wise and holy person and letting pious fools support you.
+
+Suggested Characteristics
+Some hermits are well suited to a life of seclusion, whereas others chafe against it and long for company.
+Whether they embrace solitude or long to escape it, the solitary life shapes their attitudes and ideals.
+A few are driven slightly mad by their years apart from society.
 "
 	}
 	break;
@@ -1940,7 +2424,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HACannith:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -1948,7 +2443,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HADeneith:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -1956,7 +2462,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HAGhallanda:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -1964,7 +2481,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HAJorasco:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -1972,7 +2500,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HAKundarak:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -1980,7 +2519,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HALyrandar:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -1988,7 +2538,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HAMedani:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -1996,7 +2557,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HAOrien:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -2004,7 +2576,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HAPhiarlan:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -2012,7 +2595,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HASivis:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -2020,7 +2614,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HATharashk:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -2028,7 +2633,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HAThuranni:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -2036,7 +2652,18 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case HAVadalis:
 	{
 		obj_info.info = @"
+Overview
+Skill Proficiencies: Investigation, Persuasion 
+Tool Proficiencies: Two tools by house:
 
+Role
+You are always gathering information for your house. But when the barons come to you with a specific mission, what sort of work do you usually do? Choose your role or roll on the table below.
+
+Feature: House connections
+As an agent of your house, you can always get food and lodging for your friends at a house enclave. When the house assigns you a mission, it will usually provide you with necessary supplies and transportation. Beyond this, you have many old friends, mentors, and rivals in your house and you may encounter one of them when you interact with a house business. As a Lyrandar agent you may know the captain of an airship; as a Ghallanda agent you know a lot of innkeepers and bartenders. The degree to which such acquaintances will be willing to help you out will depend on your current standing in your house.
+
+Suggested Characteristics
+House agents are a diverse lot. Consider the house you serve and the type of work you do in developing or selecting characteristics.
 "
 	}
 	break;
@@ -2044,7 +2671,22 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Inheritor:
 	{
 		obj_info.info = @"
+Overview
+You are the heir to something of great value - not mere coin or wealth, but an object that has been entrusted to you and you alone. Your inheritance might have come directly to you from a member of your family, by right of birth, or it could have been left to you by a friend, a mentor, a teacher, or someone else important in your life. The revelation of your inheritance changed your life, and might have set you on the path to adventure, but it could also come with many dangers, including those who covet your gift and want to take it from you- by force, if need be.
 
+Skill Proficiencies: Survival, plus one from among Arcana, History, and Religion  
+Tool Proficiencies: Your choice of a gaming set or a musical instrument  
+Languages: Any one of your choice  
+Equipment: Your inheritance, a set of traveler's clothes, the tool from this background that you chose to be proficient with[1], and a pouch containing 15 gp 
+Feature: Inheritance
+Choose or randomly determine your inheritance from among the possibilities in the table below. Work with your Dungeon Master to come up with details: Why is your inheritance so important, and what is its full story? You might prefer for the DM to invent these details as part of the game, allowing you to learn more about your inheritance as your character does.
+
+The Dungeon Master is free to use your inheritance as a story hook, sending you on quests to learn more about its history or true nature, or confronting you with foes who want to claim it for themselves or prevent you from learning what you seek. The DM also determines the properties of your inheritance and how they figure into the item's history and importance. For instance, the object might be a minor magic item, or one that begins with a modest ability and increases in potency with the passage of time. Or, the true nature of your inheritance might not be apparent at first and is revealed only when certain conditions are met.
+
+When you begin your adventuring career, you can decide whether to tell your companions about your inheritance right away. Rather than attracting attention to yourself, you might want to keep your inheritance a secret until you learn more about what it means to you and what it can do for you.
+
+Suggested Characteristics
+Use the tables for the folk hero background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as an inheritor. Your bond might be directly related to your inheritance, or to the person from whom you received it. Your ideal might be influenced by what you know about your inheritance, or by what you intend to do with your gift once you realize what it is capable of.
 "
 	}
 	break;
@@ -2052,7 +2694,26 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Knight:
 	{
 		obj_info.info = @"
+Overview
+You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them. Work with your DM to come up with an appropriate title and determine how much authority that title carries.
 
+A noble title doesn’t stand on its own—it’s connected to an entire family, and whatever title you hold, you will pass it down to your own children. Not only do you need to determine your noble title, but you should also work with the DM to describe your family and their influence on you.
+
+Is your family old and established, or was your title only recently bestowed? How much influence do they wield, and over what area? What kind of reputation does your family have among the other aristocrats of the region? How do the common people regard them? What’s your position in the family? Are you the heir to the head of the family? Have you already inherited the title? How do you feel about that responsibility? Or are you so far down the line of inheritance that no one cares what you do, as long as you don’t embarrass the family? How does the head of your family feel about your adventuring career? Are you in your family’s good graces, or shunned by the rest of your family? Does your family have a coat of arms? An insignia you might wear on a signet ring? Particular colors you wear all the time? An animal you regard as a symbol of your line or even a spiritual member of the family? These details help establish your family and your title as features of the world of the campaign.
+
+Skill Proficiencies: History, Persuasion
+Tool Proficiencies: One type of gaming set
+Languages: One of your choice
+Equipment: A set of fine clothes, a signet ring, a scroll of pedigree, and a purse containing 25 gp
+
+Variant: Knight
+A knighthood is among the lowest noble titles in most societies, but it can be a path to higher status. If you wish to be a knight, choose the Retainers feature (see the sidebar) instead of the Position of Privilege feature. One of your commoner retainers is replaced by a noble who serves as your squire, aiding you in exchange for training on his or her own path to knighthood. Your two remaining retainers might include a groom to care for your horse and a servant who polishes your armor (and even helps you put it on). As an emblem of chivalry and the ideals of courtly love, you might include among your equipment a banner or other token from a noble lord or lady to whom you have given your heart—in a chaste sort of devotion (This person could be your bond).
+
+Variant Feature: Retainer
+If your character has a noble background, you may select this background feature instead of Position of Privilege. You have the service of three retainers loyal to your family. These retainers can be attendants or messengers, and one might be a majordomo. Your retainers are commoners who can perform mundane tasks for you, but they do not fight for you, will not follow you into obviously dangerous areas (such as dungeons), and will leave if they are frequently endangered or abused.
+
+Suggested Characteristics
+Nobles are born and raised to a very different lifestyle that most people never experience, and their personalities reflect that upbringing. A noble title comes with a plethora of bonds—responsibilities to family, to other nobles (including the sovereign), to the people entrusted to the family’s care, or even to the title itself. But this responsibility is often a good way to undermine a noble.
 "
 	}
 	break;
@@ -2060,7 +2721,32 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case KnightOfTheOrder:
 	{
 		obj_info.info = @"
+Overview
+You belong to an order of knights who have sworn oaths to achieve a certain goal. The nature of this goal depends on the order you serve, but in your eyes it is without question a vital and honorable endeavor. Faerun has a wide variety of knightly orders, all of which have a similar outlook concerning their actions and responsibilities. Though the term knight conjures ideas of mounted, heavily armored warriors of noble blood, most knightly orders in Faerun don't restrict their membership to such individuals.
 
+The goals and philosophies of the order are more important than the gear and fighting style of its members, and so most of these orders aren't limited to fighting types, but are open to all sorts of folk who are willing to battle and die for the order's cause. The Knightly Orders of Faerun below details several of the orders that are active at present and is designed to help inform your decision about which group you owe allegiance to.
+
+Skill Proficiencies: Persuasion, plus one from among Arcana, History, Nature, and Religion, as appropriate for your order
+Tool Proficiencies: One type of gaming set or musical instrument
+Languages: One of your choice
+Equipment: One set of traveler's clothes, a signet, banner or seal representing your place or rank in the order, and a pouch containing 10 gp
+Feature: Knightly Regard
+You receive shelter and succor from members of your knightly order and those who are sympathetic to its aims. If your order is a religious one, you can gain aid from temples and other religious communities of your deity. Knights of civic orders can get help from the community- whether a lone settlement or a great nation that they serve, and knights of philosophical orders can find help from those they have aided in pursuit of their ideals, and those who share those ideals. This help comes in the form of shelter and meals, and healing when appropriate, as well as occasionally risky assistance, such as a band of local citizens rallying to aid a sorely pressed knight in a fight, or those who support the order helping to smuggle a knight out of town when he or she is being hunted unjustly. 
+
+Knightly Orders of Faerun
+Many who rightfully call themselves knight earn that title as part of an order in service to a deity, such as Kelemvor's Eternal Order or Mystra's Knights of the Mystic Fire. Other knightly orders serve a government, royal family, or are the elite military of a feudal state, such as the brutal Warlock Knights of Vaasa. Other knighthoods are secular and non governmental organizations of warriors who follow a particular philosophy, or consider themselves a kind of extended family, similar to an order of monks. Although there are organizations, such as the Knights of the Shield, that use the trappings of knighthood without necessarily being warriors, most folk of Faerun who hear the word knight think of a mounted warrior in armor beholden to a code. Below are a few knightly organizations.
+
+Knights of the Unicorn
+The Knights of the Unicorn began as a fad of romantically minded sons and daughters of patriar families in Baldur's Gate. On a lark, they took the unicorn goddess Lurue as their mascot and went on various adventures for fun. The reality of the dangers they faced eventually sank in, as did Lurue's tenets. Over time the small group grew and spread, gaining a following in places as far as Cormyr. The Knights of the Unicorn are chivalric adventurers who follow romantic ideals: life is to be relished and lived with laughter, quests should be taken on a dare, impossible dreams should be pursued for the sheer wonder of their completion, and everyone should be praised for their strengths and comforted in their weaknesses.
+
+Knights of Myth Drannor
+Long ago, the Knights of Myth Drannor were a famous adventuring band, and Dove Falconhand, one of the famous Seven Sisters, was one of them. The band took its name to honor the great but fallen city, just as the new Knights of Myth Drannor do today. With the city once again in ruins, Dove Falconhand decided to reform the group with the primary goal of building alliances and friendship between the civilized races of the world and goodly people in order to combat evil. The Knights of Myth Drannor once again ride the roads of the Dalelands, and they've begun to spread to the lands beyond. Their members, each accepted by Dove herself, are above all valiant and honest.
+
+Knights of the Silver Chalice
+The Knights of the Silver Chalice was formed by edict of the demigod Siamorphe in Waterdeep a century ago. Siamorphe's ethos is the nobility's right and responsibility to rule, and the demigod is incarnated as a different noble mortal in each generation. By the decree of the Siamorphe at that time, the Knights of the Silver Chalice took it upon themselves to put a proper heir on the throne of Tethyr and reestablish order in that kingdom. Since then they have grown to be the most popular knighthood in Tethyr, a nation that has hosted many knighthoods in fealty to the crown.
+
+Suggested Characteristics
+Use the tables for the Soldier background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a knight of your order. Your bond almost always involves the order to which you belong (or at least key members of it), and it is highly unusual for a knight's ideal not to reflect the agenda, sentiment, or philosophy of one's order.
 "
 	}
 	break;
@@ -2068,7 +2754,29 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case MercenaryVeteran:
 	{
 		obj_info.info = @"
+Overview
+As a sellsword who fought battles for coin, you're well acquainted with risking life and limb for a chance at a share of treasure. Now, you look forward to fighting foes and reaping even greater rewards as an adventurer. Your experience makes you familiar with the ins and outs of mercenary life, and you likely have harrowing stories of events on the battlefield. You might have served with a large outfit such as the Zhentarim or the soldiers of Mintarn, or a smaller band of sellswords, maybe even more than one. (See the Mercenaries of the North below for a collection of possibilities.) Now you're looking for something else, perhaps greater reward for the risks you take, or the freedom to choose your own activities. For whatever reason, you're leaving behind the life of a soldier for hire, but your skills are undeniably suited for battle, so now you fight on in a different way.
 
+Skill Proficiencies: Athletics, Persuasion  
+Tool Proficiencies: One type of gaming set, vehicles (land)  
+Equipment: A uniform of your company (traveler's clothes in quality), an insignia of your rank, a gaming set of your choice, and a pouch containing the remainder of your last wages (10 gp) 
+Feature: Mercenary Life
+You know the mercenary life as only someone who has experienced it can. You are able to identify mercenary companies by their emblems, and you know a little about any such company, including the names and reputations of its commanders and leaders, and who has hired them recently. You can find the taverns and feast halls where mercenaries abide in any area, as long as you speak the language. You can find mercenary work between adventures sufficient to maintain a comfortable lifestyle (see Practicing a Profession under Downtime Activities in chapter 8 of the Player's Handbook). 
+
+Mercenaries of the North
+Countless mercenary companies operate up and down the Sword Coast and throughout the North. Most are small scale operations that employ a dozen to a hundred folk who offer security services, hunt monsters and brigands, or go to war in exchange for gold. Some organizations, such as the Zhentarim, Flaming Fist, and the nation of Mintarn have hundreds or thousands of members and can provide private armies to those with enough funds. A few organizations operating in the North are described below.
+
+The Chill
+The cold and mysterious Lurkwood serves as the home of numerous groups of goblinoids that have banded together into one tribe called the Chill. Unlike most of their kind, the Chill refrains from raiding the people of the North and maintains relatively good relations so that they can hire themselves out as warriors. Few city states in the North are willing to field an army alongside the Chill, but several are happy to quietly pay the Chill to battle the Uthgardt, orcs, trolls of the Evermoors, and other threats to civilization.
+
+Silent Rain
+Consisting solely of elves, Silent Rain is a legendary mercenary company operating out of Evereska. Caring little for gold or fame, Silent Rain agrees only to jobs that either promote elven causes or involve destroying orcs, gnolls, and the like. Prospective employers must leave written word (in Elvish) near Evereska, and the Silent Rain sends a representative if interested.
+
+The Bloodaxes
+Founded in Sundabar nearly two centuries ago, the Bloodaxes were originally a group of dwarves outcast from their clans for crimes against the teachings of Moradin Soulforger. They began hiring out as mercenaries to whoever in the North would pay them. Since then the mercenary company has broadened its membership to other races, but every member is an exile, criminal, or misfit of some sort looking for a fresh start and a new family among the bold Bloodaxes.
+
+Suggested Characteristics
+Use the tables for the soldier background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a mercenary
 "
 	}
 	break;
@@ -2076,7 +2784,22 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Noble:
 	{
 		obj_info.info = @"
+Overview
+You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them. Work with your DM to come up with an appropriate title and determine how much authority that title carries.
 
+A noble title doesn’t stand on its own—it’s connected to an entire family, and whatever title you hold, you will pass it down to your own children. Not only do you need to determine your noble title, but you should also work with the DM to describe your family and their influence on you.
+
+Is your family old and established, or was your title only recently bestowed? How much influence do they wield, and over what area? What kind of reputation does your family have among the other aristocrats of the region? How do the common people regard them? What’s your position in the family? Are you the heir to the head of the family? Have you already inherited the title? How do you feel about that responsibility? Or are you so far down the line of inheritance that no one cares what you do, as long as you don’t embarrass the family? How does the head of your family feel about your adventuring career? Are you in your family’s good graces, or shunned by the rest of your family? Does your family have a coat of arms? An insignia you might wear on a signet ring? Particular colors you wear all the time? An animal you regard as a symbol of your line or even a spiritual member of the family? These details help establish your family and your title as features of the world of the campaign.
+
+Skill Proficiencies: History, Persuasion
+Tool Proficiencies: One type of gaming set
+Languages: One of your choice
+Equipment: A set of fine clothes, a signet ring, a scroll of pedigree, and a purse containing 25 gp
+Feature: Position of Privilege
+Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk and merchants make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.
+
+Suggested Characteristics
+Nobles are born and raised to a very different lifestyle that most people never experience, and their personalities reflect that upbringing. A noble title comes with a plethora of bonds—responsibilities to family, to other nobles (including the sovereign), to the people entrusted to the family’s care, or even to the title itself. But this responsibility is often a good way to undermine a noble.
 "
 	}
 	break;
@@ -2084,7 +2807,21 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Outlander:
 	{
 		obj_info.info = @"
+Overview
+You grew up in the wilds, far from civilization and the comforts of town and technology. You’ve witnessed the migration of herds larger than forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don’t know the specific features of the terrain, you know the ways of the wild.
 
+Skill Proficiencies: Athletics, Survival
+Tool Proficiencies: One type of musical instrument
+Languages: One of your choice
+Equipment: A staff , a hunting trap, a trophy from an animal you killed, a set of traveler’s clothes, and a belt pouch containing 10 gp
+Origin
+You've been to strange places and seen things that others cannot begin to fathom. Consider some of the distant lands you have visited, and how they impacted you. You can roll on the following table to determine your occupation during your time in the wild, or choose one that best fits your character.
+
+Feature: Wanderer
+You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth.
+
+Suggested Characteristics
+Often considered rude and uncouth among civilized folk, outlanders have little respect for the niceties of life in the cities. The ties of tribe, clan, family, and the natural world of which they are a part are the most important bonds to most outlanders.
 "
 	}
 	break;
@@ -2092,7 +2829,22 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Pirate:
 	{
 		obj_info.info = @"
+Overview
+You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths. Your first love is the distant line of the horizon, but the time has come to try your hand at something new. Discuss the nature of the ship you previously sailed with your Dungeon Master. Was it a merchant ship, a naval vessel, a ship of discovery, or a pirate ship? How famous (or infamous) is it? Is it widely traveled? Is it still sailing, or is it missing and presumed lost with all hands? What were your duties on board—boatswain, captain, navigator, cook, or some other position? Who were the captain and first mate? Did you leave your ship on good terms with your fellows, or on the run?
 
+Skill Proficiencies: Athletics, Perception
+Tool Proficiencies: Navigator’s tools, vehicles (water)
+Equipment: A belaying pin (club), 50 feet of silk rope, a lucky charm such as a rabbit foot or a small stone with a hole in the center (or you may roll for a random trinket on the Trinkets table in chapter 5), a set of common clothes, and a belt pouch containing 10 gp
+
+Variant: Pirate
+You spent your youth under the sway of a dread pirate, a ruthless cutthroat who taught you how to survive in a world of sharks and savages. You’ve indulged in larceny on the high seas and sent more than one deserving soul to a briny grave. Fear and bloodshed are no strangers to you, and you’ve garnered a somewhat unsavory reputation in many a port town. If you decide that your sailing career involved piracy, you can choose the Bad Reputation feature instead of the Ship’s Passage feature.
+
+Variant Feature: Bad Reputation
+If your character has a sailor background, you may select this background feature instead of Ship’s Passage. No matter where you go, people are afraid of you due to your reputation. When you are in a civilized settlement, you can get away with minor criminal offenses, such as refusing to pay for food at a tavern or breaking down doors at a local shop, since most people will not report your activity to the authorities.
+
+Suggested Characteristics
+Sailors can be a rough lot, but the responsibilities of life on a ship make them generally reliable as well.
+Life aboard a ship shapes their outlook and forms their most important attachments.
 "
 	}
 	break;
@@ -2100,7 +2852,22 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Sage:
 	{
 		obj_info.info = @"
+Overview
+You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.
 
+Skill Proficiencies: Arcana, History
+Languages: Two of your choice
+Equipment: A bottle of black ink, a quill, a small knife, a letter from a dead colleague posing a question you have not yet been able to answer, a set of common clothes, and a belt pouch containing 10 gp
+
+Specialty
+To determine the nature of your scholarly training, roll a d8 or choose from the options in the table below.
+
+Feature: Researcher
+When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign.
+
+Suggested Characteristics
+Sages are defined by their extensive studies, and their characteristics reflect this life of study.
+Devoted to scholarly pursuits, a sage values knowledge highly—sometimes in its own right, sometimes as a means toward other ideals.
 "
 	}
 	break;
@@ -2108,7 +2875,19 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Sailor:
 	{
 		obj_info.info = @"
+Overview
+You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths. Your first love is the distant line of the horizon, but the time has come to try your hand at something new. Discuss the nature of the ship you previously sailed with your Dungeon Master. Was it a merchant ship, a naval vessel, a ship of discovery, or a pirate ship? How famous (or infamous) is it? Is it widely traveled? Is it still sailing, or is it missing and presumed lost with all hands? What were your duties on board—boatswain, captain, navigator, cook, or some other position? Who were the captain and first mate? Did you leave your ship on good terms with your fellows, or on the run?
 
+Skill Proficiencies: Athletics, Perception
+Tool Proficiencies: Navigator’s tools, vehicles (water)
+Equipment: A belaying pin (club), 50 feet of silk rope, a lucky charm such as a rabbit foot or a small stone with a hole in the center (or you may roll for a random trinket on the Trinkets table in chapter 5), a set of common clothes, and a belt pouch containing 10 gp
+
+Feature: Ship's Passage
+When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you’re calling in a favor, you can’t be certain of a schedule or route that will meet your every need. Your Dungeon Master will determine how long it takes to get where you need to go. In return for your free passage, you and your companions are expected to assist the crew during the voyage.
+
+Suggested Characteristics
+Sailors can be a rough lot, but the responsibilities of life on a ship make them generally reliable as well.
+Life aboard a ship shapes their outlook and forms their most important attachments.
 "
 	}
 	break;
@@ -2116,7 +2895,20 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Soldier:
 	{
 		obj_info.info = @"
+Overview
+War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war. When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble’s or merchant’s private army, or a mercenary company.
 
+Skill Proficiencies: Athletics, Intimidation
+Tool Proficiencies: One type of gaming set, vehicles (land)
+Equipment: An insignia of rank, a trophy taken from a fallen enemy (a dagger, broken blade, or piece of a banner), a set of bone dice or deck of cards, a set of common clothes, and a belt pouch containing 10 gp
+Specialty
+During your time as a soldier, you had a specific role to play in your unit or army. Roll a d8 or choose from the options in the table below to determine your role:
+
+Feature: Military Rank
+You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized.
+
+Suggested Characteristics
+The horrors of war combined with the rigid discipline of military service leave their mark on all soldiers, shaping their ideals, creating strong bonds, and often leaving them scarred and vulnerable to fear, shame, and hatred.
 "
 	}
 	break;
@@ -2124,7 +2916,19 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case UrbanBountyHunter:
 	{
 		obj_info.info = @"
+Overview
+Before you became an adventurer, your life was already full of conflict and excitement, because you made a living tracking down people for pay. Unlike some people who collect bounties, though, you aren't a savage who follows quarry into or through the wilderness. You're involved in a lucrative trade, in the place where you live, that routinely tests your skills and survival instincts. What's more, you aren't alone as a bounty hunter in the wild would be: you routinely interact with both the criminal subculture and other bounty hunters, maintaining contacts in both areas to help you succeed.
 
+You might be a cunning thief-catcher, prowling the rooftops to catch one of the myriad burglars of the city. Perhaps you are someone who has your ear to the street, aware of the doings of thieves' guilds and street gangs. You might be a velvet mask bounty hunter, one who blends in with high society and noble circles in order to catch the criminals that prey on the rich, whether pickpockets or con artists. The community where you plied your trade might have been one of Faerun's great metropolises, such as Waterdeep, Baldur's Gate, or a less populous location, perhaps Luskan or Yartar - any place that's large enough to have a steady supply of potential quarries. As a member of an adventuring party, you might find it more difficult to pursue a personal agenda that doesn't fit with the group's objectives - but on the other hand, you can take down much more formidable targets with the help of your companions.
+
+Skill Proficiencies: Choose two from among Deception, Insight, Persuasion, and Stealth. 
+Tool Proficiencies: Choose two from among one type of gaming set, one musical instrument, and thieves' tools.  
+Equipment: A set of clothes appropriate to your duties and a pouch containing 20 gp. 
+Feature: Ear to the Ground
+You are in frequent contact with people in the segment of society that your chosen quarries move through. These people might be associated with the criminal underworld, the rough-and-tumble folk of the streets, or members of high society. This connection comes in the form of a contact in any city you visit, a person who provides information about the people and places of the local area. 
+
+Suggested Characteristics
+Use the tables for the criminal background in the Player's Handbook as the basis for your bounty hunter's traits and motivations, modifying the entries when appropriate to suit your identity as a bounty hunter. For instance, your bond might involve other bounty hunters or the organizations or individuals that employ you. Your ideal could be associated with your determination always to catch your quarry or your desire to maintain your reputation for being dependable. 
 "
 	}
 	break;
@@ -2132,7 +2936,17 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case Urchin:
 	{
 		obj_info.info = @"
+Overview
+You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or to provide for you, so you learned to provide for yourself. You fought fiercely over food and kept a constant watch out for other desperate souls who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate. You've survived despite all odds, and did so through cunning, strength, speed, or some combination of each. You begin your adventuring career with enough money to live modestly but securely for at least ten days. How did you come by that money? What allowed you to break free of your desperate circumstances and embark on a better life?
 
+Skill Proficiencies: Sleight of Hand, Stealth
+Tool Proficiencies: Disguise kit, thieves' tools
+Equipment: A small knife, a map of the city you grew up in, a pet mouse, a token to remember your parents by, a set of common clothes, and a belt pouch containing 10 gp
+Feature: City Secrets
+You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow.
+
+Suggested Characteristics
+Urchins are shaped by lives of desperate poverty, for good and for ill. They tend to be driven either by a commitment to the people with whom they shared life on the street or by a burning desire to find a better life—and maybe get some payback on all the rich people who treated them badly.
 "
 	}
 	break;
@@ -2140,7 +2954,23 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case TribeMember:
 	{
 		obj_info.info = @"
+Overview
+Though you might have only recently arrived in civilized lands, you are no stranger to the values of cooperation and group effort when striving for supremacy. You learned these principles, and much more, as a member of an Uthgardt tribe. Your people have always tried to hold to the old ways. Tradition and taboo have kept the Uthgardt strong while the kingdoms of others have collapsed into chaos and ruin. But for the last few generations, some bands among the tribes were tempted to settle, make peace, trade, and even to build towns. Perhaps this is why Uthgar chose to raise up the totems among the people as living embodiments of his power. Perhaps they needed a reminder of who they were and from whence they came. The Chosen of Uthgar led bands back to the old ways, and most of your people abandoned the soft ways of civilization.
 
+Skill Proficiencies: Athletics, Survival
+Tool Proficiencies: One type of musical instrument or artisan's tools
+Languages: One of your choice
+Equipment: A hunting trap, a totemic token or set of tattoos marking your loyalty to Uthgar and your tribal totem, a set of traveler's clothes, and a pouch containing 10 gp
+Barbarian Tribes of Faerun
+You might be a fair-haired barbarian of the Reghed, dwelling in the shadow of the Reghed Glacier in the far North near lcewind Dale. You might also be of the nomadic Rashemi, noted for their savage berserkers and their masked witches. Perhaps you hail from one of the wood elf tribes in the Chondalwood, or the magic-hating human tribes of the sweltering jungles of ChuIt. You might have grown up in one of the tribes that had decided to settle down, and now that they have abandoned that path, you find yourself adrift. Or you might come from a segment of the Uthgardt that adheres to tradition, but you seek to bring glory to your tribe by achieving great things as a formidable adventurer.
+
+See the Uthgardt Lands section of chapter 2 for details on each tribe's territory and its activities that will help you choose your affiliation.
+
+Feature: Uthgardt Heritage
+You have an excellent knowledge of not only your tribe's territory, but also the terrain and natural resources of the rest of the North. You are familiar enough with any wilderness area that you find twice as much food and water as you normally would when you forage there. Additionally, you can call upon the hospitality of your people, and those folk allied with your tribe, often including members of druid circles, tribes of nomadic elves, the Harpers, and the priesthoods devoted to the gods of the First Circle.
+
+Suggested Characteristics
+Use the tables for the outlander background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a member of an Uthgardt tribe. Even if you have left your tribe behind (at least for now), you hold to the traditions of your people. You will never cut down a still-living tree, and you may not countenance such an act being done in your presence. The Uthgardt ancestral mounds great hills where the totem spirits were defeated by Uthgar and where the heroes of the tribes are interred are sacred to you. Your bond is undoubtedly associated with your tribe or some aspect of Uthgardt philosophy or culture (perhaps even Uthgar himself). Your ideal is a personal choice that probably hews closely to the ethos of your people and certainly doesn't contradict or compromise what being an Uthgardt stands for.
 "
 	}
 	break;
@@ -2148,7 +2978,21 @@ Male Triton Names: Corus, Delnis, Jhimas, Keros, Molos, Nalos, Vodos, Zunis Trit
 	case WaterdhavianNoble:
 	{
 		obj_info.info = @"
+Overview
+You are a scion of one of the great noble families of Waterdeep. Human families who jealously guard their privilege and place in the City of Splendors, Waterdhavian nobles have a reputation across Faerun for being eccentric, spoiled, venal, and, above all else, rich. Whether you are a shining example of the reason for this reputation or one who proves the rule by being an exception, people expect things of you when they know your surname and what it means.
 
+Your reasons for taking up adventuring likely involve your family in some way: Are you the family rebel, who prefers delving in filthy dungeons to sipping zzar at a ball? Or have you taken up sword or spell on your family's behalf, ensuring that they have someone of renown to see to their legacy? Work with your DM to come up with the family you are part of - there are around seventy-five lineages in Waterdeep, each with its own financial interests, specialties, and schemes. You might be part of the main line of your family, possibly in line to become its leader one day. Or you might be one of any number of cousins, with less prestige but also less responsibility.
+
+Skill Proficiencies: History, Persuasion
+Tool Proficiencies: One type of gaming set or one musical instrument
+Languages: One of your choice
+Equipment: A set of fine clothes, a signet ring or brooch, a scroll of pedigree, a skin of fine zzar or wine, and a purse containing 20 gp
+
+Feature: Kept in Style
+While you are in Waterdeep or elsewhere in the North your house sees to your everyday needs. Your name and signet are sufficient to cover most of your expenses; the inns, taverns, and feast halls you frequent are glad to record your debt and send an accounting to your family's estate in Waterdeep to settle what you owe. This advantage enables you to live a comfortable lifestyle without having to pay 2 gp a day for it, or reduces the cost of a wealthy or aristocratic lifestyle by that amount. You may not maintain a less affluent lifestyle and use the difference as income-the benefit is a line of credit, not an actual monetary reward. 
+
+Suggested Characteristics
+Use the tables for the noble background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a member of a Waterdhavian family. Like other nobles, you were born and raised in a different world from the one that most folk know- one that grants you privilege but also calls you to fulfill a duty befitting your station. Your bond might be associated with your family alone, or it could be concerned with another noble house that sides with or opposes your own. Your ideal depends to some extent on how you view your role in the family, and how you intend to conduct yourself in the world at large as a representative of your house. 
 "
 	}
 	break;
